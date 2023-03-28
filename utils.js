@@ -50,3 +50,39 @@ export const maskPattern = [
   /\d/,
   /\d/,
 ];
+
+export const colors = {
+  white: "#fff",
+  violet: "#6344C6",
+  darkViolet: '#262439',
+  yellow: "#FFC448",
+  almostBlack: "#11141D",
+  orange: "#F26440",
+};
+
+export const themeLight = {
+  header: {
+    bg: colors.white,
+    fontDark: colors.almostBlack,
+    fontLight: colors.white,
+  }
+}
+
+export const local = {
+  rus: {
+    header: {
+      nav: {
+        home: 'главная',
+        case: 'примеры работ',
+      }
+    }
+  },
+  eng: {
+    header: {
+      nav: {
+        home: 'home',
+        case: 'case studies',
+      }
+    }
+  }
+}
