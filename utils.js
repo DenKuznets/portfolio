@@ -68,8 +68,8 @@ export const themeLight = {
   }
 }
 
-export const local = {
-  rus: {
+export const language = {
+  ru: {
     header: {
       nav: {
         home: 'главная',
@@ -77,7 +77,7 @@ export const local = {
       }
     }
   },
-  eng: {
+  en: {
     header: {
       nav: {
         home: 'home',
