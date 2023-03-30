@@ -22,12 +22,12 @@ export function isVisible(elem) {
 }
 
 export const screen = {
-  screen1400: "1400px",
-  screen1200: "1200px",
-  screen992: "992px",
-  screen768: "768px",
-  screen576: "576px",
-  screen480: "480px",
+  px1400: "1400px",
+  px1200: "1200px",
+  px992: "992px",
+  px768: "768px",
+  px576: "576px",
+  px480: "480px",
 };
 
 export const maskPattern = [
@@ -65,6 +65,7 @@ export const themeLight = {
     bg: colors.white,
     fontDark: colors.almostBlack,
     fontLight: colors.white,
+    burgerHover: colors.violet,
   }
 }
 
