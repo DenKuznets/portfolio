@@ -13,38 +13,30 @@ const HeaderStyled = styled.header`
     display: flex;
     align-items: center;
     ul {
-      transition: min-height 0.4s;
+      transition: all 0.4s;
       margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: ${({ theme }) => theme.header.bg};
       @media (max-width: ${screen.px768}) {
-        /* display: none; */
-        max-height: 0;
-        overflow: hidden;
-      }
-      &.menu-open {
-        min-height: 100%;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         position: fixed;
-        /* min-height: 100%; */
         width: 100%;
-        background-color: gray;
+        flex-direction: column;
         top: 0;
         left: 0;
-        a {
-          opacity: 1;
-        }
-        .close-btn {
-          position: fixed;
-          top: 5%;
-          right: 5%;
+        min-height: 0;
+        max-height: 0;
+        overflow: hidden;
+        &.menu-open {
+          min-height: 100vh;
         }
       }
-      display: flex;
       li {
         margin-right: 20px;
+      }
+      a {
+        opacity: 1;
       }
     }
   }
