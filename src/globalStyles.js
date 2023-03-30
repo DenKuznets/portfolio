@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { colors } from "../utils";
 
 const GlobalStyle = createGlobalStyle`
   /* Box sizing rules */
@@ -76,10 +77,29 @@ select {
   }
 }
 
+body {
+  color: ${colors.almostBlack};
+  text-transform: capitalize;
+}
+
 h1,h2,h3,h4,h5,h6 {
 
 }
 
+a{
+  color: ${colors.almostBlack};
+  text-decoration: none;
+  transition: all 0.2s;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
 
 `;
 

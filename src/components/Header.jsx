@@ -2,12 +2,29 @@ import styled from "styled-components";
 
 const HeaderStyled = styled.header`
   display: flex;
+  padding: 1em 3em;
   .logo {
+    margin-right: auto;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
+    font-weight: bold;
+    text-transform: lowercase;
+    &:hover{
+      cursor: pointer;
+    }
     img {
       width: 3em;
+      margin-right: 1em;
+    }
+  }
+
+  .logo__logo-text {
+    font-size: 1.5rem;
+  }
+  ul {
+    display: flex;
+    li {
+      margin-right: 20px;
     }
   }
 `;
@@ -27,7 +44,7 @@ const Header = (props) => {
     <HeaderStyled>
       <div className="logo">
         <img src="./images/logo.png" alt="" />
-        Den.Kuznets
+        <div className="logo__logo-text">ｄｅｎ . ｋｕｚｎｅｔｓ</div>
       </div>
       <nav>
         <ul>{listElements}</ul>
