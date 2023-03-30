@@ -68,10 +68,10 @@ export const themeLight = {
   }
 }
 
-export const language = {
+export const localization = {
   ru: {
     header: {
-      nav: {
+      nav: {        
         home: 'главная',
         case: 'примеры работ',
       }
