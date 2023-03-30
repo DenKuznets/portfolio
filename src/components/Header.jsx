@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { screen } from "../../utils";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { GrClose } from "react-icons/gr";
 import { IconContext } from "react-icons";
+import { useState } from "react";
 
 const HeaderStyled = styled.header`
   display: flex;
@@ -11,8 +13,34 @@ const HeaderStyled = styled.header`
     display: flex;
     align-items: center;
     ul {
+      transition: min-height 0.4s;
+      margin: 0;
       @media (max-width: ${screen.px768}) {
-        display: none;
+        /* display: none; */
+        max-height: 0;
+        overflow: hidden;
+      }
+      &.menu-open {
+        min-height: 100%;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        /* min-height: 100%; */
+        width: 100%;
+        background-color: gray;
+        top: 0;
+        left: 0;
+        a {
+          opacity: 1;
+        }
+        .close-btn {
+          position: fixed;
+          top: 5%;
+          right: 5%;
+        }
       }
       display: flex;
       li {
@@ -22,9 +50,14 @@ const HeaderStyled = styled.header`
   }
 
   .nav-burger-menu {
+    position: relative;
     display: none;
-    transition: all 0.2s;
+    z-index: 999;
+    transition: all 0.4s;
     cursor: pointer;
+    &.open {
+      transform: rotate(90deg);
+    }
     @media (max-width: ${screen.px768}) {
       display: block;
     }
@@ -48,7 +81,7 @@ const HeaderStyled = styled.header`
       margin-right: 1em;
     }
   }
-  
+
   .logo__logo-text {
     font-size: 1.5rem;
     @media (max-width: ${screen.px480}) {
@@ -58,6 +91,7 @@ const HeaderStyled = styled.header`
 `;
 
 const Header = (props) => {
+  const [showMenu, setShowMenu] = useState(false);
   const navText = props.lang.header.nav;
   const listElements = [];
   for (const [key, value] of Object.entries(navText)) {
@@ -75,11 +109,18 @@ const Header = (props) => {
         <div className="logo__logo-text">ｄｅｎ . ｋｕｚｎｅｔｓ</div>
       </div>
       <nav>
-        <ul>{listElements}</ul>
+        <ul className={showMenu ? "menu-open" : ""}>{listElements}</ul>
         <IconContext.Provider
-          value={{ size: "1.5em", className: "nav-burger-menu" }}
+          value={{
+            size: "1.5em",
+            className: `nav-burger-menu ${showMenu ? "open" : ""}`,
+          }}
         >
-          <div>
+          <div
+            onClick={() => {
+              setShowMenu(!showMenu);
+            }}
+          >
             <RxHamburgerMenu />
           </div>
         </IconContext.Provider>
