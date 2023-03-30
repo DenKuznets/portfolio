@@ -6,6 +6,7 @@ import { IconContext } from "react-icons";
 const HeaderStyled = styled.header`
   display: flex;
   padding: 1em 3em;
+  min-height: 80px;
   nav {
     display: flex;
     align-items: center;
@@ -47,9 +48,12 @@ const HeaderStyled = styled.header`
       margin-right: 1em;
     }
   }
-
+  
   .logo__logo-text {
     font-size: 1.5rem;
+    @media (max-width: ${screen.px480}) {
+      font-size: 1rem;
+    }
   }
 `;
 
