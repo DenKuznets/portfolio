@@ -45,7 +45,7 @@ const HeroStyled = styled.div`
     img {
       position: absolute;
       z-index: -1;
-      background-color: orange;
+      background-color: rgb(227, 79, 38);
       height: 350px;
       width: 340px;
       max-height: 350px;
