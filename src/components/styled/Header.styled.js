@@ -60,7 +60,6 @@ const HeaderStyled = styled.header`
     display: flex;
     align-items: center;
     font-weight: bold;
-    text-transform: lowercase;
     &:hover {
       cursor: pointer;
     }
@@ -72,6 +71,9 @@ const HeaderStyled = styled.header`
 
   .logo__logo-text {
     font-size: 1.5rem;
+    &::first-letter {
+      text-transform: lowercase;
+    }
     @media (max-width: ${screen.px480}) {
       font-size: 1rem;
     }

@@ -1,13 +1,15 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IconContext } from "react-icons";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import HeaderStyled from "./styled/Header.styled";
+import { LanguageContext } from "../App";
 
-const Header = (props) => {
+const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const navText = props.lang.header.nav;
   const listElements = [];
-  for (const [key, value] of Object.entries(navText)) {
+  const textContext = useContext(LanguageContext);
+  
+  for (const [key, value] of Object.entries(textContext.header.nav)) {
     listElements.push(
       <li key={key}>
         <a href={`#${key}`}>{value}</a>

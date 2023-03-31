@@ -78,8 +78,11 @@ select {
 }
 
 body {
-  color: ${colors.almostBlack};
-  text-transform: capitalize;
+  color: ${colors.almostBlack};  
+}
+
+body *::first-letter{ 
+    text-transform: capitalize;
 }
 
 h1,h2,h3,h4,h5,h6 {
