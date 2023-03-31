@@ -37,11 +37,17 @@ const HeroStyled = styled.div`
   }
 
   .hero-img {
+    position: relative;
     flex: 1;
     max-width: 340px;
     display: flex;
     justify-content: center;
     img {
+      position: absolute;
+      z-index: -1;
+      background-color: orange;
+      height: 350px;
+      width: 340px;
       max-height: 350px;
       border-radius: 70px 10px;
       box-shadow: rgba(0, 0, 0, 0.2) -10px 13px 15px 3px;

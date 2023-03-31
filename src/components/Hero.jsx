@@ -35,7 +35,7 @@ const Hero = () => {
             </i>
           </Button>
           <Button>
-            My Works
+            {text.header.nav.case}
             <i className="small-icon">
               <IconContext.Provider
                 value={{
@@ -52,7 +52,8 @@ const Hero = () => {
         </div>
       </div>
       <div className="hero-img">
-        <img src="./images/avatar.jpg" alt="" />
+        клевую фотку сюда
+        <img src="" alt="" />
       </div>
     </HeroStyled>
   );
