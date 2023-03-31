@@ -39,6 +39,11 @@ const HeaderStyled = styled.header`
       }
       li {
         margin-right: 20px;
+        @media (max-width: ${screen.px768}) {
+          margin-right: 0;
+          margin-bottom: 1em;
+          font-size: 2rem;
+        }
       }
     }
   }
