@@ -2,9 +2,15 @@ import styled from "styled-components";
 import { screen } from "../../../utils";
 
 const HeaderStyled = styled.header`
+  position: fixed;
+  z-index: 999;
   display: flex;
+  top: 0;
+  width: 100%;
   padding: 1em 3em;
   min-height: 80px;
+  background-color: ${({ theme }) => theme.header.bg};
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 13px;
   nav {
     display: flex;
     align-items: center;

@@ -79,6 +79,13 @@ select {
 
 body {
   color: ${colors.almostBlack};  
+  padding-top: 100px;
+  font-family: 'Merriweather', serif;
+    
+}
+
+main {
+  padding: 0 3em;
 }
 
 body *::first-letter{ 
@@ -86,7 +93,7 @@ body *::first-letter{
 }
 
 h1,h2,h3,h4,h5,h6 {
-
+  font-family: 'Raleway', sans-serif;
 }
 
 a{
@@ -102,6 +109,22 @@ a{
 
 ul {
   list-style-type: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.small-icon {  
+  div {
+    display: flex;
+    align-items: center;
+  }
+  margin-left: 0.6em;  
+}
+
+section {
+  
 }
 
 `;

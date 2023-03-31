@@ -1,8 +1,9 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext } from "react";
 import { ThemeProvider } from "styled-components";
 import Header from "./components/Header";
-import { localization, themeLight } from "../utils";
+import { localization, lorem500, themeLight } from "../utils";
 import GlobalStyle from "./globalStyles";
+import Hero from "./components/Hero";
 
 export const LanguageContext = createContext(localization.ru);
 
@@ -16,7 +17,12 @@ function App() {
             navigator.language === "ru" ? localization.ru : localization.en
           }
         >
-          <Header />
+          {/* <Header /> */}
+          <main>{/* {lorem500} */}
+            <section id="hero">
+              <Hero />
+          </section>
+          </main>
         </LanguageContext.Provider>
       </ThemeProvider>
     </div>
