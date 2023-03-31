@@ -1,10 +1,18 @@
 import styled from "styled-components";
+import { screen } from "../../../utils";
 
 const HeroStyled = styled.div`
   display: flex;
   margin: 0 auto;
   gap: 5%;
-  
+  max-width: 800px;
+  justify-content: center;
+  @media (max-width: ${screen.px768}) {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
   .hero-text {
     max-width: 315px;
     flex: 1;
@@ -30,6 +38,14 @@ const HeroStyled = styled.div`
 
   .hero-img {
     flex: 1;
+    max-width: 340px;
+    display: flex;
+    justify-content: center;
+    img {
+      max-height: 350px;
+      border-radius: 70px 10px;
+      box-shadow: rgba(0, 0, 0, 0.2) -10px 13px 15px 3px;
+    }
   }
 
   .container-small {

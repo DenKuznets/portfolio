@@ -17,7 +17,7 @@ function App() {
             navigator.language === "ru" ? localization.ru : localization.en
           }
         >
-          {/* <Header /> */}
+          <Header />
           <main>{/* {lorem500} */}
             <section id="hero">
               <Hero />
