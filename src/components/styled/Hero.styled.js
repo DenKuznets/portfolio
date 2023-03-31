@@ -34,6 +34,9 @@ const HeroStyled = styled.div`
       opacity: 0.8;
       margin-bottom: 4em;
     }
+    button {
+      text-transform: capitalize;
+    }
   }
 
   .hero-img {
