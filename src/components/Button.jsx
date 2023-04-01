@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../../utils";
+import { colors, screen } from "../../utils";
 
 const ButtonStyled = styled.button`
   display: flex;
@@ -8,17 +8,21 @@ const ButtonStyled = styled.button`
   background-color: ${({ bg }) => (bg ? bg : "white")};
   border: none;
   cursor: pointer;
-  height: 50px;
-  border-radius: 10px;
+  height: 70px;
+  border-radius: 15px;
   color: ${({ bg }) => (bg === colors.violet ? "white" : colors.almostBlack)};
   font-weight: ${({ bg }) => (bg === colors.violet ? 700 : 900)};
-  padding: 0 3em;
-  font-size: 0.7rem;
+  padding: 0 2.5em;
+  font-size: 1rem;
   transition: all 0.2s;
   outline: transparent 1px solid;
+  white-space: nowrap;
+  @media (max-width: ${screen.px480}) {
+    font-size: 0.8rem;
+
+  }
   &:hover {
-    color: ${({ bg }) =>
-      bg === colors.violet ? "yellow" : ``};
+    color: ${({ bg }) => (bg === colors.violet ? "yellow" : ``)};
     outline: ${({ bg }) =>
       bg === colors.violet ? "none" : `1px solid ${colors.almostBlack}`};
   }

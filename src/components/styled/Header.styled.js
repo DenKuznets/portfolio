@@ -11,6 +11,9 @@ const HeaderStyled = styled.header`
   min-height: 80px;
   background-color: ${({ theme }) => theme.header.bg};
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 13px;
+  @media (max-width: ${screen.px480}) {
+    padding: 1em;
+  }
   nav {
     display: flex;
     align-items: center;

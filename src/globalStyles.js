@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { colors } from "../utils";
+import { colors, screen } from "../utils";
 
 const GlobalStyle = createGlobalStyle`
   /* Box sizing rules */
@@ -81,15 +81,17 @@ body {
   color: ${colors.almostBlack};  
   padding-top: 100px;
   font-family: 'Merriweather', serif;
-    
+  font-size: 18px;
+  
 }
 
 main {
-  padding: 0 3em;
+  padding: 0 4.5em;
 }
 
 body *::first-letter{ 
     text-transform: capitalize;
+
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -124,7 +126,9 @@ ul {
 }
 
 section {
-  
+  width: 100%;
+  outline: 1px solid green;
+  margin: 0 auto;
 }
 
 `;
