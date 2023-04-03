@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "./Button";
 import { useContext } from "react";
 import { LanguageContext } from "../App";
-import { colors } from "../../utils";
+import { colors, screen } from "../../utils";
 
 const textBorderColor = (color) => {
   switch (color) {
@@ -24,6 +24,15 @@ const WorkStyled = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${({ bg }) => bg};
+  gap: 1em;
+
+  @media (max-width: ${screen.px768}) {
+    flex-direction: column;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    gap: 2em;
+  }
+
   a,
   .work-text {
     color: ${({ bg }) => textBorderColor(bg)};
@@ -38,7 +47,8 @@ const WorkStyled = styled.div`
     }
     ul {
       display: flex;
-      margin-bottom: 2em;
+      margin-bottom: 1em;
+      flex-wrap: wrap;
       li {
         margin-right: 1em;
         border: 1px dotted ${({ bg }) => textBorderColor(bg)};
@@ -47,12 +57,12 @@ const WorkStyled = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: 1em;
       }
     }
-    button{
+    button {
       margin-top: 2em;
     }
-
   }
   .work-img {
     flex: 1;
@@ -62,6 +72,9 @@ const WorkStyled = styled.div`
       border: 1px solid ${colors.almostBlack};
       max-width: 500px;
       width: 100%;
+      @media (max-width: ${screen.px768}) {
+        max-width: unset;
+      }
     }
   }
 `;
