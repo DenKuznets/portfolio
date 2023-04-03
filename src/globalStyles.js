@@ -114,6 +114,8 @@ a{
 
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .flex {

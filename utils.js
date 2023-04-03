@@ -87,12 +87,25 @@ export const localization = {
     work: {
       works: [
         {
-          name: "квиз",
-          tech: ["react", "api", "styled-components"],
+          name: "тестовое задание для web-студии",
+          tech: ["react", "styled-components", 'адаптивная верстка'],
+          img: "webstudio.png",
+          github: "https://github.com/DenKuznets/testovoe-alexmedia",
+          demo: "https://denkuznets.github.io/testovoe-alexmedia/",
         },
         {
-          name: "компонент",
+          name: "квиз",
+          tech: ["react", "api", "styled-components"],
+          img: "quizz.png",
+          github: "https://github.com/DenKuznets/quizzical-app",
+          demo: "https://denkuznets.github.io/quizzical-app/",
+        },
+        {
+          name: "компонент диаграммы расходов",
           tech: ["react", "typescript", "styled-components"],
+          img: "component.png",
+          github: "https://github.com/DenKuznets/Expenses-chart-component",
+          demo: "https://denkuznets.github.io/Expenses-chart-component/",
         },
       ],
       showmore: "подробнее",
@@ -115,12 +128,25 @@ export const localization = {
     work: {
       works: [
         {
-          name: "quizz app",
-          tech: ["react", "api", "styled-components"],
+          name: "web-studio test",
+          tech: ["react", 'responsive design', "styled-components"],
+          img: "webstudio.png",
+          github: "https://github.com/DenKuznets/testovoe-alexmedia",
+          demo: "https://denkuznets.github.io/testovoe-alexmedia/",
         },
         {
-          name: "component",
+          name: "quizz app",
+          tech: ["react", "api", "styled-components"],
+          img: "quizz.png",
+          github: "https://github.com/DenKuznets/quizzical-app",
+          demo: "https://denkuznets.github.io/quizzical-app/",
+        },
+        {
+          name: "Expenses chart component",
           tech: ["react", "typescript", "styled-components"],
+          img: "component.png",
+          github: "https://github.com/DenKuznets/Expenses-chart-component",
+          demo: "https://denkuznets.github.io/Expenses-chart-component/",
         },
       ],
       showmore: "case study",
