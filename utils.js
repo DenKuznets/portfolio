@@ -108,7 +108,7 @@ export const localization = {
           demo: "https://denkuznets.github.io/Expenses-chart-component/",
         },
       ],
-      showmore: "подробнее",
+      showmore: "Подробнее",
     },
   },
   en: {
@@ -149,7 +149,7 @@ export const localization = {
           demo: "https://denkuznets.github.io/Expenses-chart-component/",
         },
       ],
-      showmore: "case study",
+      showmore: "Case study",
     },
   },
 };

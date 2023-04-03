@@ -7,6 +7,7 @@ const HeroStyled = styled.div`
   margin: 5rem auto 0;
   gap: 5%;
   min-height: 800px;
+  
   @media (max-width: ${screen.px992}) {
     flex-direction: column;
     gap: 50px;

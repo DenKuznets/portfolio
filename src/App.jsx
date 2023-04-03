@@ -27,6 +27,12 @@ function App() {
               <Work
                 index={0}
               />
+              <Work
+                index={1}
+              />
+              <Work
+                index={2}
+              />
             </section>
           </main>
         </LanguageContext.Provider>

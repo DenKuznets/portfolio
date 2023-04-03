@@ -85,16 +85,22 @@ body {
   
 }
 
-main {
+${
+  "" /* section {
   padding: 0 4.5em;
   @media (max-width: ${screen.px480}){
     padding: 0 1em;
   }
 
+} */
 }
 
 body *::first-letter{ 
     text-transform: capitalize;
+}
+
+.hero, .work {
+  padding: 0 1.5em;
 }
 
 h1,h2,h3,h4,h5,h6 {

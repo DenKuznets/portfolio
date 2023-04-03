@@ -1,8 +1,11 @@
 import React from "react";
+import { IconContext } from "react-icons";
+import { BsArrowUpRight } from "react-icons/bs";
+import { CiLocationArrow1 } from "react-icons/ci";
 import styled from "styled-components";
 import { colors, screen } from "../../utils";
 
-const ButtonStyled = styled.button`  
+const ButtonStyled = styled.button`
   display: flex;
   align-items: center;
   background-color: ${({ bg }) => (bg ? bg : "white")};
@@ -17,7 +20,7 @@ const ButtonStyled = styled.button`
   transition: all 0.2s;
   outline: transparent 1px solid;
   white-space: nowrap;
-  
+
   @media (max-width: ${screen.px480}) {
     font-size: 0.8rem;
   }
@@ -32,7 +35,37 @@ const ButtonStyled = styled.button`
 `;
 
 const Button = (props) => {
-  return <ButtonStyled bg={props.bg}>{props.children}</ButtonStyled>;
+  return (
+    <ButtonStyled bg={props.bg}>
+      {props.children}
+      {props.bg === colors.violet ? (
+        <i className="small-icon">
+          <IconContext.Provider
+            value={{
+              size: "1.8em",
+            }}
+          >
+            <div>
+              <CiLocationArrow1 />
+            </div>
+          </IconContext.Provider>
+        </i>
+      ) : (
+        <i className="small-icon">
+          <IconContext.Provider
+            value={{
+              size: "1.2em",
+              color: colors.almostBlack,
+            }}
+          >
+            <div>
+              <BsArrowUpRight />
+            </div>
+          </IconContext.Provider>
+        </i>
+      )}
+    </ButtonStyled>
+  );
 };
 
 export default Button;

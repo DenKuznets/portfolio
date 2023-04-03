@@ -25,33 +25,10 @@ const Hero = () => {
           <p>{text.hero.aboutme}</p>
           <div className="hero-text__buttons-container flex">
             <Button bg={colors.violet}>
-              {text.hero.contactme}
-              <i className="small-icon">
-                <IconContext.Provider
-                  value={{
-                    size: "1.8em",
-                  }}
-                >
-                  <div>
-                    <CiLocationArrow1 />
-                  </div>
-                </IconContext.Provider>
-              </i>
+              {text.hero.contactme}              
             </Button>
             <Button>
-              {text.header.nav.case}
-              <i className="small-icon">
-                <IconContext.Provider
-                  value={{
-                    size: "1.2em",
-                    color: colors.almostBlack,
-                  }}
-                >
-                  <div>
-                    <BsArrowUpRight />
-                  </div>
-                </IconContext.Provider>
-              </i>
+              {text.header.nav.case}              
             </Button>
           </div>
         </div>
