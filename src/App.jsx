@@ -24,15 +24,9 @@ function App() {
               <Hero />
             </section> */}
             <section id="work1">
-              <Work
-                index={0}
-              />
-              <Work
-                index={1}
-              />
-              <Work
-                index={2}
-              />
+              <Work index={0} />
+              <Work index={1} />
+              <Work index={2} />
             </section>
           </main>
         </LanguageContext.Provider>

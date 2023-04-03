@@ -3,6 +3,7 @@ import Button from "./Button";
 import { useContext } from "react";
 import { LanguageContext } from "../App";
 import { colors, screen } from "../../utils";
+import { useRef } from "react";
 
 const textBorderColor = (color) => {
   switch (color) {
@@ -65,9 +66,12 @@ const WorkStyled = styled.div`
     }
   }
   .work-img {
+    position: relative;
     flex: 1;
     max-height: 300px;
     overflow: hidden;
+    cursor: pointer;
+
     img {
       border: 1px solid ${colors.almostBlack};
       max-width: 500px;
@@ -77,9 +81,26 @@ const WorkStyled = styled.div`
       }
     }
   }
+
+  .overlay {
+    z-index: 1;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aliceblue;
+    transition: all 0.4s;
+  }
+
+  .overlay.active {
+    width: 100%;
+    opacity: 0.7;
+  }
 `;
 
 const Work = (props) => {
+  const overlayRef = useRef("");
   const textGlobal = useContext(LanguageContext);
   const textWork = textGlobal.work.works[props.index];
   const techList = textWork.tech.map((obj, index) => (
@@ -100,6 +121,18 @@ const Work = (props) => {
       break;
   }
 
+  function handleMouseEnter(e) {
+    // console.log(e);
+    // console.log(overlayRef.current);
+    overlayRef.current.classList.add("active");
+  }
+
+  function handleMouseLeave(e) {
+    // console.log(e);
+    // console.log(overlayRef.current);
+    overlayRef.current.classList.remove("active");
+  }
+
   return (
     <WorkStyled className="work" bg={bg}>
       <div className="work-text">
@@ -111,7 +144,8 @@ const Work = (props) => {
           <Button>{textGlobal.work.showmore}</Button>
         </div>
       </div>
-      <div className="work-img">
+      <div className="work-img" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e)=>handleMouseLeave(e)}>
+        <div ref={overlayRef} className="overlay"></div>
         <img src={`./images/${textWork.img}`} alt="" />
       </div>
     </WorkStyled>
