@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { colors, screen } from "../../utils";
 
-const ButtonStyled = styled.button`
+const ButtonStyled = styled.button`  
   display: flex;
   align-items: center;
   background-color: ${({ bg }) => (bg ? bg : "white")};
@@ -17,9 +17,9 @@ const ButtonStyled = styled.button`
   transition: all 0.2s;
   outline: transparent 1px solid;
   white-space: nowrap;
+  
   @media (max-width: ${screen.px480}) {
     font-size: 0.8rem;
-
   }
   &:hover {
     color: ${({ bg }) => (bg === colors.violet ? "yellow" : ``)};

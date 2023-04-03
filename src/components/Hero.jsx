@@ -14,16 +14,18 @@ const Hero = () => {
       <div className="hero-text">
         <div className="hero-text__content">
           <h1>
-            Denis <br /> Kuznetsov
+            {text.hero.fname}
+            <br />
+            {text.hero.lname}
           </h1>
           <div className="hero-text__h3-container">
             <hr />
-            <h3>Front-end developer</h3>
+            <h3>{text.hero.profession}</h3>
           </div>
-          <p>I build things for web with react & styled-components.</p>
+          <p>{text.hero.aboutme}</p>
           <div className="hero-text__buttons-container flex">
             <Button bg={colors.violet}>
-              Say Hello
+              {text.hero.contactme}
               <i className="small-icon">
                 <IconContext.Provider
                   value={{
@@ -56,7 +58,7 @@ const Hero = () => {
       </div>
       <div className="hero-img">
         <div className="hero-img__content">
-          <img src="./images/avatar.jpg" alt="" />
+          <img src="./images/avatar1.jpg" alt="" />
         </div>
       </div>
     </HeroStyled>

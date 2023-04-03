@@ -43,8 +43,9 @@ const HeroStyled = styled.div`
 
     h1 {
       font-size: 4.5rem;
-      line-height: 0.9;
+      line-height: 1.1;
       margin-bottom: 0.4em;
+      text-transform: capitalize;
       @media (max-width: ${screen.px480}) {
         font-size: 3rem;
       }
@@ -76,7 +77,7 @@ const HeroStyled = styled.div`
       }
     }
     button {
-      text-transform: capitalize;
+      /* text-transform: capitalize; */
     }
   }
 

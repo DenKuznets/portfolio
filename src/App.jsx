@@ -14,14 +14,18 @@ function App() {
       <ThemeProvider theme={themeLight}>
         <LanguageContext.Provider
           value={
-            navigator.language === "ru" ? localization.ru : localization.en
+            // navigator.language === "ru" ? localization.ru : localization.en
+            localization.ru
           }
         >
           <Header />
-          <main>{/* {lorem500} */}
-            <section id="hero">
+          <main>
+            {/* <section id="hero">
               <Hero />
-          </section>
+            </section> */}
+            <section id="work1">
+              
+            </section>
           </main>
         </LanguageContext.Provider>
       </ThemeProvider>

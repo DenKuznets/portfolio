@@ -35,6 +35,7 @@ const HeaderStyled = styled.header`
         overflow: hidden;
         &.menu-open {
           min-height: 100vh;
+          padding: 0;
         }
         a {
           opacity: 1;
