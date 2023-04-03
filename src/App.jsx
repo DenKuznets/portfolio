@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import { localization, lorem500, themeLight } from "../utils";
 import GlobalStyle from "./globalStyles";
 import Hero from "./components/Hero";
+import Work from "./components/Work";
 
 export const LanguageContext = createContext(localization.ru);
 
@@ -24,7 +25,7 @@ function App() {
               <Hero />
             </section> */}
             <section id="work1">
-              
+              <Work />
             </section>
           </main>
         </LanguageContext.Provider>

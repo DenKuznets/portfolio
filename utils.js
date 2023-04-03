@@ -84,6 +84,19 @@ export const localization = {
       aboutme: "верстаю сайты на react и styled-components",
       contactme: "Связаться",
     },
+    work: {
+      works: [
+        {
+          name: "квиз",
+          tech: ["react", "api", "styled-components"],
+        },
+        {
+          name: "компонент",
+          tech: ["react", "typescript", "styled-components"],
+        },
+      ],
+      showmore: "подробнее",
+    },
   },
   en: {
     header: {
@@ -98,6 +111,19 @@ export const localization = {
       profession: "front-end developer",
       aboutme: "I build things for web with react & styled-components.",
       contactme: "say hello",
+    },
+    work: {
+      works: [
+        {
+          name: "quizz app",
+          tech: ["react", "api", "styled-components"],
+        },
+        {
+          name: "component",
+          tech: ["react", "typescript", "styled-components"],
+        },
+      ],
+      showmore: "case study",
     },
   },
 };
