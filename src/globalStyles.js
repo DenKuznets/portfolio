@@ -81,19 +81,9 @@ body {
   color: ${colors.almostBlack};  
   padding-top: 100px;
   font-family: 'Merriweather', serif;
-  font-size: 18px;
-  
+  font-size: 18px;  
 }
 
-${
-  "" /* section {
-  padding: 0 4.5em;
-  @media (max-width: ${screen.px480}){
-    padding: 0 1em;
-  }
-
-} */
-}
 
 body *::first-letter{ 
     text-transform: capitalize;
@@ -138,7 +128,7 @@ ul {
 
 section {
   width: 100%;
-  outline: 1px solid green;
+  ${'' /* outline: 1px solid green; */}
   margin: 0 auto;
 }
 

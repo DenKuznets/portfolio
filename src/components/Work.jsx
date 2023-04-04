@@ -17,6 +17,17 @@ const textBorderColor = (color) => {
   }
 };
 
+const gradientColor = (color) => {
+  switch (color) {
+    case colors.violet:
+      return "linear-gradient(90deg, rgba(99, 68, 198, 1) 0%, rgba(82, 96, 115, 1) 100%)";
+    case colors.orange:
+      return "linear-gradient(90deg, rgba(242,100,64, 1) 0%, rgba(82,96,115,1) 100%)";
+    default:
+      return "linear-gradient(90deg, rgba(82, 96, 115, 1) 0%, rgba(256, 256, 256, 1) 100%)";
+  }
+};
+
 const WorkStyled = styled.div`
   position: relative;
   min-height: 500px;
@@ -104,12 +115,7 @@ const WorkStyled = styled.div`
     top: 0;
     transition: all 0.35s ease-in;
     opacity: 0.8;
-
-    background: linear-gradient(
-      90deg,
-      rgba(99, 68, 198, 1) 0%,
-      rgba(82, 96, 115, 1) 100%
-    );
+    background: ${({ bg }) => gradientColor(bg)};
   }
 
   /* left-right swap positions */
@@ -207,7 +213,11 @@ const Work = (props) => {
           className="work-img__content"
         >
           {/* оверлей нечетной карточки появляется справа налево */}
-          <div style={props.index % 2 !== 0 ? { right: 0 } : {left: 0}} ref={overlayRef} className="overlay"></div>
+          <div
+            style={props.index % 2 !== 0 ? { right: 0 } : { left: 0 }}
+            ref={overlayRef}
+            className="overlay"
+          ></div>
           <img ref={imageRef} src={`./images/${textWork.img}`} alt="" />
         </div>
       </div>

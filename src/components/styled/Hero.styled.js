@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { screen } from "../../../utils";
 
 const HeroStyled = styled.div`
-  /* min-height: 500px; */
   display: flex;
   margin: 5rem auto 0;
   gap: 5%;
@@ -16,8 +15,7 @@ const HeroStyled = styled.div`
   .hero-text,
   .hero-img {
     flex: 1;
-    /* position: relative; */
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
   }
 
   .hero-text {
