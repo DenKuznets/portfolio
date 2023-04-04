@@ -26,6 +26,8 @@ const WorkStyled = styled.div`
   justify-content: center;
   background-color: ${({ bg }) => bg};
   gap: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 
   @media (max-width: ${screen.px768}) {
     flex-direction: column;
@@ -34,15 +36,15 @@ const WorkStyled = styled.div`
     gap: 2em;
   }
 
-  a,
   .work-text {
     color: ${({ bg }) => textBorderColor(bg)};
-  }
-  .work-text {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    a {
+      color: ${({ bg }) => textBorderColor(bg)};
+    }
     h2 {
       margin-bottom: 1em;
     }
@@ -66,18 +68,24 @@ const WorkStyled = styled.div`
     }
   }
   .work-img {
-    position: relative;
     flex: 1;
-    max-height: 300px;
+    height: 450px;
+  }
+
+  .work-img__content {
+    position: relative;
     overflow: hidden;
+    width: 100%;
     cursor: pointer;
 
     img {
       border: 1px solid ${colors.almostBlack};
-      max-width: 500px;
       width: 100%;
+      height: 450px;
+      object-fit: cover;
       @media (max-width: ${screen.px768}) {
         max-width: unset;
+        height: auto;
       }
     }
   }
@@ -89,13 +97,14 @@ const WorkStyled = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    background-color: aliceblue;
-    transition: all 0.4s;
-  }
+    transition: all 0.35s ease-in;
+    opacity: 0.8;
 
-  .overlay.active {
-    width: 100%;
-    opacity: 0.7;
+    background: linear-gradient(
+      90deg,
+      rgba(99, 68, 198, 1) 0%,
+      rgba(82, 96, 115, 1) 100%
+    );
   }
 `;
 
@@ -122,15 +131,12 @@ const Work = (props) => {
   }
 
   function handleMouseEnter(e) {
-    // console.log(e);
-    // console.log(overlayRef.current);
-    overlayRef.current.classList.add("active");
+    overlayRef.current.style.width =
+      overlayRef.current.nextSibling.clientWidth + 2 + "px";
   }
 
   function handleMouseLeave(e) {
-    // console.log(e);
-    // console.log(overlayRef.current);
-    overlayRef.current.classList.remove("active");
+    overlayRef.current.style.width = "0";
   }
 
   return (
@@ -144,9 +150,15 @@ const Work = (props) => {
           <Button>{textGlobal.work.showmore}</Button>
         </div>
       </div>
-      <div className="work-img" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e)=>handleMouseLeave(e)}>
-        <div ref={overlayRef} className="overlay"></div>
-        <img src={`./images/${textWork.img}`} alt="" />
+      <div className="work-img">
+        <div
+          onMouseEnter={(e) => handleMouseEnter(e)}
+          onMouseLeave={(e) => handleMouseLeave(e)}
+          className="work-img__content"
+        >
+          <div ref={overlayRef} className="overlay"></div>
+          <img src={`./images/${textWork.img}`} alt="" />
+        </div>
       </div>
     </WorkStyled>
   );
