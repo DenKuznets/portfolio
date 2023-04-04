@@ -133,6 +133,9 @@ const WorkStyled = styled.div`
         button {
           margin-left: auto;
         }
+        ul {
+          justify-content: flex-end;
+        }
         li {
           margin-right: 0;
           margin-left: 1em;
