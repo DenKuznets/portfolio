@@ -31,6 +31,7 @@ const WorkStyled = styled.div`
 
   @media (max-width: ${screen.px768}) {
     flex-direction: column;
+    align-items: flex-start;
     padding-top: 2em;
     padding-bottom: 2em;
     gap: 2em;
@@ -42,6 +43,10 @@ const WorkStyled = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    @media (max-width: ${screen.px768}) {
+      align-items: flex-start;
+    }
+
     a {
       color: ${({ bg }) => textBorderColor(bg)};
     }
@@ -67,6 +72,7 @@ const WorkStyled = styled.div`
       margin-top: 2em;
     }
   }
+
   .work-img {
     flex: 1;
     height: 450px;
@@ -106,6 +112,46 @@ const WorkStyled = styled.div`
       rgba(82, 96, 115, 1) 100%
     );
   }
+
+  /* left-right swap positions */
+  .translate-right {
+    transform: translate(50%);
+    position: absolute;
+    width: 45%;
+    margin-left: 4em;
+    align-items: flex-start;
+
+    @media (max-width: ${screen.px768}) {
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      transform: none;
+      position: relative;
+      width: 100%;
+      text-align: end;
+      .work-text__content {
+        button {
+          margin-left: auto;
+        }
+        li {
+          margin-right: 0;
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+
+  .translate-left {
+    position: absolute;
+    width: 45%;
+    transform: translate(-50%);
+    @media (max-width: ${screen.px768}) {
+      transform: none;
+      position: relative;
+      width: 100%;
+    }
+  }
 `;
 
 const Work = (props) => {
@@ -141,7 +187,9 @@ const Work = (props) => {
 
   return (
     <WorkStyled className="work" bg={bg}>
-      <div className="work-text">
+      <div
+        className={`work-text ${props.index % 2 !== 0 && "translate-right"}`}
+      >
         <div className="work-text__content">
           <h2>{textWork.name}</h2>
           <ul>{techList}</ul>
@@ -150,7 +198,7 @@ const Work = (props) => {
           <Button>{textGlobal.work.showmore}</Button>
         </div>
       </div>
-      <div className="work-img">
+      <div className={`work-img ${props.index % 2 !== 0 && "translate-left"}`}>
         <div
           onMouseEnter={(e) => handleMouseEnter(e)}
           onMouseLeave={(e) => handleMouseLeave(e)}
