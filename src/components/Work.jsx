@@ -203,6 +203,7 @@ const Work = (props) => {
           onMouseLeave={(e) => handleMouseLeave(e)}
           className="work-img__content"
         >
+          {/* оверлей нечетной карточки появляется справа налево */}
           <div style={props.index % 2 !== 0 ? { right: 0 } : {left: 0}} ref={overlayRef} className="overlay"></div>
           <img ref={imageRef} src={`./images/${textWork.img}`} alt="" />
         </div>
