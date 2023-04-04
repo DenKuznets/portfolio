@@ -147,7 +147,7 @@ const WorkStyled = styled.div`
   .translate-left {
     position: absolute;
     width: 45%;
-    transform: translate(-50%);
+    transform: translate(-55%);
     @media (max-width: ${screen.px768}) {
       transform: none;
       position: relative;
