@@ -102,7 +102,6 @@ const WorkStyled = styled.div`
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
     transition: all 0.35s ease-in;
     opacity: 0.8;
 
@@ -156,6 +155,7 @@ const WorkStyled = styled.div`
 
 const Work = (props) => {
   const overlayRef = useRef("");
+  const imageRef = useRef("");
   const textGlobal = useContext(LanguageContext);
   const textWork = textGlobal.work.works[props.index];
   const techList = textWork.tech.map((obj, index) => (
@@ -177,8 +177,7 @@ const Work = (props) => {
   }
 
   function handleMouseEnter(e) {
-    overlayRef.current.style.width =
-      overlayRef.current.nextSibling.clientWidth + 2 + "px";
+    overlayRef.current.style.width = imageRef.current.clientWidth + 2 + "px";
   }
 
   function handleMouseLeave(e) {
@@ -204,8 +203,8 @@ const Work = (props) => {
           onMouseLeave={(e) => handleMouseLeave(e)}
           className="work-img__content"
         >
-          <div ref={overlayRef} className="overlay"></div>
-          <img src={`./images/${textWork.img}`} alt="" />
+          <div style={props.index % 2 !== 0 ? { right: 0 } : {left: 0}} ref={overlayRef} className="overlay"></div>
+          <img ref={imageRef} src={`./images/${textWork.img}`} alt="" />
         </div>
       </div>
     </WorkStyled>
