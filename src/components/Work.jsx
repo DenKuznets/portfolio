@@ -5,7 +5,7 @@ import { LanguageContext } from "../App";
 import { colors, screen } from "../../utils";
 import { useRef } from "react";
 
-const textBorderColor = (color) => {
+const textAndBorderColor = (color) => {
   switch (color) {
     case colors.violet:
     case colors.orange:
@@ -49,7 +49,7 @@ const WorkStyled = styled.div`
   }
 
   .work-text {
-    color: ${({ bg }) => textBorderColor(bg)};
+    color: ${({ bg }) => textAndBorderColor(bg)};
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -59,7 +59,7 @@ const WorkStyled = styled.div`
     }
 
     a {
-      color: ${({ bg }) => textBorderColor(bg)};
+      color: ${({ bg }) => textAndBorderColor(bg)};
     }
     h2 {
       margin-bottom: 1em;
@@ -70,7 +70,7 @@ const WorkStyled = styled.div`
       flex-wrap: wrap;
       li {
         margin-right: 1em;
-        border: 1px dotted ${({ bg }) => textBorderColor(bg)};
+        border: 1px dotted ${({ bg }) => textAndBorderColor(bg)};
         padding: 0.5em 1em;
         border-radius: 5px;
         display: flex;
@@ -160,6 +160,15 @@ const WorkStyled = styled.div`
       width: 100%;
     }
   }
+
+  .case-number {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    color: white;
+    font-size: 3rem;
+    font-family: "Raleway", sans-serif;
+  }
 `;
 
 const Work = (props) => {
@@ -219,6 +228,7 @@ const Work = (props) => {
             className="overlay"
           ></div>
           <img ref={imageRef} src={`./images/${textWork.img}`} alt="" />
+          <div className="case-number">{ "0" + (props.index + 1) }</div>
         </div>
       </div>
     </WorkStyled>
