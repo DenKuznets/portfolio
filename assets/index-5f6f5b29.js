@@ -219,11 +219,9 @@ body {
   color: ${te.almostBlack};  
   padding-top: 100px;
   font-family: 'Merriweather', serif;
-  font-size: 18px;
-  
+  font-size: 18px;  
 }
 
-${""}
 
 body *::first-letter{ 
     text-transform: capitalize;
@@ -268,7 +266,7 @@ ul {
 
 section {
   width: 100%;
-  outline: 1px solid green;
+  ${""}
   margin: 0 auto;
 }
 
