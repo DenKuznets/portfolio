@@ -18,16 +18,16 @@ function App() {
       <GlobalStyle />
       <ThemeProvider theme={themeLight}>
         <LanguageContext.Provider value={appText}>
-          <Header />
+          {/* <Header /> */}
           <main>
-            {/* <section id="hero">
+            <section id="hero">
               <Hero />
-            </section> */}
-            <section id="work1">
+            </section>
+            {/* <section id="work">
               <Work index={0} />
               <Work index={1} />
               <Work index={2} />
-            </section>
+            </section> */}
           </main>
         </LanguageContext.Provider>
       </ThemeProvider>

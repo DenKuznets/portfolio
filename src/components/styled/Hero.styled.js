@@ -1,13 +1,15 @@
 import styled from "styled-components";
 import { screen } from "../../../utils";
 
+const px580 = '580px';
+
 const HeroStyled = styled.div`
   display: flex;
   margin: 5rem auto 0;
   gap: 5%;
   min-height: 800px;
-  
-  @media (max-width: ${screen.px992}) {
+
+  @media (max-width: 1065px) {
     flex-direction: column;
     gap: 50px;
   }
@@ -15,14 +17,14 @@ const HeroStyled = styled.div`
   .hero-text,
   .hero-img {
     flex: 1;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
   }
 
   .hero-text {
     display: flex;
     /* flex: 1; */
     justify-content: flex-end;
-    @media (max-width: ${screen.px992}) {
+    @media (max-width: 1065px) {
       align-items: center;
       justify-content: center;
     }
@@ -34,8 +36,8 @@ const HeroStyled = styled.div`
     padding-top: 7em;
     display: flex;
     flex-direction: column;
-   
-    @media (max-width: ${screen.px992}) {
+
+    @media (max-width: ${px580}) {
       align-items: center;
       padding-top: 0;
     }
@@ -71,12 +73,28 @@ const HeroStyled = styled.div`
       @media (max-width: ${screen.px992}) {
         max-width: 300px;
       }
+
+      @media only screen and (max-width: ${px580}) {
+        margin-bottom: 1em;
+      }
       @media (max-width: ${screen.px480}) {
         font-size: 0.8rem;
       }
     }
     button {
       /* text-transform: capitalize; */
+    }
+  }
+
+  .hero-text__buttons-container {
+    @media only screen and (max-width: ${px580}) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .hero-text__showcase-btn {
+    @media only screen and (max-width: ${px580}) {
+      margin-bottom: 2em;
     }
   }
 
@@ -93,6 +111,7 @@ const HeroStyled = styled.div`
   .hero-img__content {
     position: relative;
     display: flex;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     img {

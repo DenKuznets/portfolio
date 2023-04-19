@@ -24,18 +24,18 @@ const Hero = () => {
           </div>
           <p>{text.hero.aboutme}</p>
           <div className="hero-text__buttons-container flex">
-            <Button bg={colors.violet}>
-              {text.hero.contactme}              
+            <Button className="hero-text__contactme-btn" bg={colors.violet}>
+              {text.hero.contactme}
             </Button>
-            <Button>
-              {text.header.nav.case}              
+            <Button className="hero-text__showcase-btn">
+              {text.header.nav.case}
             </Button>
           </div>
         </div>
       </div>
       <div className="hero-img">
         <div className="hero-img__content">
-          <img src="./images/avatar1.jpg" alt="" />
+          <img src="./images/avatar-me.jpg" alt="" />
         </div>
       </div>
     </HeroStyled>

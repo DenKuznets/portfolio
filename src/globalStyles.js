@@ -89,6 +89,10 @@ body *::first-letter{
     text-transform: capitalize;
 }
 
+main {
+  padding: 0 1em;
+}
+
 .hero, .work {
   padding: 0 1.5em;
 }
