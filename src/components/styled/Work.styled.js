@@ -17,8 +17,8 @@ const gradientColor = (color) => {
   switch (color) {
     case colors.violet:
       return "linear-gradient(90deg, rgba(99, 68, 198, 1) 0%, rgba(82, 96, 115, 1) 100%)";
-    case colors.orange:
-      return "linear-gradient(90deg, rgba(242,100,64, 1) 0%, rgba(82,96,115,1) 100%)";
+    case colors.yellow:
+      return "linear-gradient(90deg, rgba(255,196,72,1) 0%, rgba(29,29,0,0.97) 100%)";
     default:
       return "linear-gradient(90deg, rgba(82, 96, 115, 1) 0%, rgba(256, 256, 256, 1) 100%)";
   }

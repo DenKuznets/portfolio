@@ -21,7 +21,7 @@ const Work = (props) => {
       break;
 
     case 2:
-      bg = colors.orange;
+      bg = colors.yellow;
       break;
 
     default:
