@@ -18,7 +18,7 @@ function App() {
       <GlobalStyle />
       <ThemeProvider theme={themeLight}>
         <LanguageContext.Provider value={appText}>
-          {/* <Header /> */}
+          <Header />
           <main>
             <section id="hero">
               <Hero />

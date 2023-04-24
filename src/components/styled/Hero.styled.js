@@ -1,23 +1,25 @@
 import styled from "styled-components";
 import { screen } from "../../../utils";
 
-const px580 = '580px';
+const px580 = "580px";
 
 const HeroStyled = styled.div`
   display: flex;
   margin: 5rem auto 0;
   gap: 5%;
   min-height: 800px;
-
+  max-width: 1320px;
+  align-items: center;
   @media (max-width: 1065px) {
     flex-direction: column;
     gap: 50px;
+    margin-top: 0;
   }
 
   .hero-text,
   .hero-img {
     flex: 1;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
   }
 
   .hero-text {
@@ -33,7 +35,7 @@ const HeroStyled = styled.div`
   .hero-text__content {
     /* outline: 1px solid black; */
     height: 100%;
-    padding-top: 7em;
+    /* padding-top: 7em; */
     display: flex;
     flex-direction: column;
 
@@ -124,7 +126,7 @@ const HeroStyled = styled.div`
       @media (max-width: ${screen.px992}) {
         position: relative;
         z-index: 1;
-        border-radius: 5px 5px 40px 40px;
+        border-radius: 5px;
       }
     }
   }
