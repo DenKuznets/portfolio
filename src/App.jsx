@@ -11,7 +11,7 @@ export const LanguageContext = createContext(localization.ru);
 function App() {
   const [appText, setAppText] = useState(
     // navigator.language === "ru" ? localization.ru : localization.en
-    localization.ru
+    localization.en
   );
   return (
     <div className="App">
