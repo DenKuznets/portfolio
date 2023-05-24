@@ -1,7 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 import { colors, screen } from "../utils";
+// import vars from "./vars";
 
 const GlobalStyle = createGlobalStyle`
+
   /* Box sizing rules */
 *,
 *::before,
@@ -78,14 +80,14 @@ select {
 }
 
 body {
-  color: ${colors.almostBlack};  
+  color: ${colors.almostBlack};
   padding-top: 100px;
   font-family: 'Merriweather', serif;
-  font-size: 18px;  
+  font-size: 18px;
 }
 
 
-body *::first-letter{ 
+body *::first-letter{
     text-transform: capitalize;
 }
 
@@ -93,12 +95,39 @@ main {
   padding: 0 1em;
 }
 
-.hero, .work {
+.container {
   padding: 0 1.5em;
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    @media (max-width: ${screen.px480}) {
+        font-size: 3rem;
+    }
+}
+
+
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    @media (max-width: ${screen.px480}) {
+        font-size: 1rem;
+    }
+}
+p {
+    @media (max-width: ${screen.px992}) {
+        max-width: 300px;
+    }
+    
+    @media (max-width: ${screen.px480}) {
+        font-size: 0.8rem;
+    }
 }
 
 a{
@@ -118,22 +147,18 @@ ul {
   margin: 0;
 }
 
-.flex {
-  display: flex;
-}
-
-.small-icon {  
+.small-icon {
   div {
     display: flex;
     align-items: center;
   }
-  margin-left: 0.6em;  
+  margin-left: 0.6em;
 }
 
 section {
-  
+
   width: 100%;
-  ${'' /* outline: 1px solid green; */}
+  ${"" /* outline: 1px solid green; */}
   margin: 0 auto;
 }
 

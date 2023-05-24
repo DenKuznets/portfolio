@@ -70,88 +70,90 @@ export const themeLight = {
 };
 
 export const localization = {
-  ru: {
-    header: {
-      nav: {
-        home: "главная",
-        case: "Примеры работ",
-      },
-    },
-    hero: {
-      fname: "денис",
-      lname: "кузнецов",
-      profession: "front-end разработчик",
-      aboutme: "верстаю сайты на react и styled-components",
-      contactme: "Связаться",
-    },
-    work: {
-      works: [
-        {
-          name: "тестовое задание для web-студии",
-          tech: ["react", "styled-components", 'адаптивная верстка'],
-          img: "webstudio.png",
-          github: "https://github.com/DenKuznets/testovoe-alexmedia",
-          demo: "https://denkuznets.github.io/testovoe-alexmedia/",
+    ru: {
+        header: {
+            nav: {
+                home: "главная",
+                case: "Примеры работ",
+            },
         },
-        {
-          name: "квиз",
-          tech: ["react", "api", "styled-components"],
-          img: "quizz.png",
-          github: "https://github.com/DenKuznets/quizzical-app",
-          demo: "https://denkuznets.github.io/quizzical-app/",
+        hero: {
+            fname: "Денис",
+            lname: "Кузнецов",
+            profession: "front-end разработчик",
+            aboutme: "верстаю сайты на react и styled-components",
+            contactme: "Связаться",
+            socials: "я в соц сетях",
         },
-        {
-          name: "компонент диаграммы расходов",
-          tech: ["react", "typescript", "styled-components"],
-          img: "component.png",
-          github: "https://github.com/DenKuznets/Expenses-chart-component",
-          demo: "https://denkuznets.github.io/Expenses-chart-component/",
+        work: {
+            works: [
+                {
+                    name: "тестовое задание для web-студии",
+                    tech: ["react", "styled-components", "адаптивная верстка"],
+                    img: "webstudio.png",
+                    github: "https://github.com/DenKuznets/testovoe-alexmedia",
+                    demo: "https://denkuznets.github.io/testovoe-alexmedia/",
+                },
+                {
+                    name: "квиз",
+                    tech: ["react", "api", "styled-components"],
+                    img: "quizz.png",
+                    github: "https://github.com/DenKuznets/quizzical-app",
+                    demo: "https://denkuznets.github.io/quizzical-app/",
+                },
+                {
+                    name: "компонент диаграммы расходов",
+                    tech: ["react", "typescript", "styled-components"],
+                    img: "component.png",
+                    github: "https://github.com/DenKuznets/Expenses-chart-component",
+                    demo: "https://denkuznets.github.io/Expenses-chart-component/",
+                },
+            ],
+            showmore: "Подробнее",
         },
-      ],
-      showmore: "Подробнее",
     },
-  },
-  en: {
-    header: {
-      nav: {
-        home: "home",
-        case: "case studies",
-      },
-    },
-    hero: {
-      fname: "denis",
-      lname: "kuznetsov",
-      profession: "front-end developer",
-      aboutme: "I build things for web with react & styled-components.",
-      contactme: "say hello",
-    },
-    work: {
-      works: [
-        {
-          name: "web-studio test",
-          tech: ["react", 'responsive design', "styled-components"],
-          img: "webstudio.png",
-          github: "https://github.com/DenKuznets/testovoe-alexmedia",
-          demo: "https://denkuznets.github.io/testovoe-alexmedia/",
+    en: {
+        header: {
+            nav: {
+                home: "home",
+                case: "case studies",
+            },
         },
-        {
-          name: "quizz app",
-          tech: ["react", "api", "styled-components"],
-          img: "quizz.png",
-          github: "https://github.com/DenKuznets/quizzical-app",
-          demo: "https://denkuznets.github.io/quizzical-app/",
+        hero: {
+            fname: "Denis",
+            lname: "Kuznetsov",
+            profession: "front-end developer",
+            aboutme: "I build things for web with react & styled-components.",
+            contactme: "say hello",
+            socials: "follow me on",
         },
-        {
-          name: "Expenses chart component",
-          tech: ["react", "typescript", "styled-components"],
-          img: "component.png",
-          github: "https://github.com/DenKuznets/Expenses-chart-component",
-          demo: "https://denkuznets.github.io/Expenses-chart-component/",
+        work: {
+            works: [
+                {
+                    name: "web-studio test",
+                    tech: ["react", "responsive design", "styled-components"],
+                    img: "webstudio.png",
+                    github: "https://github.com/DenKuznets/testovoe-alexmedia",
+                    demo: "https://denkuznets.github.io/testovoe-alexmedia/",
+                },
+                {
+                    name: "quizz app",
+                    tech: ["react", "api", "styled-components"],
+                    img: "quizz.png",
+                    github: "https://github.com/DenKuznets/quizzical-app",
+                    demo: "https://denkuznets.github.io/quizzical-app/",
+                },
+                {
+                    name: "Expenses chart component",
+                    tech: ["react", "typescript", "styled-components"],
+                    img: "component.png",
+                    github: "https://github.com/DenKuznets/Expenses-chart-component",
+                    demo: "https://denkuznets.github.io/Expenses-chart-component/",
+                },
+            ],
+            showmore: "Case study",
         },
-      ],
-      showmore: "Case study",
     },
-  },
 };
 
 export const lorem500 =
