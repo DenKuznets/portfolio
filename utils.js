@@ -65,6 +65,8 @@ export const themeLight = {
         pTextColor: 'grey',
         aTextColor: 'grey',
         aHoverTextColor: colors.almostBlack,
+        socialIconContainerBG: '#f6f6f6',
+        socialIconContainerColor: colors.almostBlack,
     },
     header: {
         bg: colors.white,
@@ -72,6 +74,9 @@ export const themeLight = {
         fontLight: colors.white,
         burgerHover: colors.violet,
     },
+    hero: {
+        socialsTextColor: colors.almostBlack,
+    }
 };
 
 export const localization = {

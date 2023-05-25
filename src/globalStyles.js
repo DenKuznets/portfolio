@@ -95,10 +95,6 @@ main {
   padding: 0 1em;
 }
 
-.container {
-  padding: 0 1.5em;
-}
-
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Raleway', sans-serif;
 }
@@ -133,14 +129,14 @@ p {
 }
 
 a{
-  color: ${({theme}) => theme.global.aTextColor};
+  color: ${({ theme }) => theme.global.aTextColor};
   text-decoration: none;
   transition: all 0.2s;
-  ${'' /* opacity: 0.8; */}
+  ${"" /* opacity: 0.8; */}
   &:hover {
     opacity: 1;
     text-decoration: underline;
-  color: ${({theme}) => theme.global.aHoverTextColor};
+  color: ${({ theme }) => theme.global.aHoverTextColor};
     
   }
 }
@@ -160,12 +156,29 @@ ul {
 }
 
 section {
-
-  width: 100%;
+    padding: 0 1em;
+  	width: 100%;
   ${"" /* outline: 1px solid green; */}
-  margin: 0 auto;
+  ${"" /* margin: 0 auto; */}
+}
+.container {
+    max-width: 1800px;
+    ${"" /* margin: 0 20px; */}
 }
 
+.social-icon-container{
+	padding: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: ${({ theme }) => theme.global.socialIconContainerBG};
+	border-radius: 50%;
+	color: ${({ theme }) => theme.global.socialIconContainerColor};
+	transition: all 0.3s ease;
+	&:hover{
+		transform: scale(1.2);
+	}
+}
 `;
 
 export default GlobalStyle;
