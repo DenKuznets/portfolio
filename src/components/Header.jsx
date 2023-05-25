@@ -24,12 +24,14 @@ const Header = () => {
               <div className="header__logo-text">ｄｅｎ . ｋｕｚｎｅｔｓ</div>
           </div>
           <nav>
-              <ul className={showMenu ? "menu-open" : ""}>{listElements}</ul>
+              <ul className={showMenu ? "nav__menu--open" : ""}>
+                  {listElements}
+              </ul>
               <IconContext.Provider
                   value={{
                       size: "1.5em",
-                      className: `nav__burger-menu ${
-                          showMenu ? "nav__burger-menu--open" : ""
+                      className: `nav__menu-burger ${
+                          showMenu ? "nav__menu-burger--open" : ""
                       }`,
                   }}
               >

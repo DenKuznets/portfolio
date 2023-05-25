@@ -57,7 +57,7 @@ const HeaderStyled = styled.header`
                 min-height: 0;
                 max-height: 0;
                 overflow: hidden;
-                &.menu-open {
+                &.nav__menu--open {
                     min-height: 100vh;
                     padding: 0;
                 }
@@ -66,7 +66,7 @@ const HeaderStyled = styled.header`
                 }
             }
             li {
-                margin-right: 20px;
+                margin-right: 70px;
                 @media (max-width: ${screen.px768}) {
                     margin-right: 0;
                     margin-bottom: 1em;
@@ -76,7 +76,7 @@ const HeaderStyled = styled.header`
         }
     }
 
-    .nav__burger-menu {
+    .nav__menu-burger {
         position: relative;
         display: none;
         z-index: 999;
