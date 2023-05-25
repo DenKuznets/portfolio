@@ -61,6 +61,11 @@ export const colors = {
 };
 
 export const themeLight = {
+    global: {
+        pTextColor: 'grey',
+        aTextColor: 'grey',
+        aHoverTextColor: colors.almostBlack,
+    },
     header: {
         bg: colors.white,
         fontDark: colors.almostBlack,

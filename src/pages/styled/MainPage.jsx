@@ -13,10 +13,10 @@ const MainPage = () => {
     );
     return (
         <>
-            <GlobalStyle />
             <ThemeProvider theme={themeLight}>
+            <GlobalStyle />
                 <LanguageContext.Provider value={appText}>
-                    {/* <Header /> */}
+                    <Header />
                     <main>
                         <section id="hero">
                             <Hero />

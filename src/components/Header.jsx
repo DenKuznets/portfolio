@@ -18,29 +18,31 @@ const Header = () => {
   }
 
   return (
-    <HeaderStyled>
-      <div className="logo">
-        <img src="./images/logo.png" alt="" />
-        <div className="logo__logo-text">ｄｅｎ . ｋｕｚｎｅｔｓ</div>
-      </div>
-      <nav>
-        <ul className={showMenu ? "menu-open" : ""}>{listElements}</ul>
-        <IconContext.Provider
-          value={{
-            size: "1.5em",
-            className: `nav-burger-menu ${showMenu ? "open" : ""}`,
-          }}
-        >
-          <div
-            onClick={() => {
-              setShowMenu(!showMenu);
-            }}
-          >
-            <RxHamburgerMenu />
+      <HeaderStyled>
+          <div className="header__logo">
+              <img src="./images/logo.png" alt="" />
+              <div className="header__logo-text">ｄｅｎ . ｋｕｚｎｅｔｓ</div>
           </div>
-        </IconContext.Provider>
-      </nav>
-    </HeaderStyled>
+          <nav>
+              <ul className={showMenu ? "menu-open" : ""}>{listElements}</ul>
+              <IconContext.Provider
+                  value={{
+                      size: "1.5em",
+                      className: `nav__burger-menu ${
+                          showMenu ? "nav__burger-menu--open" : ""
+                      }`,
+                  }}
+              >
+                  <div
+                      onClick={() => {
+                          setShowMenu(!showMenu);
+                      }}
+                  >
+                      <RxHamburgerMenu />
+                  </div>
+              </IconContext.Provider>
+          </nav>
+      </HeaderStyled>
   );
 };
 

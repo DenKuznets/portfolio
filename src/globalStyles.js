@@ -121,6 +121,8 @@ h3 {
     }
 }
 p {
+  font-size: 1rem;
+  color: ${({ theme }) => theme.global.pTextColor};
     @media (max-width: ${screen.px992}) {
         max-width: 300px;
     }
@@ -131,13 +133,15 @@ p {
 }
 
 a{
-  color: ${colors.almostBlack};
+  color: ${({theme}) => theme.global.aTextColor};
   text-decoration: none;
   transition: all 0.2s;
-  opacity: 0.8;
+  ${'' /* opacity: 0.8; */}
   &:hover {
     opacity: 1;
     text-decoration: underline;
+  color: ${({theme}) => theme.global.aHoverTextColor};
+    
   }
 }
 

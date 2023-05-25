@@ -29,6 +29,20 @@ const HeroStyled = styled.div`
                     margin-right: 14px;
                 }
             }
+            &-aboutme {
+                margin-bottom: 4.2em;
+                /* max-width: 300px; */
+            }
+            &-btns {
+                display: flex;
+                gap: 30px;
+            }
+
+            &-socials{
+                p{
+                    color: {};
+                }
+            }
         }
     }
     .hero__img {

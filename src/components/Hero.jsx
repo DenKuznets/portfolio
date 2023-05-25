@@ -30,7 +30,7 @@ const Hero = () => {
                         <hr />
                         <h3>{text.hero.profession}</h3>
                     </div>
-                    <p>{text.hero.aboutme}</p>
+                    <p className="hero__text-content-aboutme">{text.hero.aboutme}</p>
                     <div className="hero__text-content-btns">
                         <Button bg={colors.violet}>
                             {text.hero.contactme}
