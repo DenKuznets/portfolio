@@ -1,17 +1,19 @@
 import React from "react";
-import { LanguageContext } from "../App";
 import { useContext } from "react";
 import HeroStyled from "./styled/Hero.styled";
 import Button from "./Button";
 import { colors } from "../../utils";
 import { BsArrowUpRight } from "react-icons/bs";
 import { CiLocationArrow1 } from "react-icons/ci";
+import { LanguageContext } from "../pages/styled/MainPage";
 import {
     SlSocialVkontakte,
     SlSocialInstagram,
     SlSocialGithub,
 } from "react-icons/sl";
 import { IconContext } from "react-icons";
+
+
 const Hero = () => {
     const text = useContext(LanguageContext);
     return (
@@ -47,7 +49,7 @@ const Hero = () => {
             </div>
             <div className="hero__img">
                 <div className="hero__img-content">
-                    <img src="./images/avatar-violet-bg.png" alt="" />
+                    {/* <img src="./images/avatar-violet-bg.png" alt="" /> */}
                 </div>
             </div>
         </HeroStyled>

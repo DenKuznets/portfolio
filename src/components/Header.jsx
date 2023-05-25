@@ -2,7 +2,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IconContext } from "react-icons";
 import { useState, useContext } from "react";
 import HeaderStyled from "./styled/Header.styled";
-import { LanguageContext } from "../App";
+import { LanguageContext } from "../pages/styled/MainPage";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);

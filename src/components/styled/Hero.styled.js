@@ -8,19 +8,33 @@ const HeroStyled = styled.div`
     gap: 50px;
     /* margin: 5rem auto 0; */
     margin: 0 auto;
-    .hero__text{
+    .hero__text {
         outline: 1px solid red;
         display: flex;
         align-items: center;
         justify-content: center;
         &-content {
             outline: 1px solid red;
+            h1{
+                margin-bottom: 0.1em;
+            }
+            &-h3container {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin-bottom: 1.8em;
+                hr {
+                    width: 80px;
+                    margin: 0;
+                    margin-right: 14px;
+                }
+            }
         }
     }
-    .hero__img{
+    .hero__img {
         &-content {
             max-width: 700px;
-            img{
+            img {
                 border-radius: 150px 150px 0 0;
             }
         }

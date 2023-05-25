@@ -1,38 +1,17 @@
-import { createContext, useState } from "react";
-import { ThemeProvider } from "styled-components";
-import Header from "./components/Header";
-import { localization, lorem500, themeLight } from "../utils";
-import GlobalStyle from "./globalStyles";
-import Hero from "./components/Hero";
-import Work from "./components/Work";
+import {
+    Route,
+    RouterProvider,
+    createBrowserRouter,
+    createRoutesFromElements,
+} from "react-router-dom";
+import MainPage from "./pages/styled/MainPage";
 
-export const LanguageContext = createContext(localization.ru);
+const router = createBrowserRouter(
+    createRoutesFromElements(<Route path="/" element={<MainPage />}></Route>)
+);
 
 function App() {
-  const [appText, setAppText] = useState(
-    // navigator.language === "ru" ? localization.ru : localization.en
-    localization.en
-  );
-  return (
-    <div className="App">
-      <GlobalStyle />
-      <ThemeProvider theme={themeLight}>
-        <LanguageContext.Provider value={appText}>
-          {/* <Header /> */}
-          <main>
-            <section id="hero">
-              <Hero />
-            </section>
-            {/* <section id="work">
-              <Work index={0} />
-              <Work index={1} />
-              <Work index={2} />
-            </section> */}
-          </main>
-        </LanguageContext.Provider>
-      </ThemeProvider>
-    </div>
-  );
+    return <RouterProvider router={router} />;
 }
 
 export default App;
