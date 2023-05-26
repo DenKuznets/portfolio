@@ -22,12 +22,13 @@ export function isVisible(elem) {
 }
 
 export const screen = {
-    px1400: "1400px",
-    px1200: "1200px",
-    px992: "992px",
-    px768: "768px",
-    px576: "576px",
-    px480: "480px",
+    uhd: "2560px",
+    laptopL: "1400px",
+    laptop: "1024px",
+    tablet: "768px",
+    mobileL: "425px",
+    mobileM: "375px",
+    mobileS: "320px",
 };
 
 export const maskPattern = [

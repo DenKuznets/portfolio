@@ -15,7 +15,7 @@ const HeaderStyled = styled.header`
         max-width: 1800px;
         display: flex;
         padding: 1em;
-        @media (max-width: ${screen.px480}) {
+        @media (max-width: ${screen.mobileL}) {
             padding: 1em;
         }
         &__logo {
@@ -35,7 +35,7 @@ const HeaderStyled = styled.header`
                 &::first-letter {
                     text-transform: lowercase;
                 }
-                @media (max-width: ${screen.px480}) {
+                @media (max-width: ${screen.mobileL}) {
                     font-size: 1rem;
                 }
             }
@@ -51,7 +51,7 @@ const HeaderStyled = styled.header`
                 align-items: center;
                 justify-content: center;
                 background-color: ${({ theme }) => theme.header.bg};
-                @media (max-width: ${screen.px768}) {
+                @media (max-width: ${screen.tablet}) {
                     position: fixed;
                     width: 100%;
                     flex-direction: column;
@@ -70,7 +70,7 @@ const HeaderStyled = styled.header`
                 }
                 li {
                     margin-right: 70px;
-                    @media (max-width: ${screen.px768}) {
+                    @media (max-width: ${screen.tablet}) {
                         margin-right: 0;
                         margin-bottom: 1em;
                         font-size: 2rem;
@@ -88,7 +88,7 @@ const HeaderStyled = styled.header`
             &--open {
                 transform: rotate(90deg);
             }
-            @media (max-width: ${screen.px768}) {
+            @media (max-width: ${screen.tablet}) {
                 display: block;
             }
 

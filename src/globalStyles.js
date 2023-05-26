@@ -102,7 +102,7 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
     font-size: 4.5rem;
     line-height: 1.1;
-    @media (max-width: ${screen.px480}) {
+    @media (max-width: ${screen.mobileL}) {
         font-size: 3rem;
     }
 }
@@ -112,18 +112,16 @@ h1 {
 h3 {
     font-size: 1.5rem;
     font-weight: 500;
-    @media (max-width: ${screen.px480}) {
+    @media (max-width: ${screen.mobileL}) {
         font-size: 1rem;
     }
 }
 p {
   font-size: 1rem;
   color: ${({ theme }) => theme.global.pTextColor};
-    @media (max-width: ${screen.px992}) {
-        max-width: 300px;
-    }
     
-    @media (max-width: ${screen.px480}) {
+    
+    @media (max-width: ${screen.mobileL}) {
         font-size: 0.8rem;
     }
 }
