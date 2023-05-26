@@ -1,6 +1,17 @@
 import styled from "styled-components";
 import { colors, screen } from "../../../utils";
 
+function bg(index, theme) {
+    switch (index) {
+        case 0:
+            return colors.violet;
+        case 2:
+            return colors.yellow;
+        default:
+            return theme.work.defaultBG;
+    }
+}
+
 const textAndBorderColor = (color) => {
     switch (color) {
         case colors.violet:
@@ -27,7 +38,8 @@ const gradientColor = (color) => {
 const WorkStyled = styled.div`
     position: relative;
     padding: 0 1em;
-    background-color: ${({ bg }) => bg};
+    /* background-color: ${({ bg }) => bg}; */
+    background-color: ${({ index, theme }) => bg(index, theme)};
     .work {
         /* outline: 1px solid black; */
         max-width: 1200px;

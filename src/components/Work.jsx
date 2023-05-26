@@ -106,7 +106,7 @@ const Work = (props) => {
     }
 
     return (
-        <WorkStyled bg={bg}>
+        <WorkStyled index={props.index} bg={bg}>
             <div className="work container">
                 {props.index % 2 !== 0 && desktop ? (
                     <>
