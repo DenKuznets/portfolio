@@ -92,7 +92,7 @@ body *::first-letter{
 }
 
 main {
-  padding: 0 1em;
+  ${"" /* padding: 0 1em; */}
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -156,11 +156,11 @@ ul {
 section {
     padding: 0 1em;
   	width: 100%;
-  ${"" /* outline: 1px solid green; */}
-  ${"" /* margin: 0 auto; */}
+ 	${"" /* outline: 1px solid green; */}
+  	${"" /* margin: 0 auto; */}
 }
 .container {
-    max-width: 1800px;
+    ${'' /* max-width: 1800px; */}
     ${"" /* margin: 0 20px; */}
 }
 

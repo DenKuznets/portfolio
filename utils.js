@@ -63,10 +63,10 @@ export const colors = {
 
 export const themeLight = {
     global: {
-        pTextColor: 'grey',
-        aTextColor: 'grey',
+        pTextColor: "grey",
+        aTextColor: "grey",
         aHoverTextColor: colors.almostBlack,
-        socialIconContainerBG: '#f6f6f6',
+        socialIconContainerBG: "#f6f6f6",
         socialIconContainerColor: colors.almostBlack,
     },
     header: {
@@ -77,6 +77,10 @@ export const themeLight = {
     },
     hero: {
         socialsTextColor: colors.almostBlack,
+    },
+
+    work: {
+        defaultBG: colors.white,
     }
 };
 

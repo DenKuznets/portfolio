@@ -7,11 +7,12 @@ const heroTextContentCenterAll = "536px";
 
 const HeroStyled = styled.div`
     .hero {
-        outline: 1px solid green;
+        /* outline: 1px solid green; */
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 50px;
         margin: 0 auto;
+        max-width: 1800px;
 
         @media only screen and (max-width: ${heroImageNone}) {
             grid-template-columns: 1fr;
