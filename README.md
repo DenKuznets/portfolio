@@ -1,3 +1,5 @@
+В проекте был использован реакт роутер createHashRouter вместо createBrowserRouter для совместимости с GH PAGES
+
 https://themeforest.net/item/orido-personal-portfolio-website-figma-template/screenshots/37527613?index=1 дизайн
 
 https://caferati.me/portfolio - основная идея, список освоенных технологий и примеры их использования. Нажатие на технологию фильтрует карточки где применяется эта технология.

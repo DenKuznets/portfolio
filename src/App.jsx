@@ -1,12 +1,12 @@
 import {
     Route,
     RouterProvider,
-    createBrowserRouter,
+    createHashRouter,
     createRoutesFromElements,
 } from "react-router-dom";
 import MainPage from "./pages/styled/MainPage";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
     createRoutesFromElements(<Route path="/" element={<MainPage />}></Route>)
 );
 
