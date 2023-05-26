@@ -15,18 +15,16 @@ const MainPage = () => {
     return (
         <>
             <ThemeProvider theme={themeLight}>
-            <GlobalStyle />
+                <GlobalStyle />
                 <LanguageContext.Provider value={appText}>
                     {/* <Header /> */}
                     <main>
-                        <section id="hero">
-                            {/* <Hero /> */}
-                        </section>
+                        <section id="hero">{/* <Hero /> */}</section>
                         <section style={{ padding: 0 }} id="work">
-              <Work index={0} />
-              <Work index={1} />
-              <Work index={2} />
-            </section>
+                            <Work index={0} themeColor="violet" />
+                            <Work index={1} themeColor="default" />
+                            <Work index={2} themeColor="yellow" />
+                        </section>
                     </main>
                 </LanguageContext.Provider>
             </ThemeProvider>

@@ -1,7 +1,5 @@
-import styled from "styled-components";
 import Button from "./Button";
 import { useContext } from "react";
-import { colors, screen } from "../../utils";
 import { useRef } from "react";
 import WorkStyled from "./styled/Work.styled";
 import { LanguageContext } from "../pages/styled/MainPage";
@@ -18,21 +16,6 @@ const Work = (props) => {
     const desktop = useMediaQuery("(min-width: 768px)");
     let caseNumberTimeout;
 
-    let bg = "";
-    switch (props.index) {
-        case 0:
-            bg = colors.violet;
-            break;
-
-        case 2:
-            bg = colors.yellow;
-            break;
-
-        default:
-            bg = colors.white;
-            break;
-    }
-
     function handleMouseEnter(e) {
         overlayRef.current.style.width =
             imageRef.current.clientWidth + 2 + "px";
@@ -42,7 +25,7 @@ const Work = (props) => {
                 .closest(".work__img")
                 .querySelector(".work__img-case-number").style.maxHeight =
                 "300px";
-        }, 300);
+        }, 350);
     }
 
     function handleMouseLeave(e) {
@@ -106,7 +89,7 @@ const Work = (props) => {
     }
 
     return (
-        <WorkStyled index={props.index} bg={bg}>
+        <WorkStyled themeColor={props.themeColor}>
             <div className="work container">
                 {props.index % 2 !== 0 && desktop ? (
                     <>

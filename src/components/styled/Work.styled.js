@@ -1,37 +1,14 @@
 import styled from "styled-components";
 import { colors, screen } from "../../../utils";
 
-function bg(index, theme) {
-    switch (index) {
-        case 0:
-            return colors.violet;
-        case 2:
-            return colors.yellow;
-        default:
-            return theme.work.defaultBG;
-    }
-}
-
-const textAndBorderColor = (color) => {
-    switch (color) {
-        case colors.violet:
-        case colors.orange:
+const textAndBorderColor = (themeColor, theme) => {
+    switch (themeColor) {
+        case "violet":
             return colors.white;
-        case colors.white:
+        case "yellow":
             return colors.almostBlack;
         default:
-            break;
-    }
-};
-
-const gradientColor = (color) => {
-    switch (color) {
-        case colors.violet:
-            return "linear-gradient(90deg, rgba(99, 68, 198, 1) 0%, rgba(82, 96, 115, 1) 100%)";
-        case colors.yellow:
-            return "linear-gradient(90deg, rgba(255,196,72,1) 0%, rgba(29,29,0,0.97) 100%)";
-        default:
-            return "linear-gradient(90deg, rgba(82, 96, 115, 1) 0%, rgba(256, 256, 256, 1) 100%)";
+            return theme.work.defaultTextColor;
     }
 };
 
@@ -39,7 +16,16 @@ const WorkStyled = styled.div`
     position: relative;
     padding: 0 1em;
     /* background-color: ${({ bg }) => bg}; */
-    background-color: ${({ index, theme }) => bg(index, theme)};
+    background-color: ${({ themeColor, theme }) => {
+        switch (themeColor) {
+            case "violet":
+                return colors.violet;
+            case "yellow":
+                return colors.yellow;
+            default:
+                return theme.work.defaultBG;
+        }
+    }};
     .work {
         /* outline: 1px solid black; */
         max-width: 1200px;
@@ -59,7 +45,8 @@ const WorkStyled = styled.div`
             gap: 2em;
         }
         &__text {
-            color: ${({ bg }) => textAndBorderColor(bg)};
+            color: ${({ themeColor, theme }) =>
+                textAndBorderColor(themeColor, theme)};
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -68,7 +55,8 @@ const WorkStyled = styled.div`
             }
 
             a {
-                color: ${({ bg }) => textAndBorderColor(bg)};
+                color: ${({ themeColor, theme }) =>
+                    textAndBorderColor(themeColor, theme)};
             }
             h2 {
                 margin-bottom: 1em;
@@ -79,7 +67,9 @@ const WorkStyled = styled.div`
                 flex-wrap: wrap;
                 li {
                     margin-right: 1em;
-                    border: 1px dotted ${({ bg }) => textAndBorderColor(bg)};
+                    border: 1px dotted
+                        ${({ themeColor, theme }) =>
+                            textAndBorderColor(themeColor, theme)};
                     padding: 0.5em 1em;
                     border-radius: 5px;
                     display: flex;
@@ -114,14 +104,23 @@ const WorkStyled = styled.div`
                 }
             }
             &-overlay {
-                z-index: 1;
+                /* z-index: 1; */
                 width: 0;
                 height: 100%;
                 position: absolute;
                 top: 0;
                 transition: all 0.35s ease-in;
                 opacity: 0.8;
-                background: ${({ bg }) => gradientColor(bg)};
+                background: ${({ themeColor, theme }) => {
+                    switch (themeColor) {
+                        case "violet":
+                            return "linear-gradient(90deg, rgba(99, 68, 198, 1) 0%, rgba(82, 96, 115, 1) 100%)";
+                        case "yellow":
+                            return "linear-gradient(90deg, rgba(255,196,72,1) 0%, rgba(29,29,0,0.97) 100%)";
+                        default:
+                            return theme.work.defaultGradient;
+                    }
+                }};
             }
 
             &-case-number {
@@ -131,7 +130,7 @@ const WorkStyled = styled.div`
                 overflow: hidden;
                 top: 0;
                 left: 20px;
-                z-index: 5;
+                /* z-index: 5; */
                 color: white;
                 font-size: 3rem;
                 font-family: "Raleway", sans-serif;

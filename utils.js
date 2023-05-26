@@ -78,10 +78,12 @@ export const themeLight = {
     hero: {
         socialsTextColor: colors.almostBlack,
     },
-
     work: {
         defaultBG: colors.white,
-    }
+        defaultTextColor: colors.almostBlack,
+        defaultGradient:
+            "linear-gradient(90deg, rgba(82, 96, 115, 1) 0%, rgba(256, 256, 256, 1) 100%)",
+    },
 };
 
 export const localization = {
