@@ -35,6 +35,7 @@ const HeroStyled = styled.div`
                 }
                 h1 {
                     margin-bottom: 0.1em;
+                    text-align: start;
                 }
                 
                 &-h3container {
@@ -42,6 +43,9 @@ const HeroStyled = styled.div`
                     align-items: center;
                     justify-content: flex-start;
                     margin-bottom: 1.8em;
+                    @media only screen and (max-width: ${heroTextContentCenterAll}) {
+                    align-self: flex-end;
+                    }
                     hr {
                         width: 80px;
                         margin: 0;
