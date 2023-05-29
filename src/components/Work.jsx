@@ -41,7 +41,7 @@ const Work = (props) => {
         return (
             <div
                 className={`work__text ${
-                    props.index % 2 !== 0 ? "work__right" : ""
+                    props.index % 2 !== 0 ? "work__text--right" : ""
                 }`}
             >
                 <div className="work__text-content">
@@ -59,7 +59,9 @@ const Work = (props) => {
         return (
             <div
                 className={`work__img ${
-                    props.index % 2 !== 0 ? "work__left" : ""
+                    props.index % 2 !== 0
+                        ? "work__img--left"
+                        : "work__img--right"
                 }`}
             >
                 <div

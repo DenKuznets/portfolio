@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, screen } from "../../../utils";
+import { colors, fonts, screen } from "../../../utils";
 
 const textAndBorderColor = (themeColor, theme) => {
     switch (themeColor) {
@@ -85,6 +85,7 @@ const WorkStyled = styled.div`
         &__img {
             flex: 1;
             height: 450px;
+            position: relative;
 
             &-content {
                 position: relative;
@@ -128,13 +129,18 @@ const WorkStyled = styled.div`
                 min-height: 0;
                 max-height: 0;
                 overflow: hidden;
-                top: 0;
-                left: 20px;
-                /* z-index: 5; */
+                top: -25px;
+                left: 25px;
                 color: white;
-                font-size: 3rem;
-                font-family: "Raleway", sans-serif;
+                font-family: ${fonts.leagueSpartan};
+                font-weight: 800;
+                font-size: 10rem;
                 transition: all 0.3s ease;
+                opacity: 0.7;
+                @media only screen and (max-width: ${screen.mobileM}) {
+                    font-size: 6rem;
+                    top: 0;
+                }
             }
         }
     }

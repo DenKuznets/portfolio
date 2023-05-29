@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { colors, screen } from "../utils";
+import { colors, screen, fonts } from "../utils";
 // import vars from "./vars";
 
 const GlobalStyle = createGlobalStyle`
@@ -82,7 +82,7 @@ select {
 body {
   color: ${colors.almostBlack};
   padding-top: 100px;
-  font-family: 'Merriweather', serif;
+  font-family: ${fonts.merriweather};
   font-size: 18px;
 }
 
@@ -96,7 +96,7 @@ main {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: ${fonts.raleweay};
 }
 
 h1 {

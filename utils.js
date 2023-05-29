@@ -61,6 +61,12 @@ export const colors = {
     orange: "#F26440",
 };
 
+export const fonts = {
+    merriweather: "'Merriweather', serif",
+    raleweay: "'Raleway', sans-serif",
+    leagueSpartan: "'League Spartan', sans-serif",
+};
+
 export const themeLight = {
     global: {
         pTextColor: "grey",
