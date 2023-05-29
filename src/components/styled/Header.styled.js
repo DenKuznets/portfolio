@@ -20,11 +20,12 @@ const HeaderStyled = styled.header`
         }
         &__logo {
             margin-right: auto;
-            display: flex;
-            align-items: center;
             font-weight: bold;
-            &:hover {
-                cursor: pointer;
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: inherit;
             }
             img {
                 width: 3em;

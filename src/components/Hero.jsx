@@ -35,25 +35,29 @@ const Hero = () => {
                         </p>
 
                         <div className="hero__text-content-btns">
-                            <Button bg={colors.violet}>
-                                {text.hero.contactme}
-                            </Button>
-                            <Button>{text.header.nav.case}</Button>
+                            <a href="https://t.me/DenKuznets">
+                                <Button bg={colors.violet}>
+                                    {text.hero.contactme}
+                                </Button>
+                            </a>
+                            <a href="#work">
+                                <Button>{text.header.nav.work}</Button>
+                            </a>
                         </div>
                         <div className="hero__text-content-socials">
                             <span>{text.hero.socials}:</span>
                             <div className="hero__text-content-socials-icons">
-                                <a href="">
+                                <a href="https://vk.com/id6059069">
                                     <div className="social-icon-container">
                                         <SlSocialVkontakte />
                                     </div>
                                 </a>
-                                <a href="">
+                                <a href="https://www.instagram.com/denis_kyznecov/">
                                     <div className="social-icon-container">
                                         <SlSocialInstagram />
                                     </div>
                                 </a>
-                                <a href="">
+                                <a href="https://github.com/DenKuznets">
                                     <div className="social-icon-container">
                                         <SlSocialGithub />
                                     </div>

@@ -79,6 +79,13 @@ select {
   }
 }
 
+${"" /* ================================END OF RESETS */}
+
+html {
+	scroll-padding-top: 120px;
+	scroll-behavior: smooth;
+}
+
 body {
   color: ${colors.almostBlack};
   padding-top: 100px;
@@ -160,7 +167,7 @@ section {
   	${"" /* margin: 0 auto; */}
 }
 .container {
-    ${'' /* max-width: 1800px; */}
+    ${"" /* max-width: 1800px; */}
     ${"" /* margin: 0 20px; */}
 }
 

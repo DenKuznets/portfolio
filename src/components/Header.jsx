@@ -12,7 +12,7 @@ const Header = () => {
     for (const [key, value] of Object.entries(textContext.header.nav)) {
         listElements.push(
             <li key={key}>
-                <a href={`/#${key}`}>{value}</a>
+                <a href={`#${key}`}>{value}</a>
             </li>
         );
     }
@@ -21,10 +21,12 @@ const Header = () => {
         <HeaderStyled>
             <div className="header">
                 <div className="header__logo">
-                    <img src="./images/logo.png" alt="" />
-                    <div className="header__logo-text">
-                        ｄｅｎ . ｋｕｚｎｅｔｓ
-                    </div>
+                    <a href="#">
+                        <img src="./images/logo.png" alt="" />
+                        <div className="header__logo-text">
+                            ｄｅｎ . ｋｕｚｎｅｔｓ
+                        </div>
+                    </a>
                 </div>
                 <nav>
                     <ul className={showMenu ? "nav__menu--open" : ""}>

@@ -96,7 +96,7 @@ export const localization = {
     ru: {
         header: {
             nav: {
-                home: "главная",
+                hero: "Обо мне",
                 work: "Примеры работ",
             },
         },
@@ -139,7 +139,7 @@ export const localization = {
     en: {
         header: {
             nav: {
-                home: "home",
+                hero: "About me",
                 work: "case studies",
             },
         },
