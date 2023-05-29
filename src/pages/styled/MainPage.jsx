@@ -17,7 +17,7 @@ const MainPage = () => {
             <ThemeProvider theme={themeLight}>
                 <GlobalStyle />
                 <LanguageContext.Provider value={appText}>
-                    {/* <Header /> */}
+                    <Header />
                     <main>
                         <section id="hero">{/* <Hero /> */}</section>
                         <section style={{ padding: 0 }} id="work">
