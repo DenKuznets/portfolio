@@ -29,8 +29,11 @@ const Hero = () => {
                             <h3>{text.hero.profession}</h3>
                         </div>
                         <p className="hero__text-content-aboutme">
-                            {text.hero.aboutme}
+                            {/* {text.hero.aboutme} */}
+                            {/* <br /> */}
+                            {text.hero.stack}
                         </p>
+
                         <div className="hero__text-content-btns">
                             <Button bg={colors.violet}>
                                 {text.hero.contactme}

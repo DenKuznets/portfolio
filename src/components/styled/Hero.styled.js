@@ -13,6 +13,7 @@ const HeroStyled = styled.div`
         gap: 50px;
         margin: 0 auto;
         max-width: 1800px;
+        margin-bottom: 100px;
 
         @media only screen and (max-width: ${heroImageNone}) {
             grid-template-columns: 1fr;
@@ -38,14 +39,14 @@ const HeroStyled = styled.div`
                     margin-bottom: 0.1em;
                     text-align: start;
                 }
-                
+
                 &-h3container {
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
                     margin-bottom: 1.8em;
                     @media only screen and (max-width: ${heroTextContentCenterAll}) {
-                    align-self: flex-end;
+                        align-self: flex-end;
                     }
                     hr {
                         width: 80px;
@@ -55,7 +56,7 @@ const HeroStyled = styled.div`
                             width: 50px;
                         }
                     }
-                    h3{
+                    h3 {
                         text-align: start;
                     }
                 }
@@ -111,11 +112,33 @@ const HeroStyled = styled.div`
                     display: none;
                 }
                 img {
-                    border-radius: 150px 150px 0 0;
+                    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+                    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+                    animation: morphing 10s infinite;
+                    &:hover {
+                        animation-play-state: paused;
+                    }
                 }
             }
         }
     }
+
+    /* @keyframes morphing {
+        0% {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+        }
+        25% {
+            border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+        }
+        50% {
+            border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+            box-shadow: -10px -5px 50px rgba(0, 0, 0, 0.2);
+        }
+        75% {
+            border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+        }
+    } */
 `;
 
 export default HeroStyled;
