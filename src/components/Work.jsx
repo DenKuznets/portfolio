@@ -90,6 +90,8 @@ const Work = (props) => {
         );
     }
 
+    // console.log(textGlobal.work.moreExamples);
+
     return (
         <WorkStyled themeColor={props.themeColor}>
             <div className="work container">
@@ -105,6 +107,17 @@ const Work = (props) => {
                     </>
                 )}
             </div>
+            {/* {props.index === 2 ? (
+                <>
+                    <div className="work__more">
+                        <a href="">
+                            <Button>{textGlobal.work.moreExamples}</Button>
+                        </a>
+                    </div>
+                </>
+            ) : (
+                ""
+            )} */}
         </WorkStyled>
     );
 };

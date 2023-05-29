@@ -143,6 +143,15 @@ const WorkStyled = styled.div`
                 }
             }
         }
+        &__more{
+            background-color: ${colors.almostBlack};
+            /* position: absolute; */
+            width: 100%;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            padding: 3em 0;
+        }
     }
 `;
 

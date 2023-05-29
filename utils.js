@@ -134,6 +134,7 @@ export const localization = {
                 },
             ],
             showmore: "Подробнее",
+            moreExamples: "Больше примеров",
         },
     },
     en: {
@@ -177,6 +178,7 @@ export const localization = {
                 },
             ],
             showmore: "Case study",
+            moreExamples: "More Examples",
         },
     },
 };
