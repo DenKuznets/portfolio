@@ -97,7 +97,7 @@ export const localization = {
         header: {
             nav: {
                 home: "главная",
-                case: "Примеры работ",
+                work: "Примеры работ",
             },
         },
         hero: {
@@ -105,6 +105,7 @@ export const localization = {
             lname: "Кузнецов",
             profession: "front-end разработчик",
             aboutme: "верстаю сайты на react и styled-components",
+            stack: "СТЭК: HTML CSS JS REACT SASS BLADE LARAVEL",
             contactme: "Связаться",
             socials: "я в соц сетях",
         },
@@ -125,7 +126,7 @@ export const localization = {
                     demo: "https://denkuznets.github.io/quizzical-app/",
                 },
                 {
-                    name: "компонент диаграммы расходов",
+                    name: "компонент диаграмма расходов",
                     tech: ["react", "typescript", "styled-components"],
                     img: "component.png",
                     github: "https://github.com/DenKuznets/Expenses-chart-component",
@@ -139,7 +140,7 @@ export const localization = {
         header: {
             nav: {
                 home: "home",
-                case: "case studies",
+                work: "case studies",
             },
         },
         hero: {
@@ -147,6 +148,7 @@ export const localization = {
             lname: "Kuznetsov",
             profession: "front-end developer",
             aboutme: "I build things for web with react & styled-components.",
+            stack: "Tech Stack: HTML CSS JS REACT SASS BLADE LARAVEL",
             contactme: "say hello",
             socials: "follow me on",
         },

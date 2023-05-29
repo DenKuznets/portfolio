@@ -10,16 +10,19 @@ export const LanguageContext = createContext(localization.ru);
 const MainPage = () => {
     const [appText, setAppText] = useState(
         // navigator.language === "ru" ? localization.ru : localization.en
-        localization.en
+        localization.ru
     );
+
     return (
         <>
             <ThemeProvider theme={themeLight}>
                 <GlobalStyle />
                 <LanguageContext.Provider value={appText}>
-                    {/* <Header /> */}
+                    <Header />
                     <main>
-                        <section id="hero">{/* <Hero /> */}</section>
+                        <section id="hero">
+                            <Hero />
+                        </section>
                         <section style={{ padding: 0 }} id="work">
                             <Work index={0} themeColor="violet" />
                             <Work index={1} themeColor="default" />
