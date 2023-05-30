@@ -125,7 +125,7 @@ h3 {
 }
 p {
   font-size: 1rem;
-  color: ${({ theme }) => theme.global.pTextColor};
+  color: ${({ theme }) => theme.global.pTextColor}; 
     
     
     @media (max-width: ${screen.mobileL}) {
@@ -152,13 +152,7 @@ ul {
   margin: 0;
 }
 
-.small-icon {
-  div {
-    display: flex;
-    align-items: center;
-  }
-  margin-left: 0.6em;
-}
+
 
 section {
     padding: 0 1em;
@@ -169,6 +163,12 @@ section {
 .container {
     ${"" /* max-width: 1800px; */}
     ${"" /* margin: 0 20px; */}
+}
+
+${
+    "" /* .btn-back:hover .small-icon {       
+    transform: rotate(-135deg);           
+} */
 }
 
 .social-icon-container{

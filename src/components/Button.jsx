@@ -29,44 +29,62 @@ const ButtonStyled = styled.button`
         color: ${({ bg }) => (bg === colors.violet ? "yellow" : ``)};
         outline: ${({ bg }) =>
             bg === colors.violet ? "none" : `1px solid ${colors.almostBlack}`};
+        .small-icon {
+            transform: ${({ className }) =>
+                className === "btn-back" ? "rotate(-135deg)" : "rotate(45deg)"};
+        }
     }
+
     &:active {
         transform: scale(0.95);
+    }
+
+    .small-icon {
+        transition: all 0.3s ease;
+        div {
+            display: flex;
+            align-items: center;
+        }
+        margin-left: 0.6em;
     }
 `;
 
 const Button = (props) => {
-  return (
-    <ButtonStyled bg={props.bg}>
-      {props.children}
-      {props.bg === colors.violet ? (
-        <i className="small-icon">
-          <IconContext.Provider
-            value={{
-              size: "1.8em",
-            }}
-          >
-            <div>
-              <CiLocationArrow1 />
-            </div>
-          </IconContext.Provider>
-        </i>
-      ) : (
-        <i className="small-icon">
-          <IconContext.Provider
-            value={{
-              size: "1.2em",
-              color: colors.almostBlack,
-            }}
-          >
-            <div>
-              <BsArrowUpRight />
-            </div>
-          </IconContext.Provider>
-        </i>
-      )}
-    </ButtonStyled>
-  );
+    return (
+        <ButtonStyled
+            className={props.className}
+            onClick={props.onClick}
+            bg={props.bg}
+        >
+            {props.children}
+            {props.bg === colors.violet ? (
+                <i className="small-icon">
+                    <IconContext.Provider
+                        value={{
+                            size: "1.8em",
+                        }}
+                    >
+                        <div>
+                            <CiLocationArrow1 />
+                        </div>
+                    </IconContext.Provider>
+                </i>
+            ) : (
+                <i className="small-icon">
+                    <IconContext.Provider
+                        value={{
+                            size: "1.2em",
+                            color: colors.almostBlack,
+                        }}
+                    >
+                        <div>
+                            <BsArrowUpRight />
+                        </div>
+                    </IconContext.Provider>
+                </i>
+            )}
+        </ButtonStyled>
+    );
 };
 
 export default Button;

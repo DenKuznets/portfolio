@@ -1,31 +1,70 @@
 import styled from "styled-components";
 import { colors, fonts, screen } from "../../../utils";
 
-const textAndBorderColor = (themeColor, theme) => {
-    switch (themeColor) {
-        case "violet":
-            return colors.white;
-        case "yellow":
-            return colors.almostBlack;
-        default:
-            return theme.work.defaultTextColor;
-    }
-};
+const modalContentColumn = "900px";
 
-const WorkStyled = styled.div`
+export const WorkStyled = styled.div`
     position: relative;
     padding: 0 1em;
-    /* background-color: ${({ bg }) => bg}; */
-    background-color: ${({ themeColor, theme }) => {
-        switch (themeColor) {
-            case "violet":
-                return colors.violet;
-            case "yellow":
-                return colors.yellow;
-            default:
-                return theme.work.defaultBG;
-        }
+    background-color: ${({ color, theme }) => {
+        return theme.work.workThemes[color].bg;
     }};
+    .modal {
+        position: fixed;
+        overflow-y: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 3;
+        background-color: ${({ color, theme }) => {
+            return theme.work.workThemes[color].bg;
+        }};
+
+        &__content {
+            /* background-color: red; */
+            display: flex;
+            gap: 100px;
+            padding: 50px;
+            height: 100%;
+            width: 100%;
+            max-width: 1800px;
+            margin: 0 auto;
+            @media only screen and (max-width: ${modalContentColumn}) {
+                flex-direction: column;
+                /* padding-bottom: 100px; */
+                min-height: 100%;
+                height: unset;
+            }
+            @media only screen and (max-width: 530px) {
+                padding: 50px 10px;
+            }
+        }
+        p {
+            white-space: pre-line;
+            padding-left: 10px;
+            margin-top: 30px;
+            min-width: 300px;
+            color: ${({ color, theme }) =>
+                theme.work.workThemes[color].textColor} !important;
+            @media only screen and (max-width: ${modalContentColumn}) {
+                padding-left: 0;
+            }
+        }
+        iframe {
+            background-color: white;
+            flex-basis: 1000px;
+            min-width: 380px;
+            @media only screen and (max-width: ${modalContentColumn}) {
+                min-height: 70vh;
+            }
+            @media only screen and (max-width: 420px) {
+                display: none;
+            }
+        }
+    }
     .work {
         /* outline: 1px solid black; */
         max-width: 1200px;
@@ -45,8 +84,8 @@ const WorkStyled = styled.div`
             gap: 2em;
         }
         &__text {
-            color: ${({ themeColor, theme }) =>
-                textAndBorderColor(themeColor, theme)};
+            color: ${({ color, theme }) =>
+                theme.work.workThemes[color].textColor};
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -55,9 +94,10 @@ const WorkStyled = styled.div`
             }
 
             a {
-                color: ${({ themeColor, theme }) =>
-                    textAndBorderColor(themeColor, theme)};
+                color: ${({ color, theme }) =>
+                    theme.work.workThemes[color].textColor};
             }
+
             h2 {
                 margin-bottom: 1em;
             }
@@ -68,8 +108,8 @@ const WorkStyled = styled.div`
                 li {
                     margin-right: 1em;
                     border: 1px dotted
-                        ${({ themeColor, theme }) =>
-                            textAndBorderColor(themeColor, theme)};
+                        ${({ color, theme }) =>
+                            theme.work.workThemes[color].borderColor};
                     padding: 0.5em 1em;
                     border-radius: 5px;
                     display: flex;
@@ -112,16 +152,8 @@ const WorkStyled = styled.div`
                 top: 0;
                 transition: all 0.35s ease-in;
                 opacity: 0.8;
-                background: ${({ themeColor, theme }) => {
-                    switch (themeColor) {
-                        case "violet":
-                            return "linear-gradient(90deg, rgba(99, 68, 198, 1) 0%, rgba(82, 96, 115, 1) 100%)";
-                        case "yellow":
-                            return "linear-gradient(90deg, rgba(255,196,72,1) 0%, rgba(29,29,0,0.97) 100%)";
-                        default:
-                            return theme.work.defaultGradient;
-                    }
-                }};
+                background: ${({ color, theme }) =>
+                    theme.work.workThemes[color].overlayGradient};
             }
 
             &-case-number {
@@ -143,7 +175,7 @@ const WorkStyled = styled.div`
                 }
             }
         }
-        &__more{
+        &__more {
             background-color: ${colors.almostBlack};
             /* position: absolute; */
             width: 100%;
@@ -152,7 +184,7 @@ const WorkStyled = styled.div`
             justify-content: center;
             padding: 3em 0;
         }
+        &__details {
+        }
     }
 `;
-
-export default WorkStyled;

@@ -3,7 +3,7 @@ import { screen } from "../../../utils";
 
 const HeaderStyled = styled.header`
     position: fixed;
-    z-index: 999;
+    z-index: 2;
     top: 0;
     width: 100%;
     min-height: 80px;

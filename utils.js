@@ -85,10 +85,29 @@ export const themeLight = {
         socialsTextColor: colors.almostBlack,
     },
     work: {
-        defaultBG: colors.white,
-        defaultTextColor: colors.almostBlack,
-        defaultGradient:
-            "linear-gradient(90deg, rgba(82, 96, 115, 1) 0%, rgba(256, 256, 256, 1) 100%)",
+        workThemes: {
+            violet: {
+                bg: colors.violet,
+                textColor: colors.white,
+                borderColor: colors.white,
+                overlayGradient:
+                    "linear-gradient(90deg, rgba(99, 68, 198, 1) 0%, rgba(82, 96, 115, 1) 100%)",
+            },
+            yellow: {
+                bg: colors.yellow,
+                textColor: colors.almostBlack,
+                borderColor: colors.almostBlack,
+                overlayGradient:
+                    "linear-gradient(90deg, rgba(255,196,72,1) 0%, rgba(29,29,0,0.97) 100%)",
+            },
+            default: {
+                bg: colors.white,
+                textColor: colors.almostBlack,
+                borderColor: colors.almostBlack,
+                overlayGradient:
+                    "linear-gradient(90deg, rgba(82, 96, 115, 1) 0%, rgba(256, 256, 256, 1) 100%)",
+            },
+        },
     },
 };
 
@@ -117,6 +136,13 @@ export const localization = {
                     img: "webstudio.png",
                     github: "https://github.com/DenKuznets/testovoe-alexmedia",
                     demo: "https://denkuznets.github.io/testovoe-alexmedia/",
+                    description: `Тестовое задание выполнено по макету Figma, предоставленным заказчикомм. Тех. задание выглядело так: 
+                        1) Сделать липкое меню.
+                        2) Мобильное и декстпное меню должно в html быть одним блоком. 
+                        3) Добавить Анимации по своему усмотрению. Можно использовать сторонние библиотеки , но без jquery.(не обязательно)
+                        4) Cделать popup и в форме предусмотреть валидацию, Пока не заполненны все поля кнопка должна быть неактивна.(не обязательно)
+                        5) Ховеры на ссылки, по своему усмотрению.
+                        6) Мобильная верстка`,
                 },
                 {
                     name: "квиз",
@@ -135,6 +161,7 @@ export const localization = {
             ],
             showmore: "Подробнее",
             moreExamples: "Больше примеров",
+            backButton: "Назад",
         },
     },
     en: {
@@ -179,6 +206,7 @@ export const localization = {
             ],
             showmore: "Case study",
             moreExamples: "More Examples",
+            backButton: "Back",
         },
     },
 };
