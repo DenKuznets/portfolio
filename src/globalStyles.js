@@ -93,13 +93,8 @@ body {
   font-size: 18px;
 }
 
-
 body *::first-letter{
     text-transform: capitalize;
-}
-
-main {
-  ${"" /* padding: 0 1em; */}
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -114,8 +109,6 @@ h1 {
     }
 }
 
-
-
 h3 {
     font-size: 1.5rem;
     font-weight: 500;
@@ -123,6 +116,7 @@ h3 {
         font-size: 1rem;
     }
 }
+
 p {
   font-size: 1rem;
   color: ${({ theme }) => theme.global.pTextColor}; 
@@ -137,7 +131,6 @@ a{
   color: ${({ theme }) => theme.global.aTextColor};
   text-decoration: none;
   transition: all 0.2s;
-  ${"" /* opacity: 0.8; */}
   &:hover {
     opacity: 1;
     text-decoration: underline;
@@ -152,23 +145,9 @@ ul {
   margin: 0;
 }
 
-
-
 section {
     padding: 0 1em;
   	width: 100%;
- 	${"" /* outline: 1px solid green; */}
-  	${"" /* margin: 0 auto; */}
-}
-.container {
-    ${"" /* max-width: 1800px; */}
-    ${"" /* margin: 0 20px; */}
-}
-
-${
-    "" /* .btn-back:hover .small-icon {       
-    transform: rotate(-135deg);           
-} */
 }
 
 .social-icon-container{

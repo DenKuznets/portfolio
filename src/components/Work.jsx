@@ -5,7 +5,6 @@ import { WorkStyled } from "./styled/Work.styled";
 import { LanguageContext } from "../pages/styled/MainPage";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { createPortal } from "react-dom";
-export const IndexContext = createContext(0);
 
 const Work = (props) => {
     // console.log(props.workColor);
@@ -17,11 +16,11 @@ const Work = (props) => {
         <li key={index}>{obj}</li>
     ));
     const desktop = useMediaQuery("(min-width: 768px)");
-    const [modalActive, setModalActive] = useState(false);
+    const [modalActive, setModalActive] = useState(true);
     const [scrollY, setScrollY] = useState(0);
     let caseNumberTimeout;
 
-       function handleMouseEnter(e) {
+    function handleMouseEnter(e) {
         overlayRef.current.style.width =
             imageRef.current.clientWidth + 2 + "px";
         //показать номер карточки после появления оверлея
@@ -55,9 +54,9 @@ const Work = (props) => {
         setModalActive(false);
         setTimeout(() => {
             document.documentElement.style.scrollBehavior = "auto";
-            window.scrollTo(0, scrollY)
+            window.scrollTo(0, scrollY);
             document.documentElement.style.scrollBehavior = "smooth";
-        }, 1)
+        }, 1);
     }
 
     function workText() {
@@ -122,42 +121,40 @@ const Work = (props) => {
         );
     }
 
-    function workStyled() {
-        return (
+    return modalActive ? (
+        createPortal(
             <WorkStyled color={props.workColor}>
-                <div className="work container">
-                    {props.index % 2 !== 0 && desktop ? (
-                        <>
-                            {workImg()}
-                            {workText()}
-                        </>
-                    ) : (
-                        <>
-                            {workText()}
-                            {workImg()}
-                        </>
-                    )}
+                <div className="modal">
+                    <div className="modal__content">
+                        {workText()}
+                        <div className="live-preview">
+                            <h2>Live Preview</h2>
+                            <iframe src={textWork.demo} title={textWork.name}>
+                                IFRAME
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
-            </WorkStyled>
-        );
-    }
-
-    return modalActive
-        ? createPortal(
-              <WorkStyled color={props.workColor}>
-                  <div className="modal">
-                      <div className="modal__content">
-                          {workText()}
-                          <iframe
-                              src={textWork.demo}
-                              title={textWork.name}
-                          ></iframe>
-                      </div>
-                  </div>
-              </WorkStyled>,
-              document.body
-          )
-        : workStyled();
+            </WorkStyled>,
+            document.body
+        )
+    ) : (
+        <WorkStyled color={props.workColor}>
+            <div className="work container">
+                {props.index % 2 !== 0 && desktop ? (
+                    <>
+                        {workImg()}
+                        {workText()}
+                    </>
+                ) : (
+                    <>
+                        {workText()}
+                        {workImg()}
+                    </>
+                )}
+            </div>
+        </WorkStyled>
+    );
 };
 
 export default Work;

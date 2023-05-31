@@ -53,15 +53,26 @@ export const WorkStyled = styled.div`
                 padding-left: 0;
             }
         }
-        iframe {
+        .live-preview {
             background-color: white;
             flex-basis: 1000px;
             min-width: 380px;
+            background-color: transparent;
             @media only screen and (max-width: ${modalContentColumn}) {
                 min-height: 70vh;
             }
             @media only screen and (max-width: 420px) {
                 display: none;
+            }
+            h2 {
+                text-align: center;
+                margin-bottom: 10px;
+                color: ${({ color, theme }) =>
+                    theme.work.workThemes[color].textColor} !important;
+            }
+            iframe {
+                width: 100%;
+                height: 100%;
             }
         }
     }

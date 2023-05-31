@@ -150,6 +150,7 @@ export const localization = {
                     img: "quizz.png",
                     github: "https://github.com/DenKuznets/quizzical-app",
                     demo: "https://denkuznets.github.io/quizzical-app/",
+                    description: `Пример получения данных при помощи использования стороннего API. По макету figma в рамках задания сайта scrimba.com, курс Learn React`,
                 },
                 {
                     name: "компонент диаграмма расходов",
@@ -157,6 +158,7 @@ export const localization = {
                     img: "component.png",
                     github: "https://github.com/DenKuznets/Expenses-chart-component",
                     demo: "https://denkuznets.github.io/Expenses-chart-component/",
+                    description: `Основная сложность состояла в том, что бы придумать как реализовать отображение диаграммы. Кроме того, пробовал свои силы в написании компонентов react с использованием typescript. Задание с сайта frontendmentor.io`,
                 },
             ],
             showmore: "Подробнее",
