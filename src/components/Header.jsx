@@ -12,7 +12,9 @@ const Header = () => {
     for (const [key, value] of Object.entries(textContext.header.nav)) {
         listElements.push(
             <li key={key}>
-                <a href={`#${key}`}>{value}</a>
+                <a onClick={() => setShowMenu(!showMenu)} href={`#${key}`}>
+                    {value}
+                </a>
             </li>
         );
     }

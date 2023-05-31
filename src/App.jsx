@@ -1,9 +1,4 @@
 import {
-    Route,
-    RouterProvider,
-    createHashRouter,
-    createBrowserRouter,
-    createRoutesFromElements,
 } from "react-router-dom";
 import MainPage from "./pages/styled/MainPage";
 

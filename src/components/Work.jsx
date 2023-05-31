@@ -4,10 +4,7 @@ import { useRef } from "react";
 import { WorkStyled } from "./styled/Work.styled";
 import { LanguageContext } from "../pages/styled/MainPage";
 import useMediaQuery from "../hooks/useMediaQuery";
-import { VscChromeClose } from "react-icons/vsc";
-import styled from "styled-components";
 import { createPortal } from "react-dom";
-import { IconContext } from "react-icons";
 export const IndexContext = createContext(0);
 
 const Work = (props) => {
@@ -21,9 +18,10 @@ const Work = (props) => {
     ));
     const desktop = useMediaQuery("(min-width: 768px)");
     const [modalActive, setModalActive] = useState(false);
+    const [scrollY, setScrollY] = useState(0);
     let caseNumberTimeout;
 
-    function handleMouseEnter(e) {
+       function handleMouseEnter(e) {
         overlayRef.current.style.width =
             imageRef.current.clientWidth + 2 + "px";
         //показать номер карточки после появления оверлея
@@ -45,13 +43,21 @@ const Work = (props) => {
     }
 
     function showModal() {
+        // console.log('before',window.scrollY);
         document.body.style.overflow = "hidden";
         setModalActive(true);
+        setScrollY(window.scrollY);
+        // console.log('after',scrollY);
     }
 
     function hideModal() {
         document.body.style.overflow = "auto";
         setModalActive(false);
+        setTimeout(() => {
+            document.documentElement.style.scrollBehavior = "auto";
+            window.scrollTo(0, scrollY)
+            document.documentElement.style.scrollBehavior = "smooth";
+        }, 1)
     }
 
     function workText() {
@@ -67,7 +73,10 @@ const Work = (props) => {
                     <a href={textWork.github}>Github</a> |{" "}
                     <a href={textWork.demo}>Demo</a>
                     {modalActive && <p>{textWork.description}</p>}
-                    <Button className={modalActive && 'btn-back'} onClick={modalActive ? hideModal : showModal}>
+                    <Button
+                        className={modalActive && "btn-back"}
+                        onClick={modalActive ? hideModal : showModal}
+                    >
                         {modalActive
                             ? textGlobal.work.backButton
                             : textGlobal.work.showmore}
@@ -84,7 +93,7 @@ const Work = (props) => {
                     props.index % 2 !== 0
                         ? "work__img--left"
                         : "work__img--right"
-                    }`}
+                }`}
                 onClick={() => showModal()}
             >
                 <div
