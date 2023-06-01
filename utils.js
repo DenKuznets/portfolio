@@ -132,7 +132,7 @@ export const localization = {
             works: [
                 {
                     name: "коммерческий сайт",
-                    tech: ["laravel", "responsive design", "scss"],
+                    tech: ["laravel", "адаптивная верстка", "scss"],
                     img: "tes.png",
                     github: "https://github.com/DenKuznets/tes.loc",
                     demo: "https://tul-energo-service.ru/",
