@@ -116,8 +116,9 @@ export const WorkStyled = styled.div`
                 display: flex;
                 margin-bottom: 1em;
                 flex-wrap: wrap;
+                gap: 1em;
                 li {
-                    margin-right: 1em;
+                    /* margin-right: 1em; */
                     border: 1px dotted
                         ${({ color, theme }) =>
                             theme.work.workThemes[color].borderColor};
