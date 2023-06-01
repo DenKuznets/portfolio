@@ -1,5 +1,5 @@
 import Button from "./Button";
-import { createContext, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { useRef } from "react";
 import { WorkStyled } from "./styled/Work.styled";
 import { LanguageContext } from "../pages/styled/MainPage";
@@ -7,7 +7,6 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { createPortal } from "react-dom";
 
 const Work = (props) => {
-    // console.log(props.workColor);
     const overlayRef = useRef("");
     const imageRef = useRef("");
     const textGlobal = useContext(LanguageContext);
@@ -42,16 +41,15 @@ const Work = (props) => {
     }
 
     function showModal() {
-        // console.log('before',window.scrollY);
         document.body.style.overflow = "hidden";
         setModalActive(true);
         setScrollY(window.scrollY);
-        // console.log('after',scrollY);
     }
 
     function hideModal() {
         document.body.style.overflow = "auto";
         setModalActive(false);
+        // вернуть положение страницы до открытия портала. Без setTimeout не работает. Снимаем плавную прокрутку с документа, что бы возврат положения был незаметен для пользователя. Затем возвращаем ее назад.
         setTimeout(() => {
             document.documentElement.style.scrollBehavior = "auto";
             window.scrollTo(0, scrollY);
