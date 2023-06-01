@@ -16,7 +16,7 @@ const Work = (props) => {
         <li key={index}>{obj}</li>
     ));
     const desktop = useMediaQuery("(min-width: 768px)");
-    const [modalActive, setModalActive] = useState(true);
+    const [modalActive, setModalActive] = useState(false);
     const [scrollY, setScrollY] = useState(0);
     let caseNumberTimeout;
 

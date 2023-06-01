@@ -27,7 +27,7 @@ const MainPage = () => {
                             <Work index={0} workColor="violet" />
                             <Work index={1} workColor="default" />
                             <Work index={2} workColor="yellow" />
-                            <div
+                            {/* <div
                                 style={{
                                     backgroundColor: `${colors.white}`,
                                     display: "flex",
@@ -38,7 +38,7 @@ const MainPage = () => {
                                 <a href="">
                                     <Button>{appText.work.moreExamples}</Button>
                                 </a>
-                            </div>
+                            </div> */}
                         </section>
                     </main>
                     <Footer />
