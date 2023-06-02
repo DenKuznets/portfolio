@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors, fonts, screen } from "../../../utils";
 
-const modalContentColumn = "900px";
+
 
 export const WorkStyled = styled.div`
     position: relative;
@@ -9,73 +9,7 @@ export const WorkStyled = styled.div`
     background-color: ${({ color, theme }) => {
         return theme.work.workThemes[color].bg;
     }};
-    .modal {
-        position: fixed;
-        overflow-y: auto;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 3;
-        background-color: ${({ color, theme }) => {
-            return theme.work.workThemes[color].bg;
-        }};
-
-        &__content {
-            /* background-color: red; */
-            display: flex;
-            gap: 100px;
-            padding: 50px;
-            height: 100%;
-            width: 100%;
-            max-width: 1800px;
-            margin: 0 auto;
-            @media only screen and (max-width: ${modalContentColumn}) {
-                flex-direction: column;
-                /* padding-bottom: 100px; */
-                min-height: 100%;
-                height: unset;
-            }
-            @media only screen and (max-width: 530px) {
-                padding: 50px 10px;
-            }
-        }
-        p {
-            white-space: pre-line;
-            padding-left: 10px;
-            margin-top: 30px;
-            min-width: 300px;
-            color: ${({ color, theme }) =>
-                theme.work.workThemes[color].textColor} !important;
-            @media only screen and (max-width: ${modalContentColumn}) {
-                padding-left: 0;
-            }
-        }
-        .live-preview {
-            background-color: white;
-            flex-basis: 1000px;
-            min-width: 380px;
-            background-color: transparent;
-            @media only screen and (max-width: ${modalContentColumn}) {
-                min-height: 70vh;
-            }
-            @media only screen and (max-width: 420px) {
-                display: none;
-            }
-            h2 {
-                text-align: center;
-                margin-bottom: 10px;
-                color: ${({ color, theme }) =>
-                    theme.work.workThemes[color].textColor} !important;
-            }
-            iframe {
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
+   
     .work {
         /* outline: 1px solid black; */
         max-width: 1200px;
@@ -112,23 +46,13 @@ export const WorkStyled = styled.div`
             h2 {
                 margin-bottom: 1em;
             }
-            ul {
-                display: flex;
-                margin-bottom: 1em;
-                flex-wrap: wrap;
-                gap: 1em;
-                li {
-                    border: 1px dotted
-                        ${({ color, theme }) =>
-                            theme.work.workThemes[color].borderColor};
-                    padding: 0.5em 1em;
-                    border-radius: 5px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-bottom: 1em;
-                }
+
+            li {
+                border: 1px dotted
+                    ${({ color, theme }) =>
+                        theme.work.workThemes[color].borderColor};
             }
+
             &-more {
                 margin-top: 2em;
                 width: fit-content;
@@ -192,3 +116,4 @@ export const WorkStyled = styled.div`
         }
     }
 `;
+

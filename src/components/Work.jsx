@@ -5,15 +5,15 @@ import { WorkStyled } from "./styled/Work.styled";
 import { LanguageContext } from "../pages/styled/MainPage";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { createPortal } from "react-dom";
+import TechList from "./TechList";
+import WorkModal from "./WorkModal";
 
 const Work = (props) => {
     const overlayRef = useRef("");
     const imageRef = useRef("");
     const textGlobal = useContext(LanguageContext);
     const textWork = textGlobal.work.works[props.index];
-    const techList = textWork.tech.map((obj, index) => (
-        <li key={index}>{obj}</li>
-    ));
+
     const desktop = useMediaQuery("(min-width: 768px)");
     const [modalActive, setModalActive] = useState(false);
     const [scrollY, setScrollY] = useState(0);
@@ -66,12 +66,16 @@ const Work = (props) => {
             >
                 <div className="work__text-content">
                     <h2>{textWork.name}</h2>
-                    <ul>{techList}</ul>
-                    <a href={textWork.github}>Github</a> |{" "}
-                    <a href={textWork.demo}>Demo</a>
-                    {modalActive && <p>{textWork.description}</p>}
+                    <TechList list={textWork.tech} />
+                    <div>
+                        <a href={textWork.github}>Github</a> |{" "}
+                        <a href={textWork.demo}>Demo</a>
+                    </div>
+                    
                     <Link
-                        className={`work__text-more ${modalActive ? "btn-back" : ""}`}
+                        className={`work__text-more ${
+                            modalActive ? "btn-back" : ""
+                        }`}
                         onClick={modalActive ? hideModal : showModal}
                     >
                         {modalActive
@@ -122,17 +126,9 @@ const Work = (props) => {
     return modalActive ? (
         createPortal(
             <WorkStyled color={props.workColor}>
-                <div className="modal">
-                    <div className="modal__content">
-                        {workText()}
-                        <div className="live-preview">
-                            <h2>Live Preview</h2>
-                            <iframe src={textWork.demo} title={textWork.name}>
-                                IFRAME
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
+                <WorkModal hideModal={hideModal} textWork={textWork}>
+                    {workText()}
+                </WorkModal>
             </WorkStyled>,
             document.body
         )

@@ -22,7 +22,7 @@ const MainPage = () => {
                 <LanguageContext.Provider value={appText}>
                     <Header />
                     <main>
-                        <section id="hero"><Hero /></section>
+                        {/* <section id="hero"><Hero /></section> */}
                         <section style={{ padding: 0 }} id="work">
                             <Work index={0} workColor="violet" />
                             <Work index={1} workColor="default" />
