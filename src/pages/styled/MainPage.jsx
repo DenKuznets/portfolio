@@ -6,7 +6,7 @@ import Work from "../../components/Work";
 import Header from "../../components/Header";
 import { colors, localization, themeLight } from "../../../utils";
 import Footer from "../../components/Footer";
-import Button from "../../components/Button";
+import Link from "../../components/Link";
 export const LanguageContext = createContext(localization.ru);
 
 const MainPage = () => {
@@ -36,7 +36,7 @@ const MainPage = () => {
                                 }}
                             >
                                 <a href="">
-                                    <Button>{appText.work.moreExamples}</Button>
+                                    <Link>{appText.work.moreExamples}</Link>
                                 </a>
                             </div> */}
                         </section>

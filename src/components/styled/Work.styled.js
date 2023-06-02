@@ -129,10 +129,14 @@ export const WorkStyled = styled.div`
                     margin-bottom: 1em;
                 }
             }
-            button {
+            &-more {
                 margin-top: 2em;
+                width: fit-content;
+                color: ${({ color, theme }) =>
+                    theme.work.workThemes[color].more} !important;
             }
         }
+
         &__img {
             flex: 1;
             height: 450px;
@@ -185,17 +189,6 @@ export const WorkStyled = styled.div`
                     top: 0;
                 }
             }
-        }
-        &__more {
-            background-color: ${colors.almostBlack};
-            /* position: absolute; */
-            width: 100%;
-            left: 0;
-            display: flex;
-            justify-content: center;
-            padding: 3em 0;
-        }
-        &__details {
         }
     }
 `;

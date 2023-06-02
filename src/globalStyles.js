@@ -131,6 +131,7 @@ a{
   color: ${({ theme }) => theme.global.aTextColor};
   text-decoration: none;
   transition: all 0.2s;
+  cursor: pointer;
   &:hover {
     opacity: 1;
     text-decoration: underline;

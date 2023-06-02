@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Link from "./Link";
 import { useContext, useState } from "react";
 import { useRef } from "react";
 import { WorkStyled } from "./styled/Work.styled";
@@ -70,14 +70,14 @@ const Work = (props) => {
                     <a href={textWork.github}>Github</a> |{" "}
                     <a href={textWork.demo}>Demo</a>
                     {modalActive && <p>{textWork.description}</p>}
-                    <Button
-                        className={modalActive && "btn-back"}
+                    <Link
+                        className={`work__text-more ${modalActive ? "btn-back" : ""}`}
                         onClick={modalActive ? hideModal : showModal}
                     >
                         {modalActive
                             ? textGlobal.work.backButton
                             : textGlobal.work.showmore}
-                    </Button>
+                    </Link>
                 </div>
             </div>
         );

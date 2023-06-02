@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import HeroStyled from "./styled/Hero.styled";
-import Button from "./Button";
+import Link from "./Link";
 import { colors } from "../../utils";
 import { BsArrowUpRight } from "react-icons/bs";
 import { CiLocationArrow1 } from "react-icons/ci";
@@ -35,14 +35,14 @@ const Hero = () => {
                         </p>
 
                         <div className="hero__text-content-btns">
-                            <a href="https://t.me/DenKuznets">
-                                <Button bg={colors.violet}>
-                                    {text.hero.contactme}
-                                </Button>
-                            </a>
-                            <a href="#work">
-                                <Button>{text.header.nav.work}</Button>
-                            </a>
+                            <Link
+                                href="https://t.me/DenKuznets"
+                                bg={colors.violet}
+                            >
+                                {text.hero.contactme}
+                            </Link>
+
+                            <Link href="#work">{text.header.nav.work}</Link>
                         </div>
                         <div className="hero__text-content-socials">
                             <span>{text.hero.socials}:</span>

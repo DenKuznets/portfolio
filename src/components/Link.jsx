@@ -5,7 +5,7 @@ import { CiLocationArrow1 } from "react-icons/ci";
 import styled from "styled-components";
 import { colors, screen } from "../../utils";
 
-const ButtonStyled = styled.button`
+const LinkStyled = styled.a`
     display: flex;
     align-items: center;
     background-color: ${({ bg }) => (bg ? bg : "white")};
@@ -31,7 +31,9 @@ const ButtonStyled = styled.button`
             bg === colors.violet ? "none" : `1px solid ${colors.almostBlack}`};
         .small-icon {
             transform: ${({ className }) =>
-                className === "btn-back" ? "rotate(-135deg)" : "rotate(45deg)"};
+                className?.includes("btn-back")
+                    ? "rotate(-135deg)"
+                    : "rotate(45deg)"};
         }
     }
 
@@ -49,12 +51,13 @@ const ButtonStyled = styled.button`
     }
 `;
 
-const Button = (props) => {
+const Link = (props) => {
     return (
-        <ButtonStyled
+        <LinkStyled
             className={props.className}
             onClick={props.onClick}
             bg={props.bg}
+            href={props.href}
         >
             {props.children}
             {props.bg === colors.violet ? (
@@ -83,8 +86,8 @@ const Button = (props) => {
                     </IconContext.Provider>
                 </i>
             )}
-        </ButtonStyled>
+        </LinkStyled>
     );
 };
 
-export default Button;
+export default Link;
