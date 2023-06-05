@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import HeroStyled from "./styled/Hero.styled";
-import Link from "./Link";
+import Link from "./BigLink";
 import { colors } from "../../utils";
 import { BsArrowUpRight } from "react-icons/bs";
 import { CiLocationArrow1 } from "react-icons/ci";

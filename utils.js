@@ -109,8 +109,11 @@ export const themeLight = {
                     "linear-gradient(90deg, rgba(82, 96, 115, 1) 0%, rgba(256, 256, 256, 1) 100%)",
             },
         },
-        
     },
+    workModal: {
+        bg: colors.white,
+        border: colors.almostBlack,
+    }
 };
 
 export const localization = {
@@ -229,3 +232,5 @@ export const localization = {
         },
     },
 };
+
+

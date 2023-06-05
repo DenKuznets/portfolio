@@ -1,4 +1,4 @@
-import Link from "./Link";
+import BigLink from "./BigLink";
 import { useContext, useState } from "react";
 import { useRef } from "react";
 import { WorkStyled } from "./styled/Work.styled";
@@ -15,9 +15,27 @@ const Work = (props) => {
     const textWork = textGlobal.work.works[props.index];
 
     const desktop = useMediaQuery("(min-width: 768px)");
-    const [modalActive, setModalActive] = useState(false);
-    const [scrollY, setScrollY] = useState(0);
     let caseNumberTimeout;
+
+    const [modalActive, setModalActive] = useState(true);
+    const [scrollY, setScrollY] = useState(0);
+    
+    function showModal() {
+        document.body.style.overflow = "hidden";
+        setModalActive(true);
+        setScrollY(window.scrollY);
+    }
+
+    function hideModal() {
+        document.body.style.overflow = "auto";
+        setModalActive(false);
+        // вернуть положение страницы до открытия портала. Без setTimeout не работает. Снимаем плавную прокрутку с документа, что бы возврат положения был незаметен для пользователя. Затем возвращаем ее назад.
+        setTimeout(() => {
+            document.documentElement.style.scrollBehavior = "auto";
+            window.scrollTo(0, scrollY);
+            document.documentElement.style.scrollBehavior = "smooth";
+        }, 1);
+    }
 
     function handleMouseEnter(e) {
         overlayRef.current.style.width =
@@ -40,23 +58,6 @@ const Work = (props) => {
             .querySelector(".work__img-case-number").style.maxHeight = "0px";
     }
 
-    function showModal() {
-        document.body.style.overflow = "hidden";
-        setModalActive(true);
-        setScrollY(window.scrollY);
-    }
-
-    function hideModal() {
-        document.body.style.overflow = "auto";
-        setModalActive(false);
-        // вернуть положение страницы до открытия портала. Без setTimeout не работает. Снимаем плавную прокрутку с документа, что бы возврат положения был незаметен для пользователя. Затем возвращаем ее назад.
-        setTimeout(() => {
-            document.documentElement.style.scrollBehavior = "auto";
-            window.scrollTo(0, scrollY);
-            document.documentElement.style.scrollBehavior = "smooth";
-        }, 1);
-    }
-
     function workText() {
         return (
             <div
@@ -71,17 +72,10 @@ const Work = (props) => {
                         <a href={textWork.github}>Github</a> |{" "}
                         <a href={textWork.demo}>Demo</a>
                     </div>
-                    
-                    <Link
-                        className={`work__text-more ${
-                            modalActive ? "btn-back" : ""
-                        }`}
-                        onClick={modalActive ? hideModal : showModal}
-                    >
-                        {modalActive
-                            ? textGlobal.work.backButton
-                            : textGlobal.work.showmore}
-                    </Link>
+
+                    <BigLink className="work__text-more" onClick={showModal}>
+                        {textGlobal.work.showmore}
+                    </BigLink>
                 </div>
             </div>
         );
@@ -126,9 +120,7 @@ const Work = (props) => {
     return modalActive ? (
         createPortal(
             <WorkStyled color={props.workColor}>
-                <WorkModal hideModal={hideModal} textWork={textWork}>
-                    {workText()}
-                </WorkModal>
+                <WorkModal hideModal={hideModal} textWork={textWork} />
             </WorkStyled>,
             document.body
         )

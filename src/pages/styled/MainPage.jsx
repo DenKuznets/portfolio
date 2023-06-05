@@ -6,14 +6,16 @@ import Work from "../../components/Work";
 import Header from "../../components/Header";
 import { colors, localization, themeLight } from "../../../utils";
 import Footer from "../../components/Footer";
-import Link from "../../components/Link";
+import Link from "../../components/BigLink";
 export const LanguageContext = createContext(localization.ru);
 
 const MainPage = () => {
     const [appText, setAppText] = useState(
         // navigator.language === "ru" ? localization.ru : localization.en
         localization.ru
-    );
+        );
+        
+
 
     return (
         <>
@@ -25,8 +27,8 @@ const MainPage = () => {
                         {/* <section id="hero"><Hero /></section> */}
                         <section style={{ padding: 0 }} id="work">
                             <Work index={0} workColor="violet" />
-                            <Work index={1} workColor="default" />
-                            <Work index={2} workColor="yellow" />
+                            {/* <Work index={1} workColor="default" /> */}
+                            {/* <Work index={2} workColor="yellow" /> */}
                             {/* <div
                                 style={{
                                     backgroundColor: `${colors.white}`,

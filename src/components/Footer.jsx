@@ -7,7 +7,7 @@ import {
     SlSocialVkontakte,
 } from "react-icons/sl";
 import { TbBrandTelegram } from "react-icons/tb";
-import Link from "./Link";
+import Link from "./BigLink";
 
 const FooterStyled = styled.footer`
     background-color: ${colors.almostBlack};

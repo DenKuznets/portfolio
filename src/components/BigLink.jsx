@@ -5,7 +5,7 @@ import { CiLocationArrow1 } from "react-icons/ci";
 import styled from "styled-components";
 import { colors, screen } from "../../utils";
 
-const LinkStyled = styled.a`
+const BigLinkStyled = styled.a`
     display: flex;
     align-items: center;
     background-color: ${({ bg }) => (bg ? bg : "white")};
@@ -51,9 +51,9 @@ const LinkStyled = styled.a`
     }
 `;
 
-const Link = (props) => {
+const BigLink = (props) => {
     return (
-        <LinkStyled
+        <BigLinkStyled
             className={props.className}
             onClick={props.onClick}
             bg={props.bg}
@@ -86,8 +86,8 @@ const Link = (props) => {
                     </IconContext.Provider>
                 </i>
             )}
-        </LinkStyled>
+        </BigLinkStyled>
     );
 };
 
-export default Link;
+export default BigLink;

@@ -9,7 +9,7 @@ export const WorkStyled = styled.div`
     background-color: ${({ color, theme }) => {
         return theme.work.workThemes[color].bg;
     }};
-   
+
     .work {
         /* outline: 1px solid black; */
         max-width: 1200px;
@@ -45,6 +45,7 @@ export const WorkStyled = styled.div`
 
             h2 {
                 margin-bottom: 1em;
+                
             }
 
             li {
