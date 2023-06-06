@@ -15,7 +15,7 @@ const MainPage = () => {
         // navigator.language === "ru" ? localization.ru : localization.en
         localization.ru
     );
-    const [showAllWorks, setShowAllWorks] = useState(true);
+    const [showAllWorks, setShowAllWorks] = useState(false);
 
     const handleClick = () => {
         setShowAllWorks(true);
