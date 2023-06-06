@@ -141,7 +141,7 @@ export const localization = {
                     img: "tes.png",
                     github: "https://github.com/DenKuznets/tes.loc",
                     demo: "https://tul-energo-service.ru/",
-                    description: `Верстка по заказу вебстудии по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
+                    description: `Верстка по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
                 },
                 {
                     name: "тестовое задание для web-студии",

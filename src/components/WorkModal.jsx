@@ -4,7 +4,7 @@ import WorkModalStyled from "./styled/WorkModal.styled";
 import BigLink from "./BigLink";
 import TechList from "./TechList";
 
-const WorkModal = ({ hideModal, children, textWork }) => {
+const WorkModal = ({ hideModal, textWork }) => {
     const textGlobal = useContext(LanguageContext);
     return (
         <WorkModalStyled>
