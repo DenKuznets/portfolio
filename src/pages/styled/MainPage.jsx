@@ -27,8 +27,8 @@ const MainPage = () => {
                         {/* <section id="hero"><Hero /></section> */}
                         <section style={{ padding: 0 }} id="work">
                             <Work index={0} workColor="violet" />
-                            {/* <Work index={1} workColor="default" /> */}
-                            {/* <Work index={2} workColor="yellow" /> */}
+                            <Work index={1} workColor="default" />
+                            <Work index={2} workColor="yellow" />
                             {/* <div
                                 style={{
                                     backgroundColor: `${colors.white}`,

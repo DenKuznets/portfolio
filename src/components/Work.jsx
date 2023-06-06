@@ -17,9 +17,9 @@ const Work = (props) => {
     const desktop = useMediaQuery("(min-width: 768px)");
     let caseNumberTimeout;
 
-    const [modalActive, setModalActive] = useState(true);
+    const [modalActive, setModalActive] = useState(false);
     const [scrollY, setScrollY] = useState(0);
-    
+
     function showModal() {
         document.body.style.overflow = "hidden";
         setModalActive(true);

@@ -1,6 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-import { colors, fonts, screen } from "../../../utils";
 
 const modalContentColumn = "900px";
 
@@ -17,7 +15,6 @@ const WorkModalStyled = styled.div`
     background-color: ${({ theme }) => theme.workModal.bg};
 
     .modal__content {
-        /* background-color: red; */
         display: flex;
         gap: 100px;
         padding: 50px;
@@ -27,9 +24,9 @@ const WorkModalStyled = styled.div`
         margin: 0 auto;
         @media only screen and (max-width: ${modalContentColumn}) {
             flex-direction: column;
-            /* padding-bottom: 100px; */
             min-height: 100%;
             height: unset;
+            gap: 40px;
         }
         @media only screen and (max-width: 530px) {
             padding: 50px 10px;
@@ -50,9 +47,6 @@ const WorkModalStyled = styled.div`
     }
 
     li {
-        /* margin: 0;
-        padding: 0; */
-
         border: 1px dotted ${({ theme }) => theme.workModal.border};
     }
 
@@ -68,6 +62,7 @@ const WorkModalStyled = styled.div`
         background-color: transparent;
         @media only screen and (max-width: ${modalContentColumn}) {
             min-height: 70vh;
+            flex-basis: unset;
         }
         @media only screen and (max-width: 420px) {
             display: none;
@@ -79,7 +74,8 @@ const WorkModalStyled = styled.div`
         }
         iframe {
             width: 100%;
-            height: 100%;
+            min-height: 80vh;
+            overflow: auto;
         }
     }
 `;
