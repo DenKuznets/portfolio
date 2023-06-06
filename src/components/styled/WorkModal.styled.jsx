@@ -32,7 +32,7 @@ const WorkModalStyled = styled.div`
             padding: 50px 10px;
         }
     }
-    h2 {
+    h3 {
         margin-bottom: 1em;
     }
     p {
@@ -70,7 +70,7 @@ const WorkModalStyled = styled.div`
         @media only screen and (max-width: 420px) {
             display: none;
         }
-        h2 {
+        h3 {
             text-align: center;
             margin-bottom: 10px;
             color: inherit;

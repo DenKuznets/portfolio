@@ -41,7 +41,7 @@ export const WorkStyled = styled.div`
                     theme.work.workThemes[color].textColor};
             }
 
-            h2 {
+            h3 {
                 margin-bottom: 1em;
             }
 

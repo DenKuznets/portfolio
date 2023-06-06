@@ -45,6 +45,16 @@ const MainPage = () => {
                                     <Hero />
                                 </section>
                                 <section style={{ padding: 0 }} id="work">
+                                    <h2
+                                        style={{
+                                            textAlign: "center",
+                                                padding: "1em 0",
+                                                backgroundColor: colors.violet,
+                                                color: colors.yellow,
+                                        }}
+                                    >
+                                        {appText.header.nav.work}
+                                    </h2>
                                     <Work index={0} workColor="violet" />
                                     <Work index={1} workColor="default" />
                                     <Work index={2} workColor="yellow" />

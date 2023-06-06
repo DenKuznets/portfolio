@@ -66,7 +66,7 @@ const Work = (props) => {
                 }`}
             >
                 <div className="work__text-content">
-                    <h2>{textWork.name}</h2>
+                    <h3>{textWork.name}</h3>
                     <TechList list={textWork.tech} />
                     <div>
                         <a href={textWork.github}>Github</a> |{" "}

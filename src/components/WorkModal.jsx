@@ -11,7 +11,7 @@ const WorkModal = ({ hideModal, textWork }) => {
         <WorkModalStyled>
             <div className="modal__content">
                 <div className="modal__content-text">
-                    <h2>{textWork.name}</h2>
+                    <h3>{textWork.name}</h3>
                     <TechList list={textWork.tech} />
                     <div>
                         <a href={textWork.github}>Github</a> |{" "}
@@ -23,7 +23,7 @@ const WorkModal = ({ hideModal, textWork }) => {
                     </BigLink>
                 </div>
                 <div className="live-preview">
-                    <h2>Live Preview</h2>
+                    <h3>Live Preview</h3>
                     <iframe src={textWork.demo} title={textWork.name}>
                         IFRAME
                     </iframe>

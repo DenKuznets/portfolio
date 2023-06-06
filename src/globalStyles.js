@@ -82,7 +82,7 @@ select {
 ${"" /* ================================END OF RESETS */}
 
 html {
-	scroll-padding-top: 120px;
+	scroll-padding-top: 80px;
 	scroll-behavior: smooth;
 }
 
@@ -112,7 +112,13 @@ h1 {
     }
 }
 
+h2{
+  font-size: 2.5em;
+}
 
+h3{
+  font-size: 1.7rem;
+}
 
 p {
   font-size: 1rem;
