@@ -180,14 +180,45 @@ export const localization = {
                     demo: "https://denkuznets.github.io/Expenses-chart-component/",
                     description: `Основная сложность состояла в том, что бы придумать как реализовать отображение диаграммы. Кроме того, пробовал свои силы в написании компонентов react с использованием typescript. Задание с сайта frontendmentor.io`,
                 },
+                {
+                    name: "коммерческий сайт",
+                    tech: ["laravel", "адаптивная верстка", "scss"],
+                    img: "tehavto.png",
+                    github: "https://github.com/DenKuznets/teh-avto.loc",
+                    demo: "https://avtodom-techauto.ru/",
+                    description: `Верстка по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
+                },
+                {
+                    name: "коммерческий сайт",
+                    tech: ["laravel", "адаптивная верстка", "scss"],
+                    img: "bmk.png",
+                    github: "https://github.com/DenKuznets/bmk-new.loc",
+                    demo: "https://bmk78.ru/",
+                    description: `Верстка по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
+                },
+                {
+                    name: "коммерческий сайт",
+                    tech: ["laravel", "адаптивная верстка", "scss"],
+                    img: "cleaning.png",
+                    github: "https://github.com/DenKuznets/cleaning-chistulya.loc",
+                    demo: "https://chistylya.ru/",
+                    description: `Верстка по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
+                },
+                {
+                    name: "коммерческий сайт",
+                    tech: ["laravel", "адаптивная верстка", "scss"],
+                    img: "myp.png",
+                    github: "https://github.com/DenKuznets/myp-comfort",
+                    demo: "https://mup-komfort.ru/",
+                    description: `Верстка по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
+                },
             ],
             showmore: "Подробнее",
             moreExamples: "Больше примеров",
             backButton: "Назад",
-            myWorks: 'Мои проекты',
+            myWorks: "Мои проекты",
         },
     },
-
 
     en: {
         header: {

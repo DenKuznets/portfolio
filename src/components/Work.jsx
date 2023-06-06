@@ -106,7 +106,7 @@ const Work = (props) => {
                     ></div>
                     <img
                         ref={imageRef}
-                        src={`./images/${textWork.img}`}
+                        src={`./images/works-preview/${textWork.img}`}
                         alt=""
                     />
                     <div className="work__img-case-number">
