@@ -18,10 +18,18 @@ const AllWorksStyled = styled.div`
         display: grid;
         gap: 40px;
         grid-template-columns: repeat(2, 1fr);
+        @media only screen and (max-width: 869px) {
+            grid-template-columns: repeat(1, 1fr);
+            
+        }
     }
 
     .btn-back {
         width: fit-content;
+        position: sticky;
+        top: 20px;
+        z-index: 2;
+        /* background-color: transparent; */
     }
 `;
 

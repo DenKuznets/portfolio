@@ -23,9 +23,9 @@ const Hero = () => {
                         <h1>
                             {text.hero.fname} {text.hero.lname}
                         </h1>
-                        <div className="hero__text-content-h3container">
+                        <div className="hero__text-content-profession">
                             <hr />
-                            <h3>{text.hero.profession}</h3>
+                            <span>{text.hero.profession}</span>
                         </div>
                         <p className="hero__text-content-aboutme">
                             {text.hero.stack}

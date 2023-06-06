@@ -112,13 +112,7 @@ h1 {
     }
 }
 
-h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    @media (max-width: ${screen.mobileL}) {
-        font-size: 1rem;
-    }
-}
+
 
 p {
   font-size: 1rem;

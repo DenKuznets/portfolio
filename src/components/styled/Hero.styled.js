@@ -40,7 +40,7 @@ const HeroStyled = styled.div`
                     text-align: start;
                 }
 
-                &-h3container {
+                &-profession {
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
@@ -56,13 +56,19 @@ const HeroStyled = styled.div`
                             width: 50px;
                         }
                     }
-                    h3 {
-                        text-align: start;
+                    span {
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                        @media (max-width: ${screen.mobileL}) {
+                            font-size: 1rem;
+                        }
                     }
                 }
+
                 &-aboutme {
                     margin-bottom: 4.2em;
                 }
+
                 &-btns {
                     display: flex;
                     gap: 30px;

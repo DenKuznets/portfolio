@@ -59,6 +59,9 @@ const WorkSmallStyled = styled.div`
         padding: 1em;
         text-align: start;
         cursor: pointer;
+        @media only screen and (max-width: 469px) {
+            display: none;
+        }
     }
 
     ul {
@@ -78,7 +81,6 @@ const WorkSmall = ({ work, onClick }) => {
     const textGlobal = useContext(LanguageContext);
     return (
         <WorkSmallStyled onClick={onClick}>
-            
             <h4>{work.name}</h4>
             <div className="img-container">
                 <div className="overlay"></div>
