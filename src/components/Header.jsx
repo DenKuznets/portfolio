@@ -8,6 +8,7 @@ const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
     const listElements = [];
     const textContext = useContext(LanguageContext);
+    
 
     for (const [key, value] of Object.entries(textContext.header.nav)) {
         listElements.push(

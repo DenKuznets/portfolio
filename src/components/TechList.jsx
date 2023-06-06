@@ -3,18 +3,17 @@ import styled from "styled-components";
 
 export const TechListStyled = styled.ul`
     display: flex;
-    margin-bottom: 1em;
     flex-wrap: wrap;
     gap: 1em;
     li {
-        color: inherit;
-        border: 1px dotted inherit;
+        color: ${({ theme }) => theme.global.techList.textColor};
+        border: 1px dotted ${({ theme }) => theme.global.techList.itemBorder};
         padding: 0.5em 1em;
         border-radius: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 1em;
+        /* margin-bottom: 1em; */
     }
 `;
 

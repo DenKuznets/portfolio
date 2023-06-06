@@ -88,14 +88,17 @@ html {
 
 body {
   color: ${colors.almostBlack};
-  padding-top: 100px;
+  ${"" /* padding-top: 100px; */}
   font-family: ${fonts.merriweather};
   font-size: 18px;
+    & *::first-letter{
+      text-transform: capitalize;
+  }
 }
 
-body *::first-letter{
-    text-transform: capitalize;
-}
+main{
+  padding-top: 100px;
+} 
 
 h1,h2,h3,h4,h5,h6 {
   font-family: ${fonts.raleweay};

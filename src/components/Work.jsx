@@ -19,7 +19,7 @@ const Work = (props) => {
 
     const [modalActive, setModalActive] = useState(false);
     const [scrollY, setScrollY] = useState(0);
-
+    
     function showModal() {
         document.body.style.overflow = "hidden";
         setModalActive(true);
@@ -30,8 +30,8 @@ const Work = (props) => {
         document.body.style.overflow = "auto";
         setModalActive(false);
         // вернуть положение страницы до открытия портала. Без setTimeout не работает. Снимаем плавную прокрутку с документа, что бы возврат положения был незаметен для пользователя. Затем возвращаем ее назад.
+        document.documentElement.style.scrollBehavior = "auto";
         setTimeout(() => {
-            document.documentElement.style.scrollBehavior = "auto";
             window.scrollTo(0, scrollY);
             document.documentElement.style.scrollBehavior = "smooth";
         }, 1);

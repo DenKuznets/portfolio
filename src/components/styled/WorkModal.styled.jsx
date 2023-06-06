@@ -37,13 +37,16 @@ const WorkModalStyled = styled.div`
     }
     p {
         white-space: pre-line;
-        /* padding-left: 10px; */
         margin-top: 30px;
         min-width: 300px;
         color: inherit;
         @media only screen and (max-width: ${modalContentColumn}) {
             padding-left: 0;
         }
+    }
+
+    ul{
+        margin-bottom: 1em;
     }
 
     li {

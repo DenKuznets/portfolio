@@ -6,6 +6,7 @@ import TechList from "./TechList";
 
 const WorkModal = ({ hideModal, textWork }) => {
     const textGlobal = useContext(LanguageContext);
+    console.log(textWork);
     return (
         <WorkModalStyled>
             <div className="modal__content">

@@ -74,6 +74,10 @@ export const themeLight = {
         aHoverTextColor: colors.almostBlack,
         socialIconContainerBG: "#f6f6f6",
         socialIconContainerColor: colors.almostBlack,
+        techList: {
+            textColor: colors.almostBlack,
+            itemBorder: colors.almostBlack,
+        }
     },
     header: {
         bg: colors.white,
@@ -113,6 +117,9 @@ export const themeLight = {
     workModal: {
         bg: colors.white,
         border: colors.almostBlack,
+    },
+    workSmall: {
+        textColor: colors.white,
     }
 };
 
@@ -177,8 +184,11 @@ export const localization = {
             showmore: "Подробнее",
             moreExamples: "Больше примеров",
             backButton: "Назад",
+            myWorks: 'Мои проекты',
         },
     },
+
+
     en: {
         header: {
             nav: {

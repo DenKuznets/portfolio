@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { colors, fonts, screen } from "../../../utils";
 
-
-
 export const WorkStyled = styled.div`
     position: relative;
     padding: 0 1em;
@@ -45,10 +43,15 @@ export const WorkStyled = styled.div`
 
             h2 {
                 margin-bottom: 1em;
-                
+            }
+
+            ul {
+                margin-bottom: 1em;
             }
 
             li {
+                color: ${({ color, theme }) =>
+                    theme.work.workThemes[color].textColor};
                 border: 1px dotted
                     ${({ color, theme }) =>
                         theme.work.workThemes[color].borderColor};
@@ -117,4 +120,3 @@ export const WorkStyled = styled.div`
         }
     }
 `;
-

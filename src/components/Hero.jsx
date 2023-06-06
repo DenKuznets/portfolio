@@ -21,16 +21,13 @@ const Hero = () => {
                 <div className="hero__text">
                     <div className="hero__text-content">
                         <h1>
-                            {text.hero.fname}
-                            {/* <br /> */} {text.hero.lname}
+                            {text.hero.fname} {text.hero.lname}
                         </h1>
                         <div className="hero__text-content-h3container">
                             <hr />
                             <h3>{text.hero.profession}</h3>
                         </div>
                         <p className="hero__text-content-aboutme">
-                            {/* {text.hero.aboutme} */}
-                            {/* <br /> */}
                             {text.hero.stack}
                         </p>
 
