@@ -59,9 +59,9 @@ export const WorkStyled = styled.div`
 
             &-more {
                 margin-top: 2em;
-                width: fit-content;
-                color: ${({ color, theme }) =>
-                    theme.work.workThemes[color].more} !important;
+                /* width: fit-content; */
+                /* color: ${({ color, theme }) =>
+                    theme.work.workThemes[color].more} !important; */
             }
         }
 

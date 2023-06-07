@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
-import { LanguageContext } from "../pages/styled/MainPage";
+import React from "react";
 import WorkModalStyled from "./styled/WorkModal.styled";
 import BigLink from "./BigLink";
 import TechList from "./TechList";
+import useLocalization from "../hooks/useLocalization";
 
 const WorkModal = ({ hideModal, textWork }) => {
-    const textGlobal = useContext(LanguageContext);
-    console.log(textWork);
+    const textGlobal = useLocalization().local;
     return (
         <WorkModalStyled>
             <div className="modal__content">

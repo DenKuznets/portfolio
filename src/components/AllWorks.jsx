@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
 import styled from "styled-components";
-import { LanguageContext } from "../pages/styled/MainPage";
 import WorkSmall from "./WorkSmall";
 import BigLink from "./BigLink";
+import useLocalization from "../hooks/useLocalization";
 
 const AllWorksStyled = styled.section`
     padding-top: 1em;
@@ -32,7 +31,7 @@ const AllWorksStyled = styled.section`
 `;
 
 const AllWorks = ({ backToMain }) => {
-    const textGlobal = useContext(LanguageContext);
+    const textGlobal = useLocalization().local;
 
     const works = textGlobal.work.works.map((work, index) => (
         <WorkSmall key={index} work={work} />

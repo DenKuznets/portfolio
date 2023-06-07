@@ -1,8 +1,5 @@
-import React from "react";
-import { useContext } from "react";
 import HeroStyled from "./styled/Hero.styled";
 import BigLink from "./BigLink";
-import { LanguageContext } from "../pages/styled/MainPage";
 import {
     SlSocialVkontakte,
     SlSocialInstagram,
@@ -10,23 +7,24 @@ import {
 } from "react-icons/sl";
 import { IconContext } from "react-icons";
 import { CiLocationArrow1 } from "react-icons/ci";
+import useLocalization from "../hooks/useLocalization";
 
 const Hero = () => {
-    const text = useContext(LanguageContext);
+    const textGlobal = useLocalization().local;
     return (
-        <HeroStyled>
+        <HeroStyled id="hero">
             <div className="container hero">
                 <div className="hero__text">
                     <div className="hero__text-content">
                         <h1>
-                            {text.hero.fname} {text.hero.lname}
+                            {textGlobal.hero.fname} {textGlobal.hero.lname}
                         </h1>
                         <div className="hero__text-content-profession">
                             <hr />
-                            <span>{text.hero.profession}</span>
+                            <span>{textGlobal.hero.profession}</span>
                         </div>
                         <p className="hero__text-content-aboutme">
-                            {text.hero.stack}
+                            {textGlobal.hero.stack}
                         </p>
 
                         <div className="hero__text-content-btns">
@@ -34,7 +32,7 @@ const Hero = () => {
                                 className="hero__text-content-btns-telegram"
                                 href="https://t.me/DenKuznets"
                             >
-                                {text.hero.contactme}
+                                {textGlobal.hero.contactme}
                                 <i className="small-icon">
                                     <IconContext.Provider
                                         value={{
@@ -49,11 +47,11 @@ const Hero = () => {
                             </a>
 
                             <BigLink to="allworks">
-                                {text.header.nav.work}
+                                {textGlobal.header.nav.work}
                             </BigLink>
                         </div>
                         <div className="hero__text-content-socials">
-                            <span>{text.hero.socials}:</span>
+                            <span>{textGlobal.hero.socials}:</span>
                             <div className="hero__text-content-socials-icons">
                                 <a href="https://vk.com/id6059069">
                                     <div className="social-icon-container">

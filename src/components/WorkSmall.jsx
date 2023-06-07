@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 import TechList from "./TechList";
-import { LanguageContext } from "../pages/styled/MainPage";
-import BigLink from "./BigLink";
+import useLocalization from "../hooks/useLocalization";
 
 const WorkSmallStyled = styled.div`
     position: relative;
@@ -78,7 +77,7 @@ const WorkSmallStyled = styled.div`
 `;
 
 const WorkSmall = ({ work, onClick }) => {
-    const textGlobal = useContext(LanguageContext);
+    const textGlobal = useLocalization().local;
     return (
         <WorkSmallStyled onClick={onClick}>
             <h4>{work.name}</h4>

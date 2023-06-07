@@ -1,41 +1,18 @@
 import BigLink from "./BigLink";
-import { useContext, useState } from "react";
 import { useRef } from "react";
 import { WorkStyled } from "./styled/Work.styled";
-import { LanguageContext } from "../pages/styled/MainPage";
 import useMediaQuery from "../hooks/useMediaQuery";
-import { createPortal } from "react-dom";
 import TechList from "./TechList";
-import WorkModal from "./WorkModal";
+import useLocalization from "../hooks/useLocalization";
 
 const Work = (props) => {
     const overlayRef = useRef("");
     const imageRef = useRef("");
-    const textGlobal = useContext(LanguageContext);
+    const textGlobal = useLocalization().local;
     const textWork = textGlobal.work.works[props.index];
 
     const desktop = useMediaQuery("(min-width: 768px)");
     let caseNumberTimeout;
-
-    const [modalActive, setModalActive] = useState(false);
-    const [scrollY, setScrollY] = useState(0);
-    
-    function showModal() {
-        document.body.style.overflow = "hidden";
-        setModalActive(true);
-        setScrollY(window.scrollY);
-    }
-
-    function hideModal() {
-        document.body.style.overflow = "auto";
-        setModalActive(false);
-        // вернуть положение страницы до открытия портала. Без setTimeout не работает. Снимаем плавную прокрутку с документа, что бы возврат положения был незаметен для пользователя. Затем возвращаем ее назад.
-        document.documentElement.style.scrollBehavior = "auto";
-        setTimeout(() => {
-            window.scrollTo(0, scrollY);
-            document.documentElement.style.scrollBehavior = "smooth";
-        }, 1);
-    }
 
     function handleMouseEnter(e) {
         overlayRef.current.style.width =
@@ -73,7 +50,7 @@ const Work = (props) => {
                         <a href={textWork.demo}>Demo</a>
                     </div>
 
-                    <BigLink className="work__text-more" onClick={showModal}>
+                    <BigLink className="work__text-more">
                         {textGlobal.work.showmore}
                     </BigLink>
                 </div>
@@ -89,7 +66,6 @@ const Work = (props) => {
                         ? "work__img--left"
                         : "work__img--right"
                 }`}
-                onClick={() => showModal()}
             >
                 <div
                     onMouseEnter={(e) => handleMouseEnter(e)}
@@ -117,14 +93,7 @@ const Work = (props) => {
         );
     }
 
-    return modalActive ? (
-        createPortal(
-            <WorkStyled color={props.workColor}>
-                <WorkModal hideModal={hideModal} textWork={textWork} />
-            </WorkStyled>,
-            document.body
-        )
-    ) : (
+    return (
         <WorkStyled color={props.workColor}>
             <div className="work container">
                 {props.index % 2 !== 0 && desktop ? (

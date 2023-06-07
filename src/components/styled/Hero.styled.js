@@ -5,7 +5,7 @@ const textContentHeight100 = "1063px";
 const heroImageNone = "967px";
 const heroTextContentCenterAll = "536px";
 
-const HeroStyled = styled.div`
+const HeroStyled = styled.section`
     .hero {
         /* outline: 1px solid green; */
         display: grid;

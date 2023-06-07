@@ -1,16 +1,16 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IconContext } from "react-icons";
-import { useState, useContext } from "react";
+import { useState } from "react";
 import HeaderStyled from "./styled/Header.styled";
-import { LanguageContext } from "../pages/styled/MainPage";
+import useLocalization from "../hooks/useLocalization";
 
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
     const listElements = [];
-    const textContext = useContext(LanguageContext);
+    const textGlobal = useLocalization().local;
     
 
-    for (const [key, value] of Object.entries(textContext.header.nav)) {
+    for (const [key, value] of Object.entries(textGlobal.header.nav)) {
         listElements.push(
             <li key={key}>
                 <a onClick={() => setShowMenu(!showMenu)} href={`#${key}`}>
