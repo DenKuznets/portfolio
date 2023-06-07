@@ -59,9 +59,11 @@ export const WorkStyled = styled.div`
 
             &-more {
                 margin-top: 2em;
-                /* width: fit-content; */
-                /* color: ${({ color, theme }) =>
-                    theme.work.workThemes[color].more} !important; */
+                &:hover {
+                    outline: 1px solid
+                        ${({ color, theme }) =>
+                            theme.work.workThemes[color].borderColor};
+                }
             }
         }
 

@@ -58,7 +58,7 @@ const BigLink = (props) => {
                 <IconContext.Provider
                     value={{
                         size: "1.2em",
-                        color: colors.almostBlack,
+                        // color: colors.almostBlack,
                     }}
                 >
                     <div>
