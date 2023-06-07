@@ -3,11 +3,12 @@ import WorkModalStyled from "./styled/WorkModal.styled";
 import BigLink from "./BigLink";
 import TechList from "./TechList";
 import useLocalization from "../hooks/useLocalization";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 const WorkModal = () => {
     const textGlobal = useLocalization().local;
     const textWork = textGlobal.work.works[useParams().id];
+    const navigate = useNavigate();
     return (
         <WorkModalStyled>
             <div className="modal__content">
@@ -19,7 +20,7 @@ const WorkModal = () => {
                         <a href={textWork.demo}>Demo</a>
                     </div>
                     <p>{textWork.description}</p>
-                    <BigLink className="btn-back">
+                    <BigLink onClick={()=> navigate(-1) } className="btn-back">
                         {textGlobal.backButton}
                     </BigLink>
                 </div>
