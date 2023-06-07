@@ -37,8 +37,8 @@ const MainPage = () => {
                             padding: "2em 0",
                         }}
                     >
-                        <BigLink to="allworks">
-                            {textGlobal.work.moreExamples}
+                        <BigLink to="allworks" onClick={()=>window.scrollTo(0,0)}>
+                            {textGlobal.allWorks}
                         </BigLink>
                     </div>
                 </section>

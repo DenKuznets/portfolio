@@ -2,6 +2,7 @@ import styled from "styled-components";
 import WorkSmall from "./WorkSmall";
 import BigLink from "./BigLink";
 import useLocalization from "../hooks/useLocalization";
+import { useNavigate } from "react-router";
 
 const AllWorksStyled = styled.section`
     padding-top: 1em;
@@ -27,21 +28,21 @@ const AllWorksStyled = styled.section`
         top: 20px;
         margin-left: 10px;
         z-index: 2;
-        
-        background-color: ${({theme})=> theme.allWorks.btnBack};
+
+        background-color: ${({ theme }) => theme.allWorks.btnBack};
     }
 `;
 
 const AllWorks = () => {
     const textGlobal = useLocalization().local;
-
+    const navigate = useNavigate();
     const works = textGlobal.work.works.map((work, index) => (
-        <WorkSmall key={index} work={work} />
+        <WorkSmall onClick={()=>navigate(`/allworks/${index}`)} key={index} work={work} />
     ));
 
     return (
         <AllWorksStyled>
-            <BigLink to="/" className="btn-back">
+            <BigLink onClick={() => navigate(-1)} className="btn-back">
                 {textGlobal.backButton}
             </BigLink>
             <h2>{textGlobal.work.myWorks}</h2>

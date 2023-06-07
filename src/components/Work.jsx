@@ -4,12 +4,14 @@ import { WorkStyled } from "./styled/Work.styled";
 import useMediaQuery from "../hooks/useMediaQuery";
 import TechList from "./TechList";
 import useLocalization from "../hooks/useLocalization";
+import { useNavigate } from "react-router";
 
 const Work = (props) => {
     const overlayRef = useRef("");
     const imageRef = useRef("");
     const textGlobal = useLocalization().local;
     const textWork = textGlobal.work.works[props.id];
+    const navigate = useNavigate();
 
     const desktop = useMediaQuery("(min-width: 768px)");
     let caseNumberTimeout;
@@ -61,6 +63,7 @@ const Work = (props) => {
     function workImg() {
         return (
             <div
+                onClick={()=> navigate(`/allworks/${props.id}`)}
                 className={`work__img ${
                     props.id % 2 !== 0
                         ? "work__img--left"

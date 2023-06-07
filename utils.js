@@ -135,6 +135,7 @@ export const localization = {
         showmore: "Подробнее",
         backButton: "Назад",
         myWorks: "Мои проекты",
+        allWorks: 'Все проекты',
         header: {
             nav: {
                 hero: "Обо мне",
