@@ -85,7 +85,7 @@ const WorkSmall = ({ work, onClick }) => {
                 <div className="overlay"></div>
                 <img src={`./images/works-preview/${work.img}`} alt="" />
             </div>
-            <button>{textGlobal.work.showmore}</button>
+            <button>{textGlobal.showmore}</button>
             <TechList list={work.tech} />
         </WorkSmallStyled>
     );

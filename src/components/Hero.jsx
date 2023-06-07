@@ -46,12 +46,13 @@ const Hero = () => {
                                 </i>
                             </a>
 
-                            <BigLink onClick={() => {
-                                setTimeout(() => {
+                            <BigLink
+                                onClick={() => {
                                     window.scrollTo(0, 0);
-                                },1)
-                            }} to="allworks">
-                                {textGlobal.header.nav.work}
+                                }}
+                                to="allworks"
+                            >
+                                {textGlobal.myWorks}
                             </BigLink>
                         </div>
                         <div className="hero__text-content-socials">

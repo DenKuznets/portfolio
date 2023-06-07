@@ -51,7 +51,7 @@ const Work = (props) => {
                     </div>
 
                     <BigLink className="work__text-more">
-                        {textGlobal.work.showmore}
+                        {textGlobal.showmore}
                     </BigLink>
                 </div>
             </div>

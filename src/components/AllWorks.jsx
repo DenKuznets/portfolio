@@ -42,7 +42,7 @@ const AllWorks = () => {
     return (
         <AllWorksStyled>
             <BigLink to="/" className="btn-back">
-                {textGlobal.work.backButton}
+                {textGlobal.backButton}
             </BigLink>
             <h2>{textGlobal.work.myWorks}</h2>
             <div className="allworks__grid">{works}</div>

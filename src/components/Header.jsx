@@ -8,12 +8,16 @@ const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
     const listElements = [];
     const textGlobal = useLocalization().local;
-    
 
     for (const [key, value] of Object.entries(textGlobal.header.nav)) {
         listElements.push(
             <li key={key}>
-                <a onClick={() => setShowMenu(!showMenu)} href={`#${key}`}>
+                <a
+                    onClick={() => {
+                        setShowMenu(!showMenu);
+                    }}
+                    href={`#${key}`}
+                >
                     {value}
                 </a>
             </li>

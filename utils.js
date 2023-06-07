@@ -81,7 +81,7 @@ export const themeLight = {
         bigLink: {
             textColor: colors.almostBlack,
             hover: colors.almostBlack,
-        }
+        },
     },
     header: {
         bg: colors.white,
@@ -90,7 +90,7 @@ export const themeLight = {
         burgerHover: colors.violet,
     },
     hero: {
-        socialsTextColor: colors.almostBlack,      
+        socialsTextColor: colors.almostBlack,
     },
     work: {
         workThemes: {
@@ -127,11 +127,14 @@ export const themeLight = {
     },
     allWorks: {
         btnBack: colors.white,
-    }
+    },
 };
 
 export const localization = {
     ru: {
+        showmore: "Подробнее",
+        backButton: "Назад",
+        myWorks: "Мои проекты",
         header: {
             nav: {
                 hero: "Обо мне",
@@ -220,10 +223,6 @@ export const localization = {
                     description: `Верстка по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
                 },
             ],
-            showmore: "Подробнее",
-            moreExamples: "Больше примеров",
-            backButton: "Назад",
-            myWorks: "Мои проекты",
         },
     },
 

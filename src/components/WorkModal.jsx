@@ -18,7 +18,7 @@ const WorkModal = ({ hideModal, textWork }) => {
                     </div>
                     <p>{textWork.description}</p>
                     <BigLink className="btn-back" onClick={hideModal}>
-                        {textGlobal.work.backButton}
+                        {textGlobal.backButton}
                     </BigLink>
                 </div>
                 <div className="live-preview">
