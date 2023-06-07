@@ -125,6 +125,9 @@ export const themeLight = {
     workSmall: {
         textColor: colors.white,
     },
+    allWorks: {
+        btnBack: colors.white,
+    }
 };
 
 export const localization = {

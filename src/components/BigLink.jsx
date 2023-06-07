@@ -52,13 +52,12 @@ const BigLinkStyled = styled(Link)`
 
 const BigLink = (props) => {
     return (
-        <BigLinkStyled className={props.className} to={props.to}>
+        <BigLinkStyled onClick={props.onClick} className={props.className} to={props.to}>
             {props.children}
             <i className="small-icon">
                 <IconContext.Provider
                     value={{
-                        size: "1.2em",
-                        // color: colors.almostBlack,
+                        size: "1.2em"
                     }}
                 >
                     <div>

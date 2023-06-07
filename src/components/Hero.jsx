@@ -46,7 +46,11 @@ const Hero = () => {
                                 </i>
                             </a>
 
-                            <BigLink to="allworks">
+                            <BigLink onClick={() => {
+                                setTimeout(() => {
+                                    window.scrollTo(0, 0);
+                                },1)
+                            }} to="allworks">
                                 {textGlobal.header.nav.work}
                             </BigLink>
                         </div>

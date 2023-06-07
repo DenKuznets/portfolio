@@ -25,12 +25,14 @@ const AllWorksStyled = styled.section`
         width: fit-content;
         position: sticky;
         top: 20px;
+        margin-left: 10px;
         z-index: 2;
-        /* background-color: transparent; */
+        
+        background-color: ${({theme})=> theme.allWorks.btnBack};
     }
 `;
 
-const AllWorks = ({ backToMain }) => {
+const AllWorks = () => {
     const textGlobal = useLocalization().local;
 
     const works = textGlobal.work.works.map((work, index) => (
@@ -39,7 +41,7 @@ const AllWorks = ({ backToMain }) => {
 
     return (
         <AllWorksStyled>
-            <BigLink to="/" className="btn-back" onClick={backToMain}>
+            <BigLink to="/" className="btn-back">
                 {textGlobal.work.backButton}
             </BigLink>
             <h2>{textGlobal.work.myWorks}</h2>
