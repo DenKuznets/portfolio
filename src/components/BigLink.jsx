@@ -4,31 +4,31 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { CiLocationArrow1 } from "react-icons/ci";
 import styled from "styled-components";
 import { colors, screen } from "../../utils";
+import { Link } from "react-router-dom";
 
-const BigLinkStyled = styled.a`
+const BigLinkStyled = styled(Link)`
     display: flex;
     align-items: center;
-    background-color: ${({ bg }) => (bg ? bg : "white")};
+    /* background-color: ${({ bg }) => (bg ? bg : "white")}; */
     border: none;
     cursor: pointer;
     height: 70px;
     border-radius: 15px;
-    color: ${({ bg }) => (bg === colors.violet ? "white" : colors.almostBlack)};
-    font-weight: ${({ bg }) => (bg === colors.violet ? 700 : 900)};
+    color: ${({ theme }) => theme.global.bigLink.textColor};
+    font-weight: 900;
     padding: 0 2.5em;
     font-size: 1rem;
     transition: all 0.2s;
     outline: transparent 1px solid;
     white-space: nowrap;
     text-transform: capitalize;
+    width: fit-content;
 
     @media (max-width: ${screen.px480}) {
         font-size: 0.8rem;
     }
     &:hover {
-        color: ${({ bg }) => (bg === colors.violet ? "yellow" : ``)};
-        outline: ${({ bg }) =>
-            bg === colors.violet ? "none" : `1px solid ${colors.almostBlack}`};
+        outline: 1px solid ${({ theme }) => theme.global.bigLink.hover};
         .small-icon {
             transform: ${({ className }) =>
                 className?.includes("btn-back")
@@ -56,8 +56,7 @@ const BigLink = (props) => {
         <BigLinkStyled
             className={props.className}
             onClick={props.onClick}
-            bg={props.bg}
-            href={props.href}
+            to={props.to}
         >
             {props.children}
             {props.bg === colors.violet ? (

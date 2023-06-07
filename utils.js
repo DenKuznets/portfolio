@@ -77,6 +77,10 @@ export const themeLight = {
         techList: {
             textColor: colors.almostBlack,
             itemBorder: colors.almostBlack,
+        },
+        bigLink: {
+            textColor: colors.almostBlack,
+            hover: colors.almostBlack,
         }
     },
     header: {
@@ -86,7 +90,7 @@ export const themeLight = {
         burgerHover: colors.violet,
     },
     hero: {
-        socialsTextColor: colors.almostBlack,
+        socialsTextColor: colors.almostBlack,      
     },
     work: {
         workThemes: {
@@ -120,7 +124,7 @@ export const themeLight = {
     },
     workSmall: {
         textColor: colors.white,
-    }
+    },
 };
 
 export const localization = {
@@ -273,5 +277,3 @@ export const localization = {
         },
     },
 };
-
-

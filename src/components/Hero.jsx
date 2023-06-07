@@ -1,10 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import HeroStyled from "./styled/Hero.styled";
-import Link from "./BigLink";
-import { colors } from "../../utils";
-import { BsArrowUpRight } from "react-icons/bs";
-import { CiLocationArrow1 } from "react-icons/ci";
+import BigLink from "./BigLink";
 import { LanguageContext } from "../pages/styled/MainPage";
 import {
     SlSocialVkontakte,
@@ -12,6 +9,7 @@ import {
     SlSocialGithub,
 } from "react-icons/sl";
 import { IconContext } from "react-icons";
+import { CiLocationArrow1 } from "react-icons/ci";
 
 const Hero = () => {
     const text = useContext(LanguageContext);
@@ -32,14 +30,27 @@ const Hero = () => {
                         </p>
 
                         <div className="hero__text-content-btns">
-                            <Link
+                            <a
+                                className="hero__text-content-btns-telegram"
                                 href="https://t.me/DenKuznets"
-                                bg={colors.violet}
                             >
                                 {text.hero.contactme}
-                            </Link>
+                                <i className="small-icon">
+                                    <IconContext.Provider
+                                        value={{
+                                            size: "1.8em",
+                                        }}
+                                    >
+                                        <div>
+                                            <CiLocationArrow1 />
+                                        </div>
+                                    </IconContext.Provider>
+                                </i>
+                            </a>
 
-                            <Link href="#work">{text.header.nav.work}</Link>
+                            <BigLink to="allworks">
+                                {text.header.nav.work}
+                            </BigLink>
                         </div>
                         <div className="hero__text-content-socials">
                             <span>{text.hero.socials}:</span>

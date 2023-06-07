@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { screen } from "../../../utils";
+import { colors, screen } from "../../../utils";
 
 const textContentHeight100 = "1063px";
 const heroImageNone = "967px";
@@ -82,6 +82,48 @@ const HeroStyled = styled.div`
                     @media only screen and (max-width: ${heroTextContentCenterAll}) {
                         flex-direction: column;
                         align-items: center;
+                    }
+
+                    &-telegram {
+                        display: flex;
+                        align-items: center;
+                        background-color: ${colors.violet};
+                        border: none;
+                        cursor: pointer;
+                        height: 70px;
+                        border-radius: 15px;
+                        color: ${colors.white};
+                        font-weight: 700;
+                        padding: 0 2.5em;
+                        font-size: 1rem;
+                        transition: all 0.2s;
+                        outline: transparent 1px solid;
+                        white-space: nowrap;
+                        text-transform: capitalize;
+                        width: fit-content;
+                        @media (max-width: ${screen.px480}) {
+                            font-size: 0.8rem;
+                        }
+                        &:hover {
+                            color: yellow;
+                            outline: none;
+                            .small-icon {
+                                transform: rotate(45deg);
+                            }
+                        }
+
+                        &:active {
+                            transform: scale(0.95);
+                        }
+
+                        .small-icon {
+                            transition: all 0.3s ease;
+                            div {
+                                display: flex;
+                                align-items: center;
+                            }
+                            margin-left: 0.6em;
+                        }
                     }
                 }
 
