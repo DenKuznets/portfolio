@@ -42,11 +42,11 @@ export const WorkStyled = styled.div`
             }
 
             h3 {
-                margin-bottom: 1em;
+                margin-bottom: 15px;
             }
 
             ul {
-                margin-bottom: 1em;
+                margin-bottom: 15px;
             }
 
             li {

@@ -50,7 +50,7 @@ const MainPage = () => {
                                             textAlign: "center",
                                                 padding: "1em 0",
                                                 backgroundColor: colors.violet,
-                                                color: colors.yellow,
+                                                color: colors.white,
                                         }}
                                     >
                                         {appText.header.nav.work}
