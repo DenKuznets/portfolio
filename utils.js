@@ -227,6 +227,9 @@ export const localization = {
     },
 
     en: {
+        showmore: "Case study",
+        moreExamples: "More Examples",
+        backButton: "Back",
         header: {
             nav: {
                 hero: "About me",
@@ -273,9 +276,6 @@ export const localization = {
                     demo: "https://denkuznets.github.io/Expenses-chart-component/",
                 },
             ],
-            showmore: "Case study",
-            moreExamples: "More Examples",
-            backButton: "Back",
         },
     },
 };

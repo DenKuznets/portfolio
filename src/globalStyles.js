@@ -154,6 +154,14 @@ section {
   	width: 100%;
 }
 
+img, .small-icon, svg {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
 .social-icon-container{
 	padding: 14px;
 	display: flex;
