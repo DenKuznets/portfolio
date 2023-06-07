@@ -9,7 +9,7 @@ const Work = (props) => {
     const overlayRef = useRef("");
     const imageRef = useRef("");
     const textGlobal = useLocalization().local;
-    const textWork = textGlobal.work.works[props.index];
+    const textWork = textGlobal.work.works[props.id];
 
     const desktop = useMediaQuery("(min-width: 768px)");
     let caseNumberTimeout;
@@ -39,7 +39,7 @@ const Work = (props) => {
         return (
             <div
                 className={`work__text ${
-                    props.index % 2 !== 0 ? "work__text--right" : ""
+                    props.id % 2 !== 0 ? "work__text--right" : ""
                 }`}
             >
                 <div className="work__text-content">
@@ -50,7 +50,7 @@ const Work = (props) => {
                         <a href={textWork.demo}>Demo</a>
                     </div>
 
-                    <BigLink className="work__text-more">
+                    <BigLink to={`allworks/${props.id}`} className="work__text-more">
                         {textGlobal.showmore}
                     </BigLink>
                 </div>
@@ -62,7 +62,7 @@ const Work = (props) => {
         return (
             <div
                 className={`work__img ${
-                    props.index % 2 !== 0
+                    props.id % 2 !== 0
                         ? "work__img--left"
                         : "work__img--right"
                 }`}
@@ -75,7 +75,7 @@ const Work = (props) => {
                     {/* оверлей нечетной карточки появляется справа налево */}
                     <div
                         style={
-                            props.index % 2 !== 0 ? { right: 0 } : { left: 0 }
+                            props.id % 2 !== 0 ? { right: 0 } : { left: 0 }
                         }
                         ref={overlayRef}
                         className="work__img-overlay"
@@ -86,7 +86,7 @@ const Work = (props) => {
                         alt=""
                     />
                     <div className="work__img-case-number">
-                        {"0" + (props.index + 1)}
+                        {"0" + (props.id + 1)}
                     </div>
                 </div>
             </div>
@@ -96,7 +96,7 @@ const Work = (props) => {
     return (
         <WorkStyled color={props.workColor}>
             <div className="work container">
-                {props.index % 2 !== 0 && desktop ? (
+                {props.id % 2 !== 0 && desktop ? (
                     <>
                         {workImg()}
                         {workText()}

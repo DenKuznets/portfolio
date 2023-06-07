@@ -26,9 +26,9 @@ const MainPage = () => {
                     >
                         {textGlobal.header.nav.work}
                     </h2>
-                    <Work index={0} workColor="violet" />
-                    <Work index={1} workColor="default" />
-                    <Work index={2} workColor="yellow" />
+                    <Work id={0} workColor="violet" />
+                    <Work id={1} workColor="default" />
+                    <Work id={2} workColor="yellow" />
                     <div
                         style={{
                             backgroundColor: `${colors.white}`,

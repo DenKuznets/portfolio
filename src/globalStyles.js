@@ -88,7 +88,6 @@ html {
 
 body {
   color: ${colors.almostBlack};
-  ${"" /* padding-top: 100px; */}
   font-family: ${fonts.merriweather};
   font-size: 18px;
     & *::first-letter{
