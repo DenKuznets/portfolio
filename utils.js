@@ -159,7 +159,7 @@ export const localization = {
                     img: "tes.png",
                     github: "https://github.com/DenKuznets/tes.loc",
                     demo: "https://tul-energo-service.ru/",
-                    description: `Верстка по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
+                    description: `Верстка главной страницы по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
                 },
                 {
                     name: "портфолио",
@@ -210,7 +210,7 @@ export const localization = {
                     img: "tehavto.png",
                     github: "https://github.com/DenKuznets/teh-avto.loc",
                     demo: "https://avtodom-techauto.ru/",
-                    description: `Верстка по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
+                    description: `Верстка главной страницы по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
                 },
                 {
                     name: "коммерческий сайт",
@@ -218,7 +218,7 @@ export const localization = {
                     img: "bmk.png",
                     github: "https://github.com/DenKuznets/bmk-new.loc",
                     demo: "https://bmk78.ru/",
-                    description: `Верстка по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
+                    description: `Верстка главной страницы по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
                 },
                 {
                     name: "коммерческий сайт",
@@ -226,7 +226,7 @@ export const localization = {
                     img: "cleaning.png",
                     github: "https://github.com/DenKuznets/cleaning-chistulya.loc",
                     demo: "https://chistylya.ru/",
-                    description: `Верстка по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
+                    description: `Верстка главной страницы по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
                 },
                 {
                     name: "коммерческий сайт",
@@ -234,7 +234,7 @@ export const localization = {
                     img: "myp.png",
                     github: "https://github.com/DenKuznets/myp-comfort",
                     demo: "https://mup-komfort.ru/",
-                    description: `Верстка по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
+                    description: `Верстка главной страницы по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
                 },
             ],
         },
