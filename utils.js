@@ -135,7 +135,7 @@ export const localization = {
         showmore: "Подробнее",
         backButton: "Назад",
         myWorks: "Мои проекты",
-        allWorks: 'Все проекты',
+        allWorks: "Все проекты",
         header: {
             nav: {
                 hero: "Обо мне",
@@ -155,11 +155,24 @@ export const localization = {
             works: [
                 {
                     name: "коммерческий сайт",
-                    tech: ["laravel", "адаптивная верстка", "scss"],
+                    tech: ["html", "scss", "javascript", "адаптивная верстка"],
                     img: "tes.png",
                     github: "https://github.com/DenKuznets/tes.loc",
                     demo: "https://tul-energo-service.ru/",
                     description: `Верстка по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
+                },
+                {
+                    name: "портфолио",
+                    tech: [
+                        "react",
+                        "styled-components",
+                        "typescript",
+                        "react-router",
+                    ],
+                    img: "portfolio.png",
+                    github: "https://github.com/DenKuznets/masha-portfolio",
+                    demo: "http://davinchushka.vercel.app/",
+                    description: `шаблон портфолио по дизайну figma`,
                 },
                 {
                     name: "тестовое задание для web-студии",
@@ -193,7 +206,7 @@ export const localization = {
                 },
                 {
                     name: "коммерческий сайт",
-                    tech: ["laravel", "адаптивная верстка", "scss"],
+                    tech: ["html", "scss", "javascript", "адаптивная верстка"],
                     img: "tehavto.png",
                     github: "https://github.com/DenKuznets/teh-avto.loc",
                     demo: "https://avtodom-techauto.ru/",
@@ -201,7 +214,7 @@ export const localization = {
                 },
                 {
                     name: "коммерческий сайт",
-                    tech: ["laravel", "адаптивная верстка", "scss"],
+                    tech: ["html", "scss", "javascript", "адаптивная верстка"],
                     img: "bmk.png",
                     github: "https://github.com/DenKuznets/bmk-new.loc",
                     demo: "https://bmk78.ru/",
@@ -209,7 +222,7 @@ export const localization = {
                 },
                 {
                     name: "коммерческий сайт",
-                    tech: ["laravel", "адаптивная верстка", "scss"],
+                    tech: ["html", "scss", "javascript", "адаптивная верстка"],
                     img: "cleaning.png",
                     github: "https://github.com/DenKuznets/cleaning-chistulya.loc",
                     demo: "https://chistylya.ru/",
@@ -217,7 +230,7 @@ export const localization = {
                 },
                 {
                     name: "коммерческий сайт",
-                    tech: ["laravel", "адаптивная верстка", "scss"],
+                    tech: ["html", "scss", "javascript", "адаптивная верстка"],
                     img: "myp.png",
                     github: "https://github.com/DenKuznets/myp-comfort",
                     demo: "https://mup-komfort.ru/",
