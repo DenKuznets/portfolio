@@ -147,7 +147,7 @@ export const localization = {
             lname: "Кузнецов",
             profession: "front-end разработчик",
             aboutme: "верстаю сайты на react и styled-components",
-            stack: "СТЭК: HTML CSS JS TS REACT REDUX-TOOLKIT SASS STYLED-COMPONENTS",
+            stack: "СТЭК: JS TS REACT REDUX-TOOLKIT SASS STYLED-COMPONENTS CSS-MODULES",
             contactme: "Связаться",
             socials: "я в соц сетях",
         },
