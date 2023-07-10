@@ -14,6 +14,8 @@ const AllWorksStyled = styled.section`
     }
     .allworks__grid {
         /* background-color: red; */
+        margin: 0 auto;
+        max-width: 1400px;
         display: grid;
         gap: 40px;
         grid-template-columns: repeat(2, 1fr);
