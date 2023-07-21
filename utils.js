@@ -161,18 +161,19 @@ export const localization = {
                     demo: "https://tul-energo-service.ru/",
                     description: `Верстка главной страницы по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
                 },
-                {
-                    name: "портфолио",
-                    tech: [
-                        "react",
-                        "styled-components",
-                        "typescript",
-                        "react-router",
-                    ],
-                    img: "portfolio.png",
-                    github: "https://github.com/DenKuznets/masha-portfolio",
-                    demo: "http://davinchushka.vercel.app/",
-                    description: `шаблон портфолио по дизайну figma`,
+                 {
+                    name: "тестовое задание для web-студии",
+                    tech: ["react", "styled-components", "адаптивная верстка"],
+                    img: "webstudio.png",
+                    github: "https://github.com/DenKuznets/testovoe-alexmedia",
+                    demo: "https://denkuznets.github.io/testovoe-alexmedia/",
+                    description: `Тестовое задание выполнено по макету Figma, предоставленным заказчикомм. Тех. задание выглядело так: 
+                        1) Сделать липкое меню.
+                        2) Мобильное и декстпное меню должно в html быть одним блоком. 
+                        3) Добавить Анимации по своему усмотрению. Можно использовать сторонние библиотеки , но без jquery.(не обязательно)
+                        4) Cделать popup и в форме предусмотреть валидацию, Пока не заполненны все поля кнопка должна быть неактивна.(не обязательно)
+                        5) Ховеры на ссылки, по своему усмотрению.
+                        6) Мобильная верстка`,
                 },
                 {
                     name: "drag'n'drop на react",
@@ -194,19 +195,20 @@ export const localization = {
                         5) Ограничения на стек технологий:JavaScript React Redux Остальное на ваше усмотрение`,
                 },
                 {
-                    name: "тестовое задание для web-студии",
-                    tech: ["react", "styled-components", "адаптивная верстка"],
-                    img: "webstudio.png",
-                    github: "https://github.com/DenKuznets/testovoe-alexmedia",
-                    demo: "https://denkuznets.github.io/testovoe-alexmedia/",
-                    description: `Тестовое задание выполнено по макету Figma, предоставленным заказчикомм. Тех. задание выглядело так: 
-                        1) Сделать липкое меню.
-                        2) Мобильное и декстпное меню должно в html быть одним блоком. 
-                        3) Добавить Анимации по своему усмотрению. Можно использовать сторонние библиотеки , но без jquery.(не обязательно)
-                        4) Cделать popup и в форме предусмотреть валидацию, Пока не заполненны все поля кнопка должна быть неактивна.(не обязательно)
-                        5) Ховеры на ссылки, по своему усмотрению.
-                        6) Мобильная верстка`,
+                    name: "портфолио",
+                    tech: [
+                        "react",
+                        "styled-components",
+                        "typescript",
+                        "react-router",
+                    ],
+                    img: "portfolio.png",
+                    github: "https://github.com/DenKuznets/masha-portfolio",
+                    demo: "http://davinchushka.vercel.app/",
+                    description: `шаблон портфолио по дизайну figma`,
                 },
+                
+               
                 {
                     name: "квиз",
                     tech: ["react", "api", "styled-components"],
