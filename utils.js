@@ -161,13 +161,13 @@ export const localization = {
                     demo: "https://tul-energo-service.ru/",
                     description: `Верстка главной страницы по заказу вебстудии alex-media.ru по макету Figma с соблюдением дедлайна и pixel-perfect попаданием в адаптивные брейкпоинты`,
                 },
-                 {
+                {
                     name: "тестовое задание для web-студии",
                     tech: ["react", "styled-components", "адаптивная верстка"],
                     img: "webstudio.png",
                     github: "https://github.com/DenKuznets/testovoe-alexmedia",
                     demo: "https://denkuznets.github.io/testovoe-alexmedia/",
-                    description: `Тестовое задание выполнено по макету Figma, предоставленным заказчикомм. Тех. задание выглядело так: 
+                    description: `Тестовое задание по макету Figma и ТЗ: 
                         1) Сделать липкое меню.
                         2) Мобильное и декстпное меню должно в html быть одним блоком. 
                         3) Добавить Анимации по своему усмотрению. Можно использовать сторонние библиотеки , но без jquery.(не обязательно)
@@ -195,6 +195,32 @@ export const localization = {
                         5) Ограничения на стек технологий:JavaScript React Redux Остальное на ваше усмотрение`,
                 },
                 {
+                    name: "тестовое задание",
+                    tech: [
+                        "react",
+                        "styled-components",
+                        "адаптивная верстка",
+                        "API fetching",
+                        "react hooks",
+                        "modal popup",
+                        "search filter",
+                        "nested menu",
+                        "axios",
+                    ],
+                    img: "test1.png",
+                    github: "https://github.com/DenKuznets/dls-test",
+                    demo: "https://dls-test.vercel.app/",
+                    description: `Тестовое задание по макету Figma и ТЗ: 
+                        1) Горизонтальное меню - sticky, исчезает после 200px прокрутки
+                        2) Мобильное меню - плавное скрытие/открытие
+                        3) Подменю - только CSS
+                        4) Получение данных fetch()/axios
+                        5) Отображение списка постов - flex
+                        6) Поиск постов - по заголовкам и тексту
+                        7) Полная информация о посте по клику на пост - modal window     
+                        `,
+                },
+                {
                     name: "портфолио",
                     tech: [
                         "react",
@@ -207,8 +233,7 @@ export const localization = {
                     demo: "http://davinchushka.vercel.app/",
                     description: `шаблон портфолио по дизайну figma`,
                 },
-                
-               
+
                 {
                     name: "квиз",
                     tech: ["react", "api", "styled-components"],
