@@ -200,7 +200,6 @@ export const localization = {
                         "react",
                         "styled-components",
                         "адаптивная верстка",
-                        "API fetching",
                         "react hooks",
                         "modal popup",
                         "search filter",

@@ -45,6 +45,7 @@ const WorkSmallStyled = styled.div`
 
     button {
         position: absolute;
+        
         top: 50%;
         left: 50%;
         transform: translateX(-50%) scale(0);
@@ -53,7 +54,8 @@ const WorkSmallStyled = styled.div`
         width: 100%;
         /* border: none; */
         border: 1px solid white;
-        background-color: transparent;
+        /* background-color: transparent; */
+        background-color: rgba(0,0,0, 0.8);
         color: white;
         padding: 1em;
         text-align: start;
