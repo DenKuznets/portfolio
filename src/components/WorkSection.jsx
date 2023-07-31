@@ -1,6 +1,6 @@
 import BigLink from "./BigLink";
 import { useRef } from "react";
-import { WorkStyled } from "./styled/Work.styled";
+import { WorkSectionStyled } from "./styled/WorkSection.styled";
 import useMediaQuery from "../hooks/useMediaQuery";
 import TechList from "./TechList";
 import useLocalization from "../hooks/useLocalization";
@@ -97,7 +97,7 @@ const WorkSection = (props) => {
     }
 
     return (
-        <WorkStyled color={props.workColor}>
+        <WorkSectionStyled color={props.workColor}>
             <div className="work container">
                 {props.id % 2 !== 0 && desktop ? (
                     <>
@@ -111,7 +111,7 @@ const WorkSection = (props) => {
                     </>
                 )}
             </div>
-        </WorkStyled>
+        </WorkSectionStyled>
     );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import WorkModalStyled from "./styled/WorkModal.styled";
+import WorkStyled from "./styled/Work.styled";
 import BigLink from "./BigLink";
 import TechList from "./TechList";
 import useLocalization from "../hooks/useLocalization";
@@ -10,9 +10,9 @@ const Work = () => {
     const textWork = textGlobal.work.works[useParams().id];
     const navigate = useNavigate();
     return (
-        <WorkModalStyled>
-            <div className="modal__content">
-                <div className="modal__content-text">
+        <WorkStyled>
+            <div className="work__content">
+                <div className="work__content-text">
                     <h3>{textWork.name}</h3>
                     <TechList list={textWork.tech} />
                     <div>
@@ -24,14 +24,15 @@ const Work = () => {
                         {textGlobal.backButton}
                     </BigLink>
                 </div>
-                <div className="live-preview">
-                    <h3>Live Preview</h3>
-                    <iframe src={textWork.demo} title={textWork.name}>
+                <div className="work__image">
+                    {/* <h3>Live Preview</h3> */}
+                    {/* <iframe src={textWork.demo} title={textWork.name}>
                         IFRAME
-                    </iframe>
+                    </iframe> */}
+
                 </div>
             </div>
-        </WorkModalStyled>
+        </WorkStyled>
     );
 };
 

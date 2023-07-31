@@ -1,124 +1,86 @@
 import styled from "styled-components";
-import { colors, fonts, screen } from "../../../utils";
 
-export const WorkStyled = styled.div`
-    position: relative;
-    padding: 0 1em;
-    background-color: ${({ color, theme }) => {
-        return theme.work.workThemes[color].bg;
-    }};
+const modalContentColumn = "900px";
 
-    .work {
-        /* outline: 1px solid black; */
-        max-width: 1200px;
-        min-height: 500px;
-        width: 100%;
+const WorkStyled = styled.div`
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    background-color: ${({ theme }) => theme.workModal.bg};
+
+    .work__content {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
+        gap: 100px;
+        padding: 50px;
+        height: 100%;
+        width: 100%;
+        max-width: 1800px;
         margin: 0 auto;
-
-        @media (max-width: ${screen.tablet}) {
+        @media only screen and (max-width: ${modalContentColumn}) {
             flex-direction: column;
-            align-items: flex-start;
-            padding-top: 2em;
-            padding-bottom: 2em;
-            gap: 2em;
+            min-height: 100%;
+            height: unset;
+            gap: 40px;
         }
-        &__text {
-            color: ${({ color, theme }) =>
-                theme.work.workThemes[color].textColor};
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            @media (max-width: ${screen.tablet}) {
-                align-items: flex-start;
-            }
-
-            a {
-                color: ${({ color, theme }) =>
-                    theme.work.workThemes[color].textColor};
-            }
-
-            h3 {
-                margin-bottom: 15px;
-            }
-
-            ul {
-                margin-bottom: 15px;
-            }
-
-            li {
-                color: ${({ color, theme }) =>
-                    theme.work.workThemes[color].textColor};
-                border: 1px dotted
-                    ${({ color, theme }) =>
-                        theme.work.workThemes[color].borderColor};
-            }
-
-            &-more {
-                margin-top: 2em;
-                &:hover {
-                    outline: 1px solid
-                        ${({ color, theme }) =>
-                            theme.work.workThemes[color].borderColor};
-                }
-            }
+        @media only screen and (max-width: 530px) {
+            padding: 50px 10px;
         }
+    }
+    h3 {
+        margin-bottom: 1em;
+    }
+    p {
+        white-space: pre-line;
+        margin-top: 30px;
+        min-width: 300px;
+        color: inherit;
+        @media only screen and (max-width: ${modalContentColumn}) {
+            padding-left: 0;
+        }
+    }
 
-        &__img {
-            flex: 1;
-            height: 450px;
-            position: relative;
+    ul{
+        margin-bottom: 1em;
+    }
 
-            &-content {
-                position: relative;
-                overflow: hidden;
-                width: 100%;
-                cursor: pointer;
+    li {
+        border: 1px dotted ${({ theme }) => theme.workModal.border};
+    }
 
-                img {
-                    border: 1px solid ${colors.almostBlack};
-                    width: 100%;
-                    height: 450px;
-                    object-fit: cover;
-                    @media (max-width: ${screen.tablet}) {
-                        max-width: unset;
-                        height: auto;
-                    }
-                }
-            }
-            &-overlay {
-                /* z-index: 1; */
-                width: 0;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                transition: all 0.35s ease-in;
-                opacity: 0.8;
-                background: ${({ color, theme }) =>
-                    theme.work.workThemes[color].overlayGradient};
-            }
+    .btn-back {
+        width: fit-content;
+        margin-top: 2em;
+    }
 
-            &-case-number {
-                position: absolute;
-                min-height: 0;
-                max-height: 0;
-                overflow: hidden;
-                top: -25px;
-                left: 25px;
-                color: white;
-                font-family: ${fonts.leagueSpartan};
-                font-weight: 800;
-                font-size: 10rem;
-                transition: all 0.3s ease;
-                opacity: 0.7;
-                @media only screen and (max-width: ${screen.mobileM}) {
-                    font-size: 6rem;
-                    top: 0;
-                }
-            }
+    .work__image {
+        background-color: white;
+        flex-basis: 1000px;
+        min-width: 380px;
+        background-color: transparent;
+        @media only screen and (max-width: ${modalContentColumn}) {
+            min-height: 70vh;
+            flex-basis: unset;
+        }
+        @media only screen and (max-width: 420px) {
+            display: none;
+        }
+        h3 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: inherit;
+        }
+        iframe {
+            width: 100%;
+            min-height: 80vh;
+            overflow: auto;
         }
     }
 `;
+
+export default WorkStyled;
