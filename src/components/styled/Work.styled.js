@@ -31,6 +31,32 @@ const WorkStyled = styled.div`
         @media only screen and (max-width: 530px) {
             padding: 50px 10px;
         }
+        &-text {
+            flex: 1;
+        }
+        &-image {
+            flex: 1;
+            background-color: white;
+            min-width: 380px;
+            background-color: transparent;
+            @media only screen and (max-width: ${modalContentColumn}) {
+                min-height: 70vh;
+                flex-basis: unset;
+            }
+            @media only screen and (max-width: 420px) {
+                display: none;
+            }
+            h3 {
+                text-align: center;
+                margin-bottom: 10px;
+                color: inherit;
+            }
+            iframe {
+                width: 100%;
+                min-height: 80vh;
+                overflow: auto;
+            }
+        }
     }
     h3 {
         margin-bottom: 1em;
@@ -45,7 +71,7 @@ const WorkStyled = styled.div`
         }
     }
 
-    ul{
+    ul {
         margin-bottom: 1em;
     }
 
@@ -56,30 +82,6 @@ const WorkStyled = styled.div`
     .btn-back {
         width: fit-content;
         margin-top: 2em;
-    }
-
-    .work__image {
-        background-color: white;
-        flex-basis: 1000px;
-        min-width: 380px;
-        background-color: transparent;
-        @media only screen and (max-width: ${modalContentColumn}) {
-            min-height: 70vh;
-            flex-basis: unset;
-        }
-        @media only screen and (max-width: 420px) {
-            display: none;
-        }
-        h3 {
-            text-align: center;
-            margin-bottom: 10px;
-            color: inherit;
-        }
-        iframe {
-            width: 100%;
-            min-height: 80vh;
-            overflow: auto;
-        }
     }
 `;
 

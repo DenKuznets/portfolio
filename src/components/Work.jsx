@@ -20,16 +20,17 @@ const Work = () => {
                         <a href={textWork.demo}>Demo</a>
                     </div>
                     <p>{textWork.description}</p>
-                    <BigLink onClick={()=> navigate(-1) } className="btn-back">
+                    <BigLink onClick={() => navigate(-1)} className="btn-back">
                         {textGlobal.backButton}
                     </BigLink>
                 </div>
-                <div className="work__image">
-                    {/* <h3>Live Preview</h3> */}
-                    {/* <iframe src={textWork.demo} title={textWork.name}>
-                        IFRAME
-                    </iframe> */}
-
+                <div className="work__content-image">
+                    <a href={textWork.demo}>
+                        <img
+                            src={`../images/works-preview/${textWork.img}`}
+                            alt=""
+                        />
+                    </a>
                 </div>
             </div>
         </WorkStyled>
