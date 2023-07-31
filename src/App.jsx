@@ -5,7 +5,7 @@ import {
     createRoutesFromElements,
 } from "react-router-dom";
 import MainPage from "./pages/MainPage";
-import AllWorks from "./components/AllWorks";
+import WorksAll from "./components/WorksAll";
 import Work from "./components/Work";
 import Layout from "./components/Layout";
 
@@ -13,7 +13,7 @@ const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Layout />}>
             <Route index element={<MainPage />} />
-            <Route path="allworks" element={<AllWorks />} />
+            <Route path="allworks" element={<WorksAll />} />
             <Route path="allworks/:id" element={<Work />} />
         </Route>
     )

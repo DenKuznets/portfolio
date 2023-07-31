@@ -4,7 +4,7 @@ import BigLink from "./BigLink";
 import useLocalization from "../hooks/useLocalization";
 import { useNavigate } from "react-router";
 
-const AllWorksStyled = styled.section`
+const WorksAllStyled = styled.section`
     padding-top: 1em;
     margin: 0 auto;
     padding-bottom: 3em;
@@ -35,7 +35,7 @@ const AllWorksStyled = styled.section`
     }
 `;
 
-const AllWorks = () => {
+const WorksAll = () => {
     const textGlobal = useLocalization().local;
     const navigate = useNavigate();
     const works = textGlobal.work.works.map((work, index) => (
@@ -43,14 +43,14 @@ const AllWorks = () => {
     ));
 
     return (
-        <AllWorksStyled>
+        <WorksAllStyled>
             <BigLink onClick={() => navigate(-1)} className="btn-back">
                 {textGlobal.backButton}
             </BigLink>
             <h2>{textGlobal.work.myWorks}</h2>
             <div className="allworks__grid">{works}</div>
-        </AllWorksStyled>
+        </WorksAllStyled>
     );
 };
 
-export default AllWorks;
+export default WorksAll;
