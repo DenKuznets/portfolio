@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import Work from "../components/Work";
+import WorkSection from "../components/WorkSection";
 import Header from "../components/Header";
 import { colors } from "../../utils";
 import Footer from "../components/Footer";
@@ -26,9 +26,9 @@ const MainPage = () => {
                     >
                         {textGlobal.header.nav.work}
                     </h2>
-                    <Work id={0} workColor="violet" />
-                    <Work id={1} workColor="default" />
-                    <Work id={2} workColor="yellow" />
+                    <WorkSection id={0} workColor="violet" />
+                    <WorkSection id={1} workColor="default" />
+                    <WorkSection id={2} workColor="yellow" />
                     <div
                         style={{
                             backgroundColor: `${colors.white}`,

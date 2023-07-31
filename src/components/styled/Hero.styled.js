@@ -17,6 +17,10 @@ const HeroStyled = styled.section`
 
         @media only screen and (max-width: ${heroImageNone}) {
             grid-template-columns: 1fr;
+            margin-top: 5rem;
+        }
+        @media only screen and (max-width: ${heroTextContentCenterAll}) {
+            margin-top: 2rem;
         }
         &__text {
             /* outline: 1px solid red; */
@@ -147,8 +151,9 @@ const HeroStyled = styled.section`
         }
 
         &__img {
-            /* background-color: red; */
-
+            @media only screen and (max-width: ${heroImageNone}) {
+                display: none;
+            }
             &-content {
                 max-width: 700px;
                 width: 100%;
@@ -156,9 +161,6 @@ const HeroStyled = styled.section`
                 justify-content: center;
                 align-items: flex-end;
                 max-width: 700px;
-                @media only screen and (max-width: ${heroImageNone}) {
-                    display: none;
-                }
                 img {
                     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
                     box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
@@ -171,22 +173,6 @@ const HeroStyled = styled.section`
         }
     }
 
-    /* @keyframes morphing {
-        0% {
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
-        }
-        25% {
-            border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
-        }
-        50% {
-            border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
-            box-shadow: -10px -5px 50px rgba(0, 0, 0, 0.2);
-        }
-        75% {
-            border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
-        }
-    } */
 `;
 
 export default HeroStyled;

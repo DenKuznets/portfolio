@@ -6,7 +6,7 @@ import TechList from "./TechList";
 import useLocalization from "../hooks/useLocalization";
 import { useNavigate } from "react-router";
 
-const Work = (props) => {
+const WorkSection = (props) => {
     const overlayRef = useRef("");
     const imageRef = useRef("");
     const textGlobal = useLocalization().local;
@@ -115,4 +115,4 @@ const Work = (props) => {
     );
 };
 
-export default Work;
+export default WorkSection;
