@@ -12,7 +12,7 @@ const WorksAllStyled = styled.section`
         text-align: center;
         margin-bottom: 1em;
     }
-    .allworks__grid {
+    .worksAll__grid {
         /* background-color: red; */
         margin: 0 auto;
         max-width: 1400px;
@@ -43,12 +43,17 @@ const WorksAll = () => {
     ));
 
     return (
-        <WorksAllStyled>
+        <WorksAllStyled className="worksAll">
             <BigLink onClick={() => navigate(-1)} className="btn-back">
                 {textGlobal.backButton}
             </BigLink>
-            <h2>{textGlobal.work.myWorks}</h2>
-            <div className="allworks__grid">{works}</div>
+
+            {/* <h2>{textGlobal.myWorks}</h2> */}
+            <div className="worksAll_filter">
+                
+            </div>
+
+            <div className="worksAll__grid">{works}</div>
         </WorksAllStyled>
     );
 };
