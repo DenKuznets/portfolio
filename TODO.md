@@ -1,4 +1,4 @@
-workmodal фото вместо iframe в мобильной версии
+allworks filter
 allworks better colors
 hero stack with icons
 темная версия
