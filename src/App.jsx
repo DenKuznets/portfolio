@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import AllWorks from "./components/AllWorks";
-import WorkModal from "./components/WorkModal";
+import Work from "./components/Work";
 import Layout from "./components/Layout";
 
 const router = createBrowserRouter(
@@ -14,7 +14,7 @@ const router = createBrowserRouter(
         <Route path="/" element={<Layout />}>
             <Route index element={<MainPage />} />
             <Route path="allworks" element={<AllWorks />} />
-            <Route path="allworks/:id" element={<WorkModal />} />
+            <Route path="allworks/:id" element={<Work />} />
         </Route>
     )
 );

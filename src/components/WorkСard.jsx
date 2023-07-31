@@ -3,7 +3,7 @@ import styled from "styled-components";
 import TechList from "./TechList";
 import useLocalization from "../hooks/useLocalization";
 
-const WorkSmallStyled = styled.div`
+const WorkCardStyled = styled.div`
     position: relative;
     max-width: 100%;
     height: 500px;
@@ -78,10 +78,10 @@ const WorkSmallStyled = styled.div`
     }
 `;
 
-const WorkSmall = ({ work, onClick }) => {
+const WorkCard = ({ work, onClick }) => {
     const textGlobal = useLocalization().local;
     return (
-        <WorkSmallStyled onClick={onClick}>
+        <WorkCardStyled onClick={onClick}>
             <h4>{work.name}</h4>
             <div className="img-container">
                 <div className="overlay"></div>
@@ -89,8 +89,8 @@ const WorkSmall = ({ work, onClick }) => {
             </div>
             <button>{textGlobal.showmore}</button>
             <TechList list={work.tech} />
-        </WorkSmallStyled>
+        </WorkCardStyled>
     );
 };
 
-export default WorkSmall;
+export default WorkCard;

@@ -5,7 +5,7 @@ import TechList from "./TechList";
 import useLocalization from "../hooks/useLocalization";
 import { useNavigate, useParams } from "react-router";
 
-const WorkModal = () => {
+const Work = () => {
     const textGlobal = useLocalization().local;
     const textWork = textGlobal.work.works[useParams().id];
     const navigate = useNavigate();
@@ -35,4 +35,4 @@ const WorkModal = () => {
     );
 };
 
-export default WorkModal;
+export default Work;

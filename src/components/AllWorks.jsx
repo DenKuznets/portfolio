@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import WorkSmall from "./WorkSmall";
+import WorkCard from "./WorkСard";
 import BigLink from "./BigLink";
 import useLocalization from "../hooks/useLocalization";
 import { useNavigate } from "react-router";
@@ -39,7 +39,7 @@ const AllWorks = () => {
     const textGlobal = useLocalization().local;
     const navigate = useNavigate();
     const works = textGlobal.work.works.map((work, index) => (
-        <WorkSmall onClick={()=>navigate(`/allworks/${index}`)} key={index} work={work} />
+        <WorkCard onClick={()=>navigate(`/allworks/${index}`)} key={index} work={work} />
     ));
 
     return (
