@@ -5,11 +5,15 @@ import useLocalization from "../hooks/useLocalization";
 
 const WorkCardStyled = styled.div`
     position: relative;
-    max-width: 100%;
-    height: 500px;
+    width: 100%;
+    height: 100%;
+    height: 30rem;
     border-radius: 4px;
     overflow: hidden;
     color: ${({ theme }) => theme.workSmall.textColor};
+    @media only screen and (max-width: 690px) {
+        min-height: 30rem;
+    }
     &:hover {
         button {
             transform: translateX(-50%) scale(1);
@@ -24,7 +28,7 @@ const WorkCardStyled = styled.div`
             height: 100%;
             width: 100%;
             position: absolute;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.3);
         }
         img {
             height: 100%;
@@ -45,17 +49,15 @@ const WorkCardStyled = styled.div`
 
     button {
         position: absolute;
-        
+
         top: 50%;
         left: 50%;
         transform: translateX(-50%) scale(0);
         z-index: 1;
         transition: all 0.3s ease;
         width: 100%;
-        /* border: none; */
         border: 1px solid white;
-        /* background-color: transparent; */
-        background-color: rgba(0,0,0, 0.8);
+        background-color: rgba(0, 0, 0, 0.8);
         color: white;
         padding: 1em;
         text-align: start;
@@ -74,6 +76,7 @@ const WorkCardStyled = styled.div`
         li {
             border-color: inherit;
             color: inherit;
+            background-color: rgba(0, 0, 0, 0.4);
         }
     }
 `;
