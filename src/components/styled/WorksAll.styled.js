@@ -16,18 +16,20 @@ const WorksAllStyled = styled.section`
         justify-content: center;
         gap: 40px;
         flex-wrap: wrap;
-        @media only screen and (max-width: 869px) {
-        }
     }
 
     .btn-back {
         width: fit-content;
-        position: sticky;
+        position: fixed;
         top: 20px;
         margin-left: 10px;
         z-index: 2;
-
         background-color: ${({ theme }) => theme.allWorks.btnBack};
+        @media only screen and (max-width: 600px) {
+            top: unset;
+            bottom: 20px;
+            right: 1rem;
+        }
     }
 `;
 

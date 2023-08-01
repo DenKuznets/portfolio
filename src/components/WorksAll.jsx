@@ -64,6 +64,8 @@ const WorksAll = () => {
                         display: "flex",
                         gap: "20px",
                         justifyContent: "center",
+                        flexWrap: "wrap",
+                        mt: { xs: "0", sm: "5rem", lg: "2rem" },
                         // backgroundColor: "red",
                     }}
                 >
