@@ -1,3 +1,4 @@
+react query, zustand, vite
 SIDEBAR вместо кнопок назад
 allworks better colors
 hero stack with icons
