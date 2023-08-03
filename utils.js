@@ -165,6 +165,7 @@ export const localization = {
             },
             works: [
                 {
+                    id: 1,
                     category: CATEGORIES.LANDING,
                     name: "коммерческий сайт",
                     tech: ["html", "scss", "javascript", "адаптивная верстка"],
@@ -174,6 +175,7 @@ export const localization = {
                     description: `Верстка лэндинга по заказу web-студии alex-media.ru по макету Figma с соблюдением дедлайна, pixel-perfect попаданием в адаптивные брейкпоинты. В сотрудничестве с дизайнером и backend-разработчиком (php, laravel, blade)`,
                 },
                 {
+                    id: 2,
                     category: CATEGORIES.TEST,
                     name: "тестовое задание для web-студии",
                     tech: ["react", "styled-components", "адаптивная верстка"],
@@ -189,6 +191,7 @@ export const localization = {
                         6) Мобильная верстка`,
                 },
                 {
+                    id: 3,
                     category: CATEGORIES.TEST,
                     name: "drag'n'drop на react",
                     tech: ["react", "redux-toolkit"],
@@ -209,6 +212,7 @@ export const localization = {
                         5) Ограничения на стек технологий:JavaScript React Redux Остальное на ваше усмотрение`,
                 },
                 {
+                    id: 4,
                     category: CATEGORIES.TEST,
                     name: "тестовое задание",
                     tech: [
@@ -231,6 +235,7 @@ export const localization = {
                         `,
                 },
                 {
+                    id: 5,
                     category: CATEGORIES.LEARN,
                     name: "портфолио",
                     tech: [
@@ -246,6 +251,7 @@ export const localization = {
                 },
 
                 {
+                    id: 6,
                     category: CATEGORIES.LEARN,
                     name: "квиз",
                     tech: ["react", "api", "styled-components"],
@@ -255,6 +261,7 @@ export const localization = {
                     description: `Пример использования API. По макету figma в рамках задания сайта scrimba.com, курс Learn React`,
                 },
                 {
+                    id: 7,
                     category: CATEGORIES.LEARN,
                     name: "компонент диаграмма расходов",
                     tech: ["react", "typescript", "styled-components"],
@@ -264,6 +271,7 @@ export const localization = {
                     description: `Основная сложность состояла в том, что бы придумать как реализовать отображение диаграммы. Кроме того, пробовал свои силы в написании компонентов react с использованием typescript. Задание с сайта frontendmentor.io`,
                 },
                 {
+                    id: 8,
                     category: CATEGORIES.LANDING,
                     name: "коммерческий сайт",
                     tech: ["html", "scss", "javascript", "адаптивная верстка"],
@@ -273,6 +281,7 @@ export const localization = {
                     description: `Верстка лэндинга по заказу web-студии alex-media.ru по макету Figma с соблюдением дедлайна, pixel-perfect попаданием в адаптивные брейкпоинты. В сотрудничестве с дизайнером и backend-разработчиком (php, laravel, blade)`,
                 },
                 {
+                    id: 9,
                     category: CATEGORIES.LANDING,
                     name: "коммерческий сайт",
                     tech: ["html", "scss", "javascript", "адаптивная верстка"],
@@ -282,6 +291,7 @@ export const localization = {
                     description: `Верстка лэндинга по заказу web-студии alex-media.ru по макету Figma с соблюдением дедлайна, pixel-perfect попаданием в адаптивные брейкпоинты. В сотрудничестве с дизайнером и backend-разработчиком (php, laravel, blade)`,
                 },
                 {
+                    id: 10,
                     category: CATEGORIES.LANDING,
                     name: "коммерческий сайт",
                     tech: ["html", "scss", "javascript", "адаптивная верстка"],
@@ -291,6 +301,7 @@ export const localization = {
                     description: `Верстка лэндинга по заказу web-студии alex-media.ru по макету Figma с соблюдением дедлайна, pixel-perfect попаданием в адаптивные брейкпоинты. В сотрудничестве с дизайнером и backend-разработчиком (php, laravel, blade)`,
                 },
                 {
+                    id: 11,
                     category: CATEGORIES.LANDING,
                     name: "коммерческий сайт",
                     tech: ["html", "scss", "javascript", "адаптивная верстка"],

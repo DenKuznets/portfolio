@@ -7,7 +7,8 @@ import { useNavigate, useParams } from "react-router";
 
 const Work = () => {
     const textGlobal = useLocalization().local;
-    const textWork = textGlobal.work.works[useParams().id];
+    const textWork = textGlobal.work.works[useParams().id-1];
+    console.log(textWork);
     const navigate = useNavigate();
     return (
         <WorkStyled>

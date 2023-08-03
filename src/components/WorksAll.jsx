@@ -46,7 +46,7 @@ const WorksAll = () => {
     const workCards = workCardsList.map((work, index) => (
         <Grid sm={12} md={6} xl={4} item key={index}>
             <WorkCard
-                onClick={() => navigate(`/allworks/${index}`)}
+                onClick={() => navigate(`/allworks/${work.id}`)}
                 work={work}
             />
         </Grid>
