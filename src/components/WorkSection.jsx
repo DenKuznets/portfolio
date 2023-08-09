@@ -52,7 +52,7 @@ const WorkSection = (props) => {
                         <a href={textWork.demo}>Demo</a>
                     </div>
 
-                    <BigLink to={`allworks/${props.id}`} className="work__text-more">
+                    <BigLink to={`allworks/${textWork.id}`} className="work__text-more">
                         {textGlobal.showmore}
                     </BigLink>
                 </div>

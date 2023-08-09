@@ -153,7 +153,7 @@ export const localization = {
             lname: "Кузнецов",
             profession: "front-end разработчик",
             aboutme: "верстаю сайты на react и styled-components",
-            stack: "СТЭК: JS TS REACT REDUX-TOOLKIT SASS STYLED-COMPONENTS CSS-MODULES",
+            stack: "СТЭК: JS TS REACT REDUX-TOOLKIT MUI SASS STYLED-COMPONENTS CSS-MODULES",
             contactme: "Связаться",
             socials: "я в соц сетях",
         },
@@ -175,6 +175,39 @@ export const localization = {
                     description: `Верстка лэндинга по заказу web-студии alex-media.ru по макету Figma с соблюдением дедлайна, pixel-perfect попаданием в адаптивные брейкпоинты. В сотрудничестве с дизайнером и backend-разработчиком (php, laravel, blade)`,
                 },
                 {
+                    id: 5,
+                    category: CATEGORIES.LEARN,
+                    name: "портфолио",
+                    tech: [
+                        "react",
+                        "styled-components",
+                        "typescript",
+                        "react-router",
+                    ],
+                    img: "portfolio.png",
+                    github: "https://github.com/DenKuznets/masha-portfolio",
+                    demo: "http://davinchushka.vercel.app/",
+                    description: `шаблон портфолио по дизайну figma`,
+                },
+                {
+                    id: 12,
+                    category: CATEGORIES.LEARN,
+                    name: "IP address tracker",
+                    tech: ["react", "mui", "typescript", "zustand"],
+                    img: "iptracker.png",
+                    github: "https://github.com/DenKuznets/ip-address-tracker",
+                    demo: "dk-ip-address-tracker.vercel.app",
+                    description: ` frontend mentor challenge
+                        Функционал: 
+                        - Адаптивная верстка под разные экраны
+                        - Ховер на интерактивных элементах
+                        - Отображение адрес IP пользователя на карте при загрузке страницы
+                        - Поиск информрации об ip/доменах
+                        - Отображение ошибки при некорректном вводе айпи/домена
+                        - Отображение ошибки при других сетевых ошибках
+                        - Отправка запроса по нажатию Enter или клику черной кнопки`,
+                },
+                {
                     id: 2,
                     category: CATEGORIES.TEST,
                     name: "тестовое задание для web-студии",
@@ -190,6 +223,7 @@ export const localization = {
                         5) Ховеры на ссылки, по своему усмотрению.
                         6) Мобильная верстка`,
                 },
+
                 {
                     id: 3,
                     category: CATEGORIES.TEST,
@@ -233,21 +267,6 @@ export const localization = {
                         6) Поиск постов - по заголовкам и тексту
                         7) Полная информация о посте по клику на пост - modal window     
                         `,
-                },
-                {
-                    id: 5,
-                    category: CATEGORIES.LEARN,
-                    name: "портфолио",
-                    tech: [
-                        "react",
-                        "styled-components",
-                        "typescript",
-                        "react-router",
-                    ],
-                    img: "portfolio.png",
-                    github: "https://github.com/DenKuznets/masha-portfolio",
-                    demo: "http://davinchushka.vercel.app/",
-                    description: `шаблон портфолио по дизайну figma`,
                 },
 
                 {
