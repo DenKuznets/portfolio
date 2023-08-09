@@ -174,20 +174,29 @@ export const localization = {
                     demo: "https://tul-energo-service.ru/",
                     description: `Верстка лэндинга по заказу web-студии alex-media.ru по макету Figma с соблюдением дедлайна, pixel-perfect попаданием в адаптивные брейкпоинты. В сотрудничестве с дизайнером и backend-разработчиком (php, laravel, blade)`,
                 },
+
                 {
-                    id: 5,
-                    category: CATEGORIES.LEARN,
-                    name: "портфолио",
+                    id: 4,
+                    category: CATEGORIES.TEST,
+                    name: "тестовое задание",
                     tech: [
                         "react",
                         "styled-components",
-                        "typescript",
-                        "react-router",
+                        "адаптивная верстка",
+                        "axios",
                     ],
-                    img: "portfolio.png",
-                    github: "https://github.com/DenKuznets/masha-portfolio",
-                    demo: "http://davinchushka.vercel.app/",
-                    description: `шаблон портфолио по дизайну figma`,
+                    img: "test1.png",
+                    github: "https://github.com/DenKuznets/dls-test",
+                    demo: "https://dls-test.vercel.app/",
+                    description: `Тестовое задание по макету Figma и ТЗ: 
+                        1) Горизонтальное меню - sticky, исчезает после 200px прокрутки
+                        2) Мобильное меню - плавное скрытие/открытие
+                        3) Подменю - только CSS
+                        4) Получение данных fetch()/axios
+                        5) Отображение списка постов - flex
+                        6) Поиск постов - по заголовкам и тексту
+                        7) Полная информация о посте по клику на пост - modal window     
+                        `,
                 },
                 {
                     id: 12,
@@ -206,6 +215,21 @@ export const localization = {
                         - Отображение ошибки при некорректном вводе айпи/домена
                         - Отображение ошибки при других сетевых ошибках
                         - Отправка запроса по нажатию Enter или клику черной кнопки`,
+                },
+                {
+                    id: 5,
+                    category: CATEGORIES.LEARN,
+                    name: "портфолио",
+                    tech: [
+                        "react",
+                        "styled-components",
+                        "typescript",
+                        "react-router",
+                    ],
+                    img: "portfolio.png",
+                    github: "https://github.com/DenKuznets/masha-portfolio",
+                    demo: "http://davinchushka.vercel.app/",
+                    description: `шаблон портфолио по дизайну figma`,
                 },
                 {
                     id: 2,
@@ -236,13 +260,13 @@ export const localization = {
                     ТЗ: 
                     Реализовать простой 2д планировщик.
                         1) Сделать блок со списком объектов на выбор(это могут быть 2д
-фотографии столов, стульев, перегородок).
+                            фотографии столов, стульев, перегородок).
                         2) Сделать доску на которое можно добавлять эти объекты и
-перемещать их мышкой. 
+                            перемещать их мышкой. 
                         3) Должна быть возможность сохранения расстановки в
-файл(сохранять id объекта и его координаты).
+                                файл(сохранять id объекта и его координаты).
                         4) Также должна быть возможность импорта этого файла с
-координатами и отображения сохраненной расстановки.
+                                координатами и отображения сохраненной расстановки.
                         5) Ограничения на стек технологий:JavaScript React Redux Остальное на ваше усмотрение`,
                 },
                 {
