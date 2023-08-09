@@ -197,7 +197,7 @@ export const localization = {
                     img: "iptracker.png",
                     github: "https://github.com/DenKuznets/ip-address-tracker",
                     demo: "dk-ip-address-tracker.vercel.app",
-                    description: ` frontend mentor challenge
+                    description: ` frontend mentor api focused challenge
                         Функционал: 
                         - Адаптивная верстка под разные экраны
                         - Ховер на интерактивных элементах
