@@ -4,7 +4,7 @@ import BigLink from "./BigLink";
 import TechList from "./TechList";
 import useLocalization from "../hooks/useLocalization";
 import { useNavigate, useParams } from "react-router";
-import replaceURL from "./ReplaceURL";
+import replaceURL from "./replaceURL";
 
 const Work = () => {
     const textGlobal = useLocalization().local;
