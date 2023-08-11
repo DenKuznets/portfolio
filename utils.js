@@ -205,7 +205,7 @@ export const localization = {
                     tech: ["react", "mui", "typescript", "zustand"],
                     img: "iptracker.png",
                     github: "https://github.com/DenKuznets/ip-address-tracker",
-                    demo: "dk-ip-address-tracker.vercel.app",
+                    demo: "https://dk-ip-address-tracker.vercel.app",
                     description: ` frontend mentor api focused challenge
                         Функционал: 
                         - Адаптивная верстка под разные экраны
