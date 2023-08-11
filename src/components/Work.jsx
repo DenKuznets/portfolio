@@ -4,6 +4,7 @@ import BigLink from "./BigLink";
 import TechList from "./TechList";
 import useLocalization from "../hooks/useLocalization";
 import { useNavigate, useParams } from "react-router";
+import replaceURL from "./ReplaceURL";
 
 const Work = () => {
     const textGlobal = useLocalization().local;
@@ -13,6 +14,7 @@ const Work = () => {
     );
 
     const navigate = useNavigate();
+    
     return (
         <WorkStyled>
             <div className="work__content">
@@ -23,7 +25,7 @@ const Work = () => {
                         <a href={textWork.github}>Github</a> |{" "}
                         <a href={textWork.demo}>Demo</a>
                     </div>
-                    <p>{textWork.description}</p>
+                    <p>{replaceURL(textWork.description)}</p>
                     <BigLink onClick={() => navigate(-1)} className="btn-back">
                         {textGlobal.backButton}
                     </BigLink>

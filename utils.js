@@ -199,24 +199,6 @@ export const localization = {
                         `,
                 },
                 {
-                    id: 12,
-                    category: CATEGORIES.LEARN,
-                    name: "IP address tracker",
-                    tech: ["react", "mui", "typescript", "zustand"],
-                    img: "iptracker.png",
-                    github: "https://github.com/DenKuznets/ip-address-tracker",
-                    demo: "https://dk-ip-address-tracker.vercel.app",
-                    description: ` frontend mentor api focused challenge
-                        Функционал: 
-                        - Адаптивная верстка под разные экраны
-                        - Ховер на интерактивных элементах
-                        - Отображение адрес IP пользователя на карте при загрузке страницы
-                        - Поиск информрации об ip/доменах
-                        - Отображение ошибки при некорректном вводе айпи/домена
-                        - Отображение ошибки при других сетевых ошибках
-                        - Отправка запроса по нажатию Enter или клику черной кнопки`,
-                },
-                {
                     id: 5,
                     category: CATEGORIES.LEARN,
                     name: "портфолио",
@@ -353,6 +335,17 @@ export const localization = {
                     demo: "https://mup-komfort.ru/",
                     description: `Верстка лэндинга по заказу web-студии alex-media.ru по макету Figma с соблюдением дедлайна, pixel-perfect попаданием в адаптивные брейкпоинты. В сотрудничестве с дизайнером и backend-разработчиком (php, laravel, blade)`,
                 },
+                {
+                    id: 12,
+                    category: CATEGORIES.LEARN,
+                    name: "мое портфолио",
+                    tech: ["react", "styled-components", "js"],
+                    img: "myportfolio.png",
+                    github: "https://github.com/DenKuznets/portfolio",
+                    demo: "https://denkuznets.vercel.app/",
+                    description: `Этот сайт портфолио я разработал сам, вдохновляясь примерами таких работ как https://stefantopalovicdev.vercel.app/ , https://caferati.me/portfolio , https://brittanychiang.com/ и http://riccardozanutta.com/ . 
+                    За основу дизайна использовал этот шаблон https://themeforest.net/item/orido-personal-portfolio-website-figma-template/screenshots/37527613?index=1`,
+                },
             ],
         },
     },
@@ -410,3 +403,5 @@ export const localization = {
         },
     },
 };
+
+
