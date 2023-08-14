@@ -71,6 +71,7 @@ const HeroStyled = styled.section`
 
                 &-aboutme {
                     margin-bottom: 4.2em;
+                    text-transform: uppercase;
                 }
 
                 &-btns {
@@ -172,7 +173,6 @@ const HeroStyled = styled.section`
             }
         }
     }
-
 `;
 
 export default HeroStyled;
