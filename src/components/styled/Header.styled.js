@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { screen } from "../../../utils";
+import { screen } from "../../js/screen";
 
 const HeaderStyled = styled.header`
     position: fixed;

@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../../utils";
+import { colors } from "../js/colors";
 import {
     SlSocialGithub,
     SlSocialInstagram,
     SlSocialVkontakte,
 } from "react-icons/sl";
 import { TbBrandTelegram } from "react-icons/tb";
-import Link from "./BigLink";
 
 const FooterStyled = styled.footer`
     background-color: ${colors.almostBlack};

@@ -2,7 +2,7 @@ import React from "react";
 import { IconContext } from "react-icons";
 import { BsArrowUpRight } from "react-icons/bs";
 import styled from "styled-components";
-import { colors, screen } from "../../utils";
+import { screen } from "../js/screen";
 import { Link } from "react-router-dom";
 
 const BigLinkStyled = styled(Link)`

@@ -1,140 +1,4 @@
-//прекратить скролл окна в фоне
-export function preventScroll() {
-    if (typeof window != "undefined" && window.document) {
-        document.body.style.overflow = "hidden";
-    }
-}
-
-//возобновить скролл окна в фоне
-export function resumeScroll() {
-    if (typeof window != "undefined" && window.document) {
-        document.body.style.overflow = "";
-    }
-}
-
-export function isVisible(elem) {
-    let top = elem.getBoundingClientRect().top;
-    let bottom = elem.getBoundingClientRect().bottom;
-    if (bottom > 0 && top < window.innerHeight) {
-        return true;
-    }
-    return false;
-}
-
-export const screen = {
-    uhd: "2560px",
-    laptopL: "1400px",
-    laptop: "1024px",
-    tablet: "768px",
-    mobileL: "425px",
-    mobileM: "375px",
-    mobileS: "320px",
-};
-
-export const maskPattern = [
-    "+",
-    "7",
-    " ",
-    "(",
-    /[1-9]/,
-    /\d/,
-    /\d/,
-    ")",
-    " ",
-    /\d/,
-    /\d/,
-    /\d/,
-    " ",
-    /\d/,
-    /\d/,
-    "-",
-    /\d/,
-    /\d/,
-];
-
-export const colors = {
-    white: "#fff",
-    violet: "#6344C6",
-    darkViolet: "#262439",
-    yellow: "#FFC448",
-    almostBlack: "#11141D",
-    orange: "#F26440",
-};
-
-export const fonts = {
-    merriweather: "'Merriweather', serif",
-    raleweay: "'Raleway', sans-serif",
-    leagueSpartan: "'League Spartan', sans-serif",
-};
-
-export const themeLight = {
-    global: {
-        pTextColor: "grey",
-        aTextColor: "grey",
-        aHoverTextColor: colors.almostBlack,
-        socialIconContainerBG: "#f6f6f6",
-        socialIconContainerColor: colors.almostBlack,
-        techList: {
-            textColor: colors.almostBlack,
-            itemBorder: colors.almostBlack,
-        },
-        bigLink: {
-            textColor: colors.almostBlack,
-            hover: colors.almostBlack,
-        },
-    },
-    header: {
-        bg: colors.white,
-        fontDark: colors.almostBlack,
-        fontLight: colors.white,
-        burgerHover: colors.violet,
-    },
-    hero: {
-        socialsTextColor: colors.almostBlack,
-    },
-    work: {
-        workThemes: {
-            violet: {
-                bg: colors.violet,
-                textColor: colors.white,
-                borderColor: colors.white,
-                more: colors.almostBlack,
-                overlayGradient:
-                    "linear-gradient(90deg, rgba(99, 68, 198, 1) 0%, rgba(82, 96, 115, 1) 100%)",
-            },
-            yellow: {
-                bg: colors.yellow,
-                textColor: colors.almostBlack,
-                borderColor: colors.almostBlack,
-                overlayGradient:
-                    "linear-gradient(90deg, rgba(255,196,72,1) 0%, rgba(29,29,0,0.97) 100%)",
-            },
-            default: {
-                bg: colors.white,
-                textColor: colors.almostBlack,
-                borderColor: colors.almostBlack,
-                overlayGradient:
-                    "linear-gradient(90deg, rgba(82, 96, 115, 1) 0%, rgba(256, 256, 256, 1) 100%)",
-            },
-        },
-    },
-    workModal: {
-        bg: colors.white,
-        border: colors.almostBlack,
-    },
-    workSmall: {
-        textColor: colors.white,
-    },
-    allWorks: {
-        btnBack: colors.white,
-    },
-};
-
-export const CATEGORIES = {
-    TEST: "TEST",
-    LANDING: "LANDING",
-    LEARN: "LEARN",
-};
+import { CATEGORIES } from "./categories";
 
 export const localization = {
     ru: {
@@ -250,7 +114,7 @@ export const localization = {
                         4) Также должна быть возможность импорта этого файла с
                                 координатами и отображения сохраненной расстановки.
                         5) Ограничения на стек технологий:JavaScript React Redux Остальное на ваше усмотрение`,
-                },           
+                },
 
                 {
                     id: 6,
@@ -380,5 +244,3 @@ export const localization = {
         },
     },
 };
-
-

@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { localization } from "../../utils";
+import { localization } from "../js/localizaion";
 
 const useLocalization = create((set) => ({
     // local: navigator.language === "ru" ? localization.ru : localization.en,

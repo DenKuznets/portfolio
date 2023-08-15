@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../globalStyles";
-import { themeLight } from "../../utils";
+import { themeLight } from "../js/themeLight";
 
 const Layout = () => {
     return (

@@ -3,6 +3,7 @@ import { IconContext } from "react-icons";
 import { useState } from "react";
 import HeaderStyled from "./styled/Header.styled";
 import useLocalization from "../hooks/useLocalization";
+import { smoothScroll } from "../js/utils";
 
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -15,6 +16,7 @@ const Header = () => {
                 <a
                     onClick={() => {
                         setShowMenu(!showMenu);
+                        smoothScroll();
                     }}
                     href={`#${key}`}
                 >
@@ -28,7 +30,7 @@ const Header = () => {
         <HeaderStyled>
             <div className="header">
                 <div className="header__logo">
-                    <a href="#">
+                    <a href="#" onClick={() => smoothScroll()}>
                         <img src="./images/logo.png" alt="" />
                         <div className="header__logo-text">
                             ｄｅｎ . ｋｕｚｎｅｔｓ

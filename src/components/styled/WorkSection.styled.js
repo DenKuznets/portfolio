@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { colors, fonts, screen } from "../../../utils";
+import { colors } from "../../js/colors";
+import { screen } from "../../js/screen";
+import { fonts } from "../../js/fonts";
 
 export const WorkSectionStyled = styled.div`
     position: relative;

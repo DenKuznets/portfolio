@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
-import { colors, screen, fonts } from "../utils";
-// import vars from "./vars";
+
+import { colors } from "./js/colors";
+import { screen } from "./js/screen";
+import { fonts } from "./js/fonts";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -31,10 +33,6 @@ ol[role='list'] {
   list-style: none;
 }
 
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
 
 /* Set core body defaults */
 body {
@@ -83,7 +81,6 @@ ${"" /* ================================END OF RESETS */}
 
 html {
 	scroll-padding-top: 80px;
-	scroll-behavior: smooth;
 }
 
 body {

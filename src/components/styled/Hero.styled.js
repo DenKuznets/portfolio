@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { colors, screen } from "../../../utils";
+import { colors } from "../../js/colors";
+import { screen } from "../../js/screen";
 
 const textContentHeight100 = "1063px";
 const heroImageNone = "967px";

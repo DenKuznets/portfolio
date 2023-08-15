@@ -1,7 +1,7 @@
 import Hero from "../components/Hero";
 import WorkSection from "../components/WorkSection";
 import Header from "../components/Header";
-import { colors } from "../../utils";
+import { colors } from "../js/colors";
 import Footer from "../components/Footer";
 import BigLink from "../components/BigLink";
 import useLocalization from "../hooks/useLocalization";
@@ -37,7 +37,10 @@ const MainPage = () => {
                             padding: "2em 0",
                         }}
                     >
-                        <BigLink to="allworks" onClick={()=>window.scrollTo(0,0)}>
+                        <BigLink
+                            to="allworks"
+                            onClick={() => window.scrollTo(0, 0)}
+                        >
                             {textGlobal.allWorks}
                         </BigLink>
                     </div>

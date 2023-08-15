@@ -10,7 +10,7 @@ import {
     createTheme,
 } from "@mui/material";
 import WorksAllStyled from "./styled/WorksAll.styled";
-import { colors } from "../../utils";
+import { colors } from "../js/colors";
 import { useMemo, useState } from "react";
 
 const theme = createTheme({
