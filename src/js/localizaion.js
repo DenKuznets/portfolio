@@ -17,7 +17,7 @@ export const localization = {
             lname: "Кузнецов",
             profession: "front-end разработчик",
             aboutme: "верстаю сайты на react и styled-components",
-            stack: "СТЭК: html, css, css-modules, mui, styled-components, js, ts (начального уровня), git (github), npm, vite, react, react-hooks, zustand, redux, react-router, rest, react-query, graphql (apollo-client), jest, react-testing-library, storybook",
+            stack: "СТЭК: react, ts, mui, styled-components, redux, rest, graphql (apollo-client), jest, react-testing-library, storybook",
             contactme: "Связаться",
             socials: "я в соц сетях",
         },
