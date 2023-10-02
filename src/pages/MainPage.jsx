@@ -27,8 +27,8 @@ const MainPage = () => {
                         {textGlobal.header.nav.work}
                     </h2>
                     <WorkSection id={13} workColor="violet" />
-                    <WorkSection id={2} workColor="default" />
-                    <WorkSection id={3} workColor="yellow" />
+                    <WorkSection id={1} workColor="default" />
+                    <WorkSection id={4} workColor="yellow" />
                     <div
                         style={{
                             backgroundColor: `${colors.white}`,
