@@ -38,45 +38,6 @@ export const localization = {
                     demo: "https://tul-energo-service.ru/",
                     description: `Верстка лэндинга по заказу web-студии alex-media.ru по макету Figma с соблюдением дедлайна, pixel-perfect попаданием в адаптивные брейкпоинты. В сотрудничестве с дизайнером и backend-разработчиком (php, laravel, blade)`,
                 },
-
-                {
-                    id: 4,
-                    category: CATEGORIES.TEST,
-                    name: "тестовое задание",
-                    tech: [
-                        "react",
-                        "styled-components",
-                        "адаптивная верстка",
-                        "axios",
-                    ],
-                    img: "test1.png",
-                    github: "https://github.com/DenKuznets/dls-test",
-                    demo: "https://dls-test.vercel.app/",
-                    description: `Тестовое задание по макету Figma и ТЗ: 
-                        1) Горизонтальное меню - sticky, исчезает после 200px прокрутки
-                        2) Мобильное меню - плавное скрытие/открытие
-                        3) Подменю - только CSS
-                        4) Получение данных fetch()/axios
-                        5) Отображение списка постов - flex
-                        6) Поиск постов - по заголовкам и тексту
-                        7) Полная информация о посте по клику на пост - modal window     
-                        `,
-                },
-                {
-                    id: 5,
-                    category: CATEGORIES.LEARN,
-                    name: "портфолио",
-                    tech: [
-                        "react",
-                        "styled-components",
-                        "typescript",
-                        "react-router",
-                    ],
-                    img: "portfolio.png",
-                    github: "https://github.com/DenKuznets/masha-portfolio",
-                    demo: "http://davinchushka.vercel.app/",
-                    description: `шаблон портфолио по дизайну figma`,
-                },
                 {
                     id: 2,
                     category: CATEGORIES.TEST,
@@ -116,6 +77,45 @@ export const localization = {
                         5) Ограничения на стек технологий:JavaScript React Redux Остальное на ваше усмотрение`,
                 },
 
+                {
+                    id: 4,
+                    category: CATEGORIES.TEST,
+                    name: "тестовое задание",
+                    tech: [
+                        "react",
+                        "styled-components",
+                        "адаптивная верстка",
+                        "axios",
+                    ],
+                    img: "test1.png",
+                    github: "https://github.com/DenKuznets/dls-test",
+                    demo: "https://dls-test.vercel.app/",
+                    description: `Тестовое задание по макету Figma и ТЗ: 
+                        1) Горизонтальное меню - sticky, исчезает после 200px прокрутки
+                        2) Мобильное меню - плавное скрытие/открытие
+                        3) Подменю - только CSS
+                        4) Получение данных fetch()/axios
+                        5) Отображение списка постов - flex
+                        6) Поиск постов - по заголовкам и тексту
+                        7) Полная информация о посте по клику на пост - modal window     
+                        `,
+                },
+
+                {
+                    id: 5,
+                    category: CATEGORIES.LEARN,
+                    name: "портфолио",
+                    tech: [
+                        "react",
+                        "styled-components",
+                        "typescript",
+                        "react-router",
+                    ],
+                    img: "portfolio.png",
+                    github: "https://github.com/DenKuznets/masha-portfolio",
+                    demo: "http://davinchushka.vercel.app/",
+                    description: `шаблон портфолио по дизайну figma`,
+                },
                 {
                     id: 6,
                     category: CATEGORIES.LEARN,
@@ -186,6 +186,16 @@ export const localization = {
                     demo: "https://denkuznets.vercel.app/",
                     description: `Этот сайт портфолио я разработал сам, вдохновляясь примерами таких работ как https://stefantopalovicdev.vercel.app/ , https://caferati.me/portfolio , https://brittanychiang.com/ и http://riccardozanutta.com/ . 
                     За основу дизайна использовал этот шаблон https://themeforest.net/item/orido-personal-portfolio-website-figma-template/screenshots/37527613?index=1`,
+                },
+                {
+                    id: 13,
+                    category: CATEGORIES.LEARN,
+                    name: "ROCK PAPER SCISSORS",
+                    tech: ["react", "mui", "ts", "unit testing"],
+                    img: "rpc.png",
+                    github: "https://github.com/DenKuznets/rock-paper-scissors",
+                    demo: "https://rock-paper-scissors-kappa-tawny.vercel.app/",
+                    description: `Игра "Камень Ножницы Бумага" по дизайну https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH`,
                 },
             ],
         },

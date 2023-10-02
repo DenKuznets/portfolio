@@ -14,7 +14,8 @@ const Work = () => {
     );
 
     const navigate = useNavigate();
-    
+    console.log(textWork);
+
     return (
         <WorkStyled>
             <div className="work__content">

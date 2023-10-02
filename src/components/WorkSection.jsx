@@ -10,7 +10,7 @@ const WorkSection = (props) => {
     const overlayRef = useRef("");
     const imageRef = useRef("");
     const textGlobal = useLocalization().local;
-    const textWork = textGlobal.work.works[props.id];
+    const textWork = textGlobal.work.works[props.id-1];
     const navigate = useNavigate();
 
     const desktop = useMediaQuery("(min-width: 768px)");
