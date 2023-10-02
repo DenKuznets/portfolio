@@ -1,8 +1,9 @@
-project id 4 поменять название: вместо Тестовое задание написать Лэндинг с поиском постов
-разобраться почему иконки соц сетей не работают в adblock browser
-добавить в стэк ? react query, zustand, vite
-SIDEBAR вместо кнопок назад
-allworks better colors
-hero tech-stack with icons
-темная версия
-английская версия
+I.project id 4 поменять название: вместо 
+II.Тестовое задание написать Лэндинг с поиском постов
+III.разобраться почему иконки соц сетей не работают в adblock browser
+IV.SIDEBAR вместо кнопок назад
+V.allworks better colors
+VI.hero tech-stack with icons
+VII.темная версия
+VIII. английская версия
+IX. когда будешь перерабатывать под NextJS + TS сделай так что бы самые свежие добавленные работы на странице AllWorks были вверху
