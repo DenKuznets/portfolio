@@ -10,7 +10,7 @@ const WorkSection = (props) => {
     const overlayRef = useRef("");
     const imageRef = useRef("");
     const textGlobal = useLocalization().local;
-    const textWork = textGlobal.work.works[props.id-1];
+    const textWork = textGlobal.work.works[props.id - 1];
     const navigate = useNavigate();
 
     const desktop = useMediaQuery("(min-width: 768px)");
@@ -52,7 +52,10 @@ const WorkSection = (props) => {
                         <a href={textWork.demo}>Demo</a>
                     </div>
 
-                    <BigLink to={`allworks/${textWork.id}`} className="work__text-more">
+                    <BigLink
+                        to={`allworks/${textWork.id}`}
+                        className="work__text-more"
+                    >
                         {textGlobal.showmore}
                     </BigLink>
                 </div>
@@ -63,11 +66,9 @@ const WorkSection = (props) => {
     function workImg() {
         return (
             <div
-                onClick={()=> navigate(`/allworks/${props.id}`)}
+                onClick={() => navigate(`/allworks/${props.id}`)}
                 className={`work__img ${
-                    props.id % 2 !== 0
-                        ? "work__img--left"
-                        : "work__img--right"
+                    props.id % 2 !== 0 ? "work__img--left" : "work__img--right"
                 }`}
             >
                 <div
@@ -77,9 +78,7 @@ const WorkSection = (props) => {
                 >
                     {/* оверлей нечетной карточки появляется справа налево */}
                     <div
-                        style={
-                            props.id % 2 !== 0 ? { right: 0 } : { left: 0 }
-                        }
+                        style={props.id % 2 !== 0 ? { right: 0 } : { left: 0 }}
                         ref={overlayRef}
                         className="work__img-overlay"
                     ></div>
@@ -89,7 +88,7 @@ const WorkSection = (props) => {
                         alt=""
                     />
                     <div className="work__img-case-number">
-                        {"0" + (props.id + 1)}
+                        {"0" + props.id}
                     </div>
                 </div>
             </div>
