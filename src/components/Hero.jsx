@@ -79,7 +79,7 @@ const Hero = () => {
                 </div>
                 <div className="hero__img">
                     <div className="hero__img-content">
-                        <img src="./images/avatar-violet-bg.png" alt="" />
+                        <img src="./images/avatar-violet-bg.webp" alt="" />
                     </div>
                 </div>
             </div>
