@@ -60,17 +60,41 @@ const Hero = () => {
                             <div className="hero__text-content-socials-icons">
                                 <a href="https://vk.com/id6059069">
                                     <div className="social-icon-container">
-                                        <SlSocialVkontakte />
+                                        {/* <SlSocialVkontakte /> */}
+                                        <img
+                                            style={{
+                                                width: "25px",
+                                                height: "25px",
+                                            }}
+                                            src="./images/vk-logo.svg"
+                                            alt="vk-logo"
+                                        />
                                     </div>
                                 </a>
                                 <a href="https://www.instagram.com/denis_kyznecov/">
                                     <div className="social-icon-container">
-                                        <SlSocialInstagram />
+                                        {/* <SlSocialInstagram /> */}
+                                        <img
+                                            style={{
+                                                width: "25px",
+                                                height: "25px",
+                                            }}
+                                            src="./images/instagram-logo.svg"
+                                            alt="instagram-logo"
+                                        />
                                     </div>
                                 </a>
                                 <a href="https://github.com/DenKuznets">
                                     <div className="social-icon-container">
-                                        <SlSocialGithub />
+                                        {/* <SlSocialGithub /> */}
+                                        <img
+                                            style={{
+                                                width: "25px",
+                                                height: "25px",
+                                            }}
+                                            src="./images/github-logo.svg"
+                                            alt="github-logo"
+                                        />
                                     </div>
                                 </a>
                             </div>
