@@ -55,9 +55,9 @@ const Hero = () => {
                                 {textGlobal.myWorks}
                             </BigLink>
                         </div>
-                        <div className="hero__text-content-socials">
-                            <span>{textGlobal.hero.socials}:</span>
-                            <div className="hero__text-content-socials-icons">
+                        {/* <div className="hero__text-content-socials"> */}
+                            {/* <span>{textGlobal.hero.socials}:</span> */}
+                            {/* <div className="hero__text-content-socials-icons"> */}
                                 {/* <a href="https://vk.com/id6059069">
                                     <div className="social-icon-container">
                                         <img
@@ -70,9 +70,8 @@ const Hero = () => {
                                         />
                                     </div>
                                 </a> */}
-                                <a href="https://www.instagram.com/denis_kyznecov/">
+                                {/* <a href="https://www.instagram.com/denis_kyznecov/">
                                     <div className="social-icon-container">
-                                        {/* <SlSocialInstagram /> */}
                                         <img
                                             style={{
                                                 width: "25px",
@@ -82,10 +81,9 @@ const Hero = () => {
                                             alt="instagram-logo"
                                         />
                                     </div>
-                                </a>
-                                <a href="https://github.com/DenKuznets">
+                                </a> */}
+                                {/* <a href="https://github.com/DenKuznets">
                                     <div className="social-icon-container">
-                                        {/* <SlSocialGithub /> */}
                                         <img
                                             style={{
                                                 width: "25px",
@@ -95,9 +93,9 @@ const Hero = () => {
                                             alt="github-logo"
                                         />
                                     </div>
-                                </a>
-                            </div>
-                        </div>
+                                </a> */}
+                            {/* </div> */}
+                        {/* </div> */}
                     </div>
                 </div>
                 <div className="hero__img">
