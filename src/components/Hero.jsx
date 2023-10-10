@@ -58,9 +58,8 @@ const Hero = () => {
                         <div className="hero__text-content-socials">
                             <span>{textGlobal.hero.socials}:</span>
                             <div className="hero__text-content-socials-icons">
-                                <a href="https://vk.com/id6059069">
+                                {/* <a href="https://vk.com/id6059069">
                                     <div className="social-icon-container">
-                                        {/* <SlSocialVkontakte /> */}
                                         <img
                                             style={{
                                                 width: "25px",
@@ -70,7 +69,7 @@ const Hero = () => {
                                             alt="vk-logo"
                                         />
                                     </div>
-                                </a>
+                                </a> */}
                                 <a href="https://www.instagram.com/denis_kyznecov/">
                                     <div className="social-icon-container">
                                         {/* <SlSocialInstagram /> */}
