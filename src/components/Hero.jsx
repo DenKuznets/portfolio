@@ -1,10 +1,5 @@
 import HeroStyled from "./styled/Hero.styled";
 import BigLink from "./BigLink";
-import {
-    SlSocialVkontakte,
-    SlSocialInstagram,
-    SlSocialGithub,
-} from "react-icons/sl";
 import { IconContext } from "react-icons";
 import { CiLocationArrow1 } from "react-icons/ci";
 import useLocalization from "../hooks/useLocalization";
@@ -55,10 +50,10 @@ const Hero = () => {
                                 {textGlobal.myWorks}
                             </BigLink>
                         </div>
-                        {/* <div className="hero__text-content-socials"> */}
-                            {/* <span>{textGlobal.hero.socials}:</span> */}
-                            {/* <div className="hero__text-content-socials-icons"> */}
-                                {/* <a href="https://vk.com/id6059069">
+                        <div className="hero__text-content-socials">
+                            <span>{textGlobal.hero.socials}:</span>
+                            <div className="hero__text-content-socials-icons">
+                                <a href="https://vk.com/id6059069">
                                     <div className="social-icon-container">
                                         <img
                                             style={{
@@ -69,8 +64,8 @@ const Hero = () => {
                                             alt="vk-logo"
                                         />
                                     </div>
-                                </a> */}
-                                {/* <a href="https://www.instagram.com/denis_kyznecov/">
+                                </a>
+                                <a href="https://www.instagram.com/denis_kyznecov/">
                                     <div className="social-icon-container">
                                         <img
                                             style={{
@@ -81,8 +76,8 @@ const Hero = () => {
                                             alt="instagram-logo"
                                         />
                                     </div>
-                                </a> */}
-                                {/* <a href="https://github.com/DenKuznets">
+                                </a>
+                                <a href="https://github.com/DenKuznets">
                                     <div className="social-icon-container">
                                         <img
                                             style={{
@@ -93,9 +88,9 @@ const Hero = () => {
                                             alt="github-logo"
                                         />
                                     </div>
-                                </a> */}
-                            {/* </div> */}
-                        {/* </div> */}
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="hero__img">
